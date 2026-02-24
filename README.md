@@ -1,5 +1,6 @@
 # DataScienceProject
 
+<<<<<<< HEAD
 ## Project Goal
 Short description of what we want to analyze.
 
@@ -19,3 +20,5 @@ Describe where the data comes from.
 - Python
 - Pandas
 - Matplotlib / Seaborn
+=======
+HALLO 
