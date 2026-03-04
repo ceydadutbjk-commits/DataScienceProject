@@ -1,10 +1,19 @@
-# API Keys und Umgebungsvariablen
-.env
-
-# Datenordner (lieber die Skripte teilen, nicht die riesigen JSONs)
-raw_data/
+# Python Systemdateien
 __pycache__/
-
-# Python virtuelle Umgebungen
+*.py[cod]
+*$py.class
 venv/
 .venv/
+
+# Mac Systemdateien
+.DS_Store
+
+# IDE / Editor Einstellungen
+.vscode/
+.idea/
+
+# Sensible Daten (API Keys)
+.env
+
+# Daten (nur falls du sie doch NICHT auf Git haben willst)
+# raw_data/
