@@ -1,0 +1,213 @@
+{
+  "type": "related_queries",
+  "keyword": "Inflation",
+  "start": "2020-01-01",
+  "end": "2024-12-31",
+  "geo": "DE",
+  "related_queries": {
+    "top": [
+      {
+        "query": "inflation deutschland",
+        "value": 100
+      },
+      {
+        "query": "inflation 2022",
+        "value": 35
+      },
+      {
+        "query": "inflation 2023",
+        "value": 26
+      },
+      {
+        "query": "inflation euro",
+        "value": 16
+      },
+      {
+        "query": "inflation 2021",
+        "value": 16
+      },
+      {
+        "query": "inflation deutschland 2022",
+        "value": 16
+      },
+      {
+        "query": "inflation in deutschland",
+        "value": 14
+      },
+      {
+        "query": "inflation 2024",
+        "value": 13
+      },
+      {
+        "query": "inflation usa",
+        "value": 13
+      },
+      {
+        "query": "inflation rate",
+        "value": 12
+      },
+      {
+        "query": "inflation aktuell",
+        "value": 11
+      },
+      {
+        "query": "inflation deutschland 2023",
+        "value": 11
+      },
+      {
+        "query": "inflation türkei",
+        "value": 11
+      },
+      {
+        "query": "was ist inflation",
+        "value": 10
+      },
+      {
+        "query": "inflationsrate",
+        "value": 10
+      },
+      {
+        "query": "inflation 2020",
+        "value": 10
+      },
+      {
+        "query": "definition inflation",
+        "value": 9
+      },
+      {
+        "query": "germany inflation",
+        "value": 9
+      },
+      {
+        "query": "inflation germany",
+        "value": 9
+      },
+      {
+        "query": "deflation",
+        "value": 8
+      },
+      {
+        "query": "inflation corona",
+        "value": 8
+      },
+      {
+        "query": "inflation us",
+        "value": 8
+      },
+      {
+        "query": "ezb inflation",
+        "value": 7
+      },
+      {
+        "query": "ezb",
+        "value": 7
+      },
+      {
+        "query": "inflation deutschland 2021",
+        "value": 6
+      }
+    ],
+    "rising": [
+      {
+        "query": "inflation deutschland 2022",
+        "value": 322450
+      },
+      {
+        "query": "inflation 2024",
+        "value": 265850
+      },
+      {
+        "query": "inflation deutschland 2023",
+        "value": 224300
+      },
+      {
+        "query": "inflation corona",
+        "value": 167900
+      },
+      {
+        "query": "inflation deutschland 2024",
+        "value": 93050
+      },
+      {
+        "query": "inflation 2023",
+        "value": 65850
+      },
+      {
+        "query": "inflation 2022",
+        "value": 52150
+      },
+      {
+        "query": "inflation reduction act",
+        "value": 41650
+      },
+      {
+        "query": "inflationsrate deutschland 2022",
+        "value": 24600
+      },
+      {
+        "query": "inflation 2021",
+        "value": 19550
+      },
+      {
+        "query": "inflation januar 2023",
+        "value": 14400
+      },
+      {
+        "query": "inflation schweiz 2022",
+        "value": 12800
+      },
+      {
+        "query": "inflation deutschland 2021",
+        "value": 9900
+      },
+      {
+        "query": "inflationsprämie",
+        "value": 5800
+      },
+      {
+        "query": "inflation 2020",
+        "value": 800
+      },
+      {
+        "query": "wie hoch ist die inflation",
+        "value": 350
+      },
+      {
+        "query": "inflation russland",
+        "value": 200
+      },
+      {
+        "query": "inflation aktuell",
+        "value": 200
+      },
+      {
+        "query": "schweiz inflation",
+        "value": 200
+      },
+      {
+        "query": "inflation usa",
+        "value": 160
+      },
+      {
+        "query": "germany inflation",
+        "value": 110
+      },
+      {
+        "query": "inflation us",
+        "value": 110
+      },
+      {
+        "query": "inflation germany",
+        "value": 100
+      },
+      {
+        "query": "inflation türkei",
+        "value": 90
+      },
+      {
+        "query": "inflation in deutschland",
+        "value": 80
+      }
+    ]
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "type": "related_queries",
+  "keyword": "Strompreis",
+  "start": "2020-01-01",
+  "end": "2024-12-31",
+  "geo": "DE",
+  "related_queries": {
+    "top": [
+      {
+        "query": "strompreis aktuell",
+        "value": 100
+      },
+      {
+        "query": "strompreis kwh",
+        "value": 82
+      },
+      {
+        "query": "strompreis 2023",
+        "value": 54
+      },
+      {
+        "query": "strompreis eon",
+        "value": 53
+      },
+      {
+        "query": "aktueller strompreis",
+        "value": 51
+      },
+      {
+        "query": "eon",
+        "value": 49
+      },
+      {
+        "query": "strompreis 2022",
+        "value": 46
+      },
+      {
+        "query": "strompreis deutschland",
+        "value": 43
+      },
+      {
+        "query": "strompreis börse",
+        "value": 40
+      },
+      {
+        "query": "strompreise",
+        "value": 39
+      },
+      {
+        "query": "gaspreis",
+        "value": 31
+      },
+      {
+        "query": "strompreis vergleich",
+        "value": 31
+      },
+      {
+        "query": "strompreis pro kwh",
+        "value": 30
+      },
+      {
+        "query": "vattenfall",
+        "value": 27
+      },
+      {
+        "query": "strompreis 2024",
+        "value": 24
+      },
+      {
+        "query": "strompreis enbw",
+        "value": 20
+      },
+      {
+        "query": "verivox",
+        "value": 20
+      },
+      {
+        "query": "enbw",
+        "value": 20
+      },
+      {
+        "query": "stromanbieter",
+        "value": 16
+      },
+      {
+        "query": "strompreis grundversorgung",
+        "value": 15
+      },
+      {
+        "query": "tibber",
+        "value": 15
+      },
+      {
+        "query": "tibber strompreis",
+        "value": 14
+      },
+      {
+        "query": "strompreis prognose",
+        "value": 14
+      },
+      {
+        "query": "strompreis aktuell börse",
+        "value": 14
+      },
+      {
+        "query": "strompreisbremse",
+        "value": 9
+      }
+    ],
+    "rising": [
+      {
+        "query": "strompreis 2023",
+        "value": 598300
+      },
+      {
+        "query": "strompreis 2024",
+        "value": 270000
+      },
+      {
+        "query": "tibber",
+        "value": 163950
+      },
+      {
+        "query": "tibber strompreis",
+        "value": 155950
+      },
+      {
+        "query": "strompreise 2022",
+        "value": 55550
+      },
+      {
+        "query": "eon strompreis bestandskunden",
+        "value": 44100
+      },
+      {
+        "query": "strompreis bremse",
+        "value": 31050
+      },
+      {
+        "query": "strompreis 2022",
+        "value": 25400
+      },
+      {
+        "query": "strompreisbremse 2023",
+        "value": 21600
+      },
+      {
+        "query": "strompreis prognose 2024",
+        "value": 20500
+      },
+      {
+        "query": "tibber aktueller strompreis",
+        "value": 20250
+      },
+      {
+        "query": "strompreisbremse",
+        "value": 13250
+      },
+      {
+        "query": "strompreis schock",
+        "value": 5800
+      },
+      {
+        "query": "eon strompreis 2023",
+        "value": 2650
+      },
+      {
+        "query": "strompreis deckel deutschland",
+        "value": 1850
+      },
+      {
+        "query": "durchschnittlicher strompreis 2022",
+        "value": 1550
+      },
+      {
+        "query": "strompreis aktuell börse",
+        "value": 950
+      },
+      {
+        "query": "strompreis aktuell",
+        "value": 950
+      },
+      {
+        "query": "vattenfall strompreis bestandskunden",
+        "value": 800
+      },
+      {
+        "query": "strompreis grundversorgung",
+        "value": 300
+      },
+      {
+        "query": "gaspreis",
+        "value": 200
+      },
+      {
+        "query": "strompreis börse",
+        "value": 140
+      },
+      {
+        "query": "strompreis prognose",
+        "value": 120
+      },
+      {
+        "query": "aktueller strompreis",
+        "value": 90
+      },
+      {
+        "query": "strompreis eon",
+        "value": 60
+      }
+    ]
+  }
+}

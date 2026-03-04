@@ -1,0 +1,90 @@
+{
+  "type": "interest_by_region",
+  "keyword": "Gaspreis",
+  "start": "2020-01-01",
+  "end": "2024-12-31",
+  "geo": "DE",
+  "resolution": "REGION",
+  "rows": [
+    {
+      "geoName": "Baden-Württemberg",
+      "geoCode": "DE-BW",
+      "interest": 60
+    },
+    {
+      "geoName": "Bayern",
+      "geoCode": "DE-BY",
+      "interest": 71
+    },
+    {
+      "geoName": "Berlin",
+      "geoCode": "DE-BE",
+      "interest": 44
+    },
+    {
+      "geoName": "Brandenburg",
+      "geoCode": "DE-BB",
+      "interest": 81
+    },
+    {
+      "geoName": "Bremen",
+      "geoCode": "DE-HB",
+      "interest": 57
+    },
+    {
+      "geoName": "Hamburg",
+      "geoCode": "DE-HH",
+      "interest": 57
+    },
+    {
+      "geoName": "Hessen",
+      "geoCode": "DE-HE",
+      "interest": 57
+    },
+    {
+      "geoName": "Mecklenburg-Vorpommern",
+      "geoCode": "DE-MV",
+      "interest": 60
+    },
+    {
+      "geoName": "Niedersachsen",
+      "geoCode": "DE-NI",
+      "interest": 100
+    },
+    {
+      "geoName": "Nordrhein-Westfalen",
+      "geoCode": "DE-NW",
+      "interest": 74
+    },
+    {
+      "geoName": "Rheinland-Pfalz",
+      "geoCode": "DE-RP",
+      "interest": 71
+    },
+    {
+      "geoName": "Saarland",
+      "geoCode": "DE-SL",
+      "interest": 74
+    },
+    {
+      "geoName": "Sachsen",
+      "geoCode": "DE-SN",
+      "interest": 76
+    },
+    {
+      "geoName": "Sachsen-Anhalt",
+      "geoCode": "DE-ST",
+      "interest": 86
+    },
+    {
+      "geoName": "Schleswig-Holstein",
+      "geoCode": "DE-SH",
+      "interest": 85
+    },
+    {
+      "geoName": "Thüringen",
+      "geoCode": "DE-TH",
+      "interest": 77
+    }
+  ]
+}

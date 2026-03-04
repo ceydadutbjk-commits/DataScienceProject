@@ -1,0 +1,11 @@
+{
+  "type": "related_queries",
+  "keyword": "Margarine",
+  "start": "2020-01-01",
+  "end": "2024-12-31",
+  "geo": "DE",
+  "related_queries": {
+    "top": [],
+    "rising": []
+  }
+}

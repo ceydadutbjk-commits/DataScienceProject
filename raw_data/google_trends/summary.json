@@ -1,0 +1,330 @@
+[
+  {
+    "file": "iot_Butter.json",
+    "type": "interest_over_time",
+    "keyword": "Butter",
+    "n_points": 61,
+    "first": {
+      "date": "2019-12-31",
+      "value": 36.0
+    },
+    "last": {
+      "date": "2024-12-31",
+      "value": 76.2
+    }
+  },
+  {
+    "file": "iot_Gaspreis.json",
+    "type": "interest_over_time",
+    "keyword": "Gaspreis",
+    "n_points": 61,
+    "first": {
+      "date": "2019-12-31",
+      "value": 2.0
+    },
+    "last": {
+      "date": "2024-12-31",
+      "value": 6.4
+    }
+  },
+  {
+    "file": "iot_Inflation.json",
+    "type": "interest_over_time",
+    "keyword": "Inflation",
+    "n_points": 61,
+    "first": {
+      "date": "2019-12-31",
+      "value": 13.0
+    },
+    "last": {
+      "date": "2024-12-31",
+      "value": 33.8
+    }
+  },
+  {
+    "file": "iot_Lebensmittelpreise.json",
+    "type": "interest_over_time",
+    "keyword": "Lebensmittelpreise",
+    "n_points": 61,
+    "first": {
+      "date": "2019-12-31",
+      "value": 0.0
+    },
+    "last": {
+      "date": "2024-12-31",
+      "value": 18.0
+    }
+  },
+  {
+    "file": "iot_Margarine.json",
+    "type": "interest_over_time",
+    "keyword": "Margarine",
+    "n_points": 61,
+    "first": {
+      "date": "2019-12-31",
+      "value": 18.0
+    },
+    "last": {
+      "date": "2024-12-31",
+      "value": 28.4
+    }
+  },
+  {
+    "file": "iot_Strompreis.json",
+    "type": "interest_over_time",
+    "keyword": "Strompreis",
+    "n_points": 61,
+    "first": {
+      "date": "2019-12-31",
+      "value": 10.0
+    },
+    "last": {
+      "date": "2024-12-31",
+      "value": 35.6
+    }
+  },
+  {
+    "file": "meta.json",
+    "type": null
+  },
+  {
+    "file": "region_Butter.json",
+    "type": "interest_by_region",
+    "keyword": "Butter",
+    "n_regions": 16,
+    "top5": [
+      {
+        "geoName": "Berlin",
+        "geoCode": "DE-BE",
+        "interest": 100
+      },
+      {
+        "geoName": "Brandenburg",
+        "geoCode": "DE-BB",
+        "interest": 82
+      },
+      {
+        "geoName": "Hamburg",
+        "geoCode": "DE-HH",
+        "interest": 81
+      },
+      {
+        "geoName": "Bremen",
+        "geoCode": "DE-HB",
+        "interest": 75
+      },
+      {
+        "geoName": "Rheinland-Pfalz",
+        "geoCode": "DE-RP",
+        "interest": 75
+      }
+    ]
+  },
+  {
+    "file": "region_Gaspreis.json",
+    "type": "interest_by_region",
+    "keyword": "Gaspreis",
+    "n_regions": 16,
+    "top5": [
+      {
+        "geoName": "Niedersachsen",
+        "geoCode": "DE-NI",
+        "interest": 100
+      },
+      {
+        "geoName": "Sachsen-Anhalt",
+        "geoCode": "DE-ST",
+        "interest": 86
+      },
+      {
+        "geoName": "Schleswig-Holstein",
+        "geoCode": "DE-SH",
+        "interest": 85
+      },
+      {
+        "geoName": "Brandenburg",
+        "geoCode": "DE-BB",
+        "interest": 81
+      },
+      {
+        "geoName": "Thüringen",
+        "geoCode": "DE-TH",
+        "interest": 77
+      }
+    ]
+  },
+  {
+    "file": "region_Inflation.json",
+    "type": "interest_by_region",
+    "keyword": "Inflation",
+    "n_regions": 16,
+    "top5": [
+      {
+        "geoName": "Hamburg",
+        "geoCode": "DE-HH",
+        "interest": 100
+      },
+      {
+        "geoName": "Berlin",
+        "geoCode": "DE-BE",
+        "interest": 88
+      },
+      {
+        "geoName": "Hessen",
+        "geoCode": "DE-HE",
+        "interest": 84
+      },
+      {
+        "geoName": "Bayern",
+        "geoCode": "DE-BY",
+        "interest": 82
+      },
+      {
+        "geoName": "Baden-Württemberg",
+        "geoCode": "DE-BW",
+        "interest": 79
+      }
+    ]
+  },
+  {
+    "file": "region_Lebensmittelpreise.json",
+    "type": "interest_by_region",
+    "keyword": "Lebensmittelpreise",
+    "n_regions": 16,
+    "top5": [
+      {
+        "geoName": "Mecklenburg-Vorpommern",
+        "geoCode": "DE-MV",
+        "interest": 100
+      },
+      {
+        "geoName": "Sachsen",
+        "geoCode": "DE-SN",
+        "interest": 94
+      },
+      {
+        "geoName": "Sachsen-Anhalt",
+        "geoCode": "DE-ST",
+        "interest": 94
+      },
+      {
+        "geoName": "Brandenburg",
+        "geoCode": "DE-BB",
+        "interest": 89
+      },
+      {
+        "geoName": "Thüringen",
+        "geoCode": "DE-TH",
+        "interest": 89
+      }
+    ]
+  },
+  {
+    "file": "region_Margarine.json",
+    "type": "interest_by_region",
+    "keyword": "Margarine",
+    "n_regions": 16,
+    "top5": [
+      {
+        "geoName": "Schleswig-Holstein",
+        "geoCode": "DE-SH",
+        "interest": 100
+      },
+      {
+        "geoName": "Niedersachsen",
+        "geoCode": "DE-NI",
+        "interest": 95
+      },
+      {
+        "geoName": "Nordrhein-Westfalen",
+        "geoCode": "DE-NW",
+        "interest": 94
+      },
+      {
+        "geoName": "Bremen",
+        "geoCode": "DE-HB",
+        "interest": 93
+      },
+      {
+        "geoName": "Saarland",
+        "geoCode": "DE-SL",
+        "interest": 81
+      }
+    ]
+  },
+  {
+    "file": "region_Strompreis.json",
+    "type": "interest_by_region",
+    "keyword": "Strompreis",
+    "n_regions": 16,
+    "top5": [
+      {
+        "geoName": "Bayern",
+        "geoCode": "DE-BY",
+        "interest": 100
+      },
+      {
+        "geoName": "Schleswig-Holstein",
+        "geoCode": "DE-SH",
+        "interest": 89
+      },
+      {
+        "geoName": "Niedersachsen",
+        "geoCode": "DE-NI",
+        "interest": 86
+      },
+      {
+        "geoName": "Baden-Württemberg",
+        "geoCode": "DE-BW",
+        "interest": 82
+      },
+      {
+        "geoName": "Rheinland-Pfalz",
+        "geoCode": "DE-RP",
+        "interest": 81
+      }
+    ]
+  },
+  {
+    "file": "related_Butter.json",
+    "type": "related_queries",
+    "keyword": "Butter",
+    "top_n": 6,
+    "rising_n": 3
+  },
+  {
+    "file": "related_Gaspreis.json",
+    "type": "related_queries",
+    "keyword": "Gaspreis",
+    "top_n": 18,
+    "rising_n": 9
+  },
+  {
+    "file": "related_Inflation.json",
+    "type": "related_queries",
+    "keyword": "Inflation",
+    "top_n": 25,
+    "rising_n": 25
+  },
+  {
+    "file": "related_Lebensmittelpreise.json",
+    "type": "related_queries",
+    "keyword": "Lebensmittelpreise",
+    "top_n": 0,
+    "rising_n": 0
+  },
+  {
+    "file": "related_Margarine.json",
+    "type": "related_queries",
+    "keyword": "Margarine",
+    "top_n": 0,
+    "rising_n": 0
+  },
+  {
+    "file": "related_Strompreis.json",
+    "type": "related_queries",
+    "keyword": "Strompreis",
+    "top_n": 25,
+    "rising_n": 25
+  }
+]

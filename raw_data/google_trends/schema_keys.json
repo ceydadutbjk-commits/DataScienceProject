@@ -1,0 +1,173 @@
+{
+  "iot_Gaspreis.json": [
+    "data",
+    "end",
+    "freq",
+    "geo",
+    "keyword",
+    "start",
+    "type"
+  ],
+  "summary.json": [
+    "file",
+    "first",
+    "keyword",
+    "last",
+    "n_points",
+    "type"
+  ],
+  "related_Gaspreis.json": [
+    "end",
+    "geo",
+    "keyword",
+    "related_queries",
+    "start",
+    "type"
+  ],
+  "iot_Margarine.json": [
+    "data",
+    "end",
+    "freq",
+    "geo",
+    "keyword",
+    "start",
+    "type"
+  ],
+  "region_Strompreis.json": [
+    "end",
+    "geo",
+    "keyword",
+    "resolution",
+    "rows",
+    "start",
+    "type"
+  ],
+  "region_Inflation.json": [
+    "end",
+    "geo",
+    "keyword",
+    "resolution",
+    "rows",
+    "start",
+    "type"
+  ],
+  "related_Margarine.json": [
+    "end",
+    "geo",
+    "keyword",
+    "related_queries",
+    "start",
+    "type"
+  ],
+  "iot_Lebensmittelpreise.json": [
+    "data",
+    "end",
+    "freq",
+    "geo",
+    "keyword",
+    "start",
+    "type"
+  ],
+  "iot_Strompreis.json": [
+    "data",
+    "end",
+    "freq",
+    "geo",
+    "keyword",
+    "start",
+    "type"
+  ],
+  "iot_Inflation.json": [
+    "data",
+    "end",
+    "freq",
+    "geo",
+    "keyword",
+    "start",
+    "type"
+  ],
+  "iot_Butter.json": [
+    "data",
+    "end",
+    "freq",
+    "geo",
+    "keyword",
+    "start",
+    "type"
+  ],
+  "related_Inflation.json": [
+    "end",
+    "geo",
+    "keyword",
+    "related_queries",
+    "start",
+    "type"
+  ],
+  "region_Margarine.json": [
+    "end",
+    "geo",
+    "keyword",
+    "resolution",
+    "rows",
+    "start",
+    "type"
+  ],
+  "region_Gaspreis.json": [
+    "end",
+    "geo",
+    "keyword",
+    "resolution",
+    "rows",
+    "start",
+    "type"
+  ],
+  "related_Lebensmittelpreise.json": [
+    "end",
+    "geo",
+    "keyword",
+    "related_queries",
+    "start",
+    "type"
+  ],
+  "region_Lebensmittelpreise.json": [
+    "end",
+    "geo",
+    "keyword",
+    "resolution",
+    "rows",
+    "start",
+    "type"
+  ],
+  "region_Butter.json": [
+    "end",
+    "geo",
+    "keyword",
+    "resolution",
+    "rows",
+    "start",
+    "type"
+  ],
+  "related_Strompreis.json": [
+    "end",
+    "geo",
+    "keyword",
+    "related_queries",
+    "start",
+    "type"
+  ],
+  "related_Butter.json": [
+    "end",
+    "geo",
+    "keyword",
+    "related_queries",
+    "start",
+    "type"
+  ],
+  "meta.json": [
+    "end",
+    "freq",
+    "geo",
+    "keywords",
+    "start"
+  ]
+}

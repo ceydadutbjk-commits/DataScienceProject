@@ -1,0 +1,90 @@
+{
+  "type": "interest_by_region",
+  "keyword": "Strompreis",
+  "start": "2020-01-01",
+  "end": "2024-12-31",
+  "geo": "DE",
+  "resolution": "REGION",
+  "rows": [
+    {
+      "geoName": "Baden-Württemberg",
+      "geoCode": "DE-BW",
+      "interest": 82
+    },
+    {
+      "geoName": "Bayern",
+      "geoCode": "DE-BY",
+      "interest": 100
+    },
+    {
+      "geoName": "Berlin",
+      "geoCode": "DE-BE",
+      "interest": 50
+    },
+    {
+      "geoName": "Brandenburg",
+      "geoCode": "DE-BB",
+      "interest": 75
+    },
+    {
+      "geoName": "Bremen",
+      "geoCode": "DE-HB",
+      "interest": 58
+    },
+    {
+      "geoName": "Hamburg",
+      "geoCode": "DE-HH",
+      "interest": 60
+    },
+    {
+      "geoName": "Hessen",
+      "geoCode": "DE-HE",
+      "interest": 65
+    },
+    {
+      "geoName": "Mecklenburg-Vorpommern",
+      "geoCode": "DE-MV",
+      "interest": 78
+    },
+    {
+      "geoName": "Niedersachsen",
+      "geoCode": "DE-NI",
+      "interest": 86
+    },
+    {
+      "geoName": "Nordrhein-Westfalen",
+      "geoCode": "DE-NW",
+      "interest": 76
+    },
+    {
+      "geoName": "Rheinland-Pfalz",
+      "geoCode": "DE-RP",
+      "interest": 81
+    },
+    {
+      "geoName": "Saarland",
+      "geoCode": "DE-SL",
+      "interest": 77
+    },
+    {
+      "geoName": "Sachsen",
+      "geoCode": "DE-SN",
+      "interest": 77
+    },
+    {
+      "geoName": "Sachsen-Anhalt",
+      "geoCode": "DE-ST",
+      "interest": 74
+    },
+    {
+      "geoName": "Schleswig-Holstein",
+      "geoCode": "DE-SH",
+      "interest": 89
+    },
+    {
+      "geoName": "Thüringen",
+      "geoCode": "DE-TH",
+      "interest": 70
+    }
+  ]
+}

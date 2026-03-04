@@ -1,0 +1,90 @@
+{
+  "type": "interest_by_region",
+  "keyword": "Butter",
+  "start": "2020-01-01",
+  "end": "2024-12-31",
+  "geo": "DE",
+  "resolution": "REGION",
+  "rows": [
+    {
+      "geoName": "Baden-Württemberg",
+      "geoCode": "DE-BW",
+      "interest": 73
+    },
+    {
+      "geoName": "Bayern",
+      "geoCode": "DE-BY",
+      "interest": 74
+    },
+    {
+      "geoName": "Berlin",
+      "geoCode": "DE-BE",
+      "interest": 100
+    },
+    {
+      "geoName": "Brandenburg",
+      "geoCode": "DE-BB",
+      "interest": 82
+    },
+    {
+      "geoName": "Bremen",
+      "geoCode": "DE-HB",
+      "interest": 75
+    },
+    {
+      "geoName": "Hamburg",
+      "geoCode": "DE-HH",
+      "interest": 81
+    },
+    {
+      "geoName": "Hessen",
+      "geoCode": "DE-HE",
+      "interest": 72
+    },
+    {
+      "geoName": "Mecklenburg-Vorpommern",
+      "geoCode": "DE-MV",
+      "interest": 70
+    },
+    {
+      "geoName": "Niedersachsen",
+      "geoCode": "DE-NI",
+      "interest": 65
+    },
+    {
+      "geoName": "Nordrhein-Westfalen",
+      "geoCode": "DE-NW",
+      "interest": 72
+    },
+    {
+      "geoName": "Rheinland-Pfalz",
+      "geoCode": "DE-RP",
+      "interest": 75
+    },
+    {
+      "geoName": "Saarland",
+      "geoCode": "DE-SL",
+      "interest": 71
+    },
+    {
+      "geoName": "Sachsen",
+      "geoCode": "DE-SN",
+      "interest": 74
+    },
+    {
+      "geoName": "Sachsen-Anhalt",
+      "geoCode": "DE-ST",
+      "interest": 69
+    },
+    {
+      "geoName": "Schleswig-Holstein",
+      "geoCode": "DE-SH",
+      "interest": 66
+    },
+    {
+      "geoName": "Thüringen",
+      "geoCode": "DE-TH",
+      "interest": 66
+    }
+  ]
+}

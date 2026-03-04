@@ -1,0 +1,49 @@
+{
+  "type": "related_queries",
+  "keyword": "Butter",
+  "start": "2020-01-01",
+  "end": "2024-12-31",
+  "geo": "DE",
+  "related_queries": {
+    "top": [
+      {
+        "query": "peanut butter",
+        "value": 100
+      },
+      {
+        "query": "butter chicken",
+        "value": 82
+      },
+      {
+        "query": "shea butter",
+        "value": 31
+      },
+      {
+        "query": "body butter",
+        "value": 19
+      },
+      {
+        "query": "peanut butter falcon",
+        "value": 12
+      },
+      {
+        "query": "the peanut butter falcon",
+        "value": 5
+      }
+    ],
+    "rising": [
+      {
+        "query": "peanut butter falcon",
+        "value": 170
+      },
+      {
+        "query": "butter chicken",
+        "value": 150
+      },
+      {
+        "query": "the peanut butter falcon",
+        "value": 80
+      }
+    ]
+  }
+}

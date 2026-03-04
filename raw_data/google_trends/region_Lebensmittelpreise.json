@@ -1,0 +1,90 @@
+{
+  "type": "interest_by_region",
+  "keyword": "Lebensmittelpreise",
+  "start": "2020-01-01",
+  "end": "2024-12-31",
+  "geo": "DE",
+  "resolution": "REGION",
+  "rows": [
+    {
+      "geoName": "Baden-Württemberg",
+      "geoCode": "DE-BW",
+      "interest": 59
+    },
+    {
+      "geoName": "Bayern",
+      "geoCode": "DE-BY",
+      "interest": 56
+    },
+    {
+      "geoName": "Berlin",
+      "geoCode": "DE-BE",
+      "interest": 69
+    },
+    {
+      "geoName": "Brandenburg",
+      "geoCode": "DE-BB",
+      "interest": 89
+    },
+    {
+      "geoName": "Bremen",
+      "geoCode": "DE-HB",
+      "interest": 75
+    },
+    {
+      "geoName": "Hamburg",
+      "geoCode": "DE-HH",
+      "interest": 70
+    },
+    {
+      "geoName": "Hessen",
+      "geoCode": "DE-HE",
+      "interest": 57
+    },
+    {
+      "geoName": "Mecklenburg-Vorpommern",
+      "geoCode": "DE-MV",
+      "interest": 100
+    },
+    {
+      "geoName": "Niedersachsen",
+      "geoCode": "DE-NI",
+      "interest": 67
+    },
+    {
+      "geoName": "Nordrhein-Westfalen",
+      "geoCode": "DE-NW",
+      "interest": 56
+    },
+    {
+      "geoName": "Rheinland-Pfalz",
+      "geoCode": "DE-RP",
+      "interest": 65
+    },
+    {
+      "geoName": "Saarland",
+      "geoCode": "DE-SL",
+      "interest": 73
+    },
+    {
+      "geoName": "Sachsen",
+      "geoCode": "DE-SN",
+      "interest": 94
+    },
+    {
+      "geoName": "Sachsen-Anhalt",
+      "geoCode": "DE-ST",
+      "interest": 94
+    },
+    {
+      "geoName": "Schleswig-Holstein",
+      "geoCode": "DE-SH",
+      "interest": 76
+    },
+    {
+      "geoName": "Thüringen",
+      "geoCode": "DE-TH",
+      "interest": 89
+    }
+  ]
+}

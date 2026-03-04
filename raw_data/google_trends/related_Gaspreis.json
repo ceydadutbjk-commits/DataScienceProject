@@ -1,0 +1,121 @@
+{
+  "type": "related_queries",
+  "keyword": "Gaspreis",
+  "start": "2020-01-01",
+  "end": "2024-12-31",
+  "geo": "DE",
+  "related_queries": {
+    "top": [
+      {
+        "query": "gaspreis aktuell",
+        "value": 100
+      },
+      {
+        "query": "gas",
+        "value": 64
+      },
+      {
+        "query": "gaspreis kwh",
+        "value": 36
+      },
+      {
+        "query": "gaspreis börse",
+        "value": 24
+      },
+      {
+        "query": "strompreis",
+        "value": 23
+      },
+      {
+        "query": "aktueller gaspreis",
+        "value": 23
+      },
+      {
+        "query": "gaspreise",
+        "value": 22
+      },
+      {
+        "query": "gaspreis deutschland",
+        "value": 17
+      },
+      {
+        "query": "gaspreis pro kwh",
+        "value": 15
+      },
+      {
+        "query": "ölpreis",
+        "value": 13
+      },
+      {
+        "query": "entwicklung gaspreis",
+        "value": 13
+      },
+      {
+        "query": "gaspreis chart",
+        "value": 9
+      },
+      {
+        "query": "gaspreis kwh aktuell",
+        "value": 8
+      },
+      {
+        "query": "gas preis",
+        "value": 7
+      },
+      {
+        "query": "gaspreisentwicklung",
+        "value": 7
+      },
+      {
+        "query": "gasspeicher",
+        "value": 6
+      },
+      {
+        "query": "gaspreis börse aktuell",
+        "value": 4
+      },
+      {
+        "query": "gaspreis aktuell chart",
+        "value": 2
+      }
+    ],
+    "rising": [
+      {
+        "query": "gasspeicher",
+        "value": 2300
+      },
+      {
+        "query": "gaspreis börse aktuell",
+        "value": 950
+      },
+      {
+        "query": "gaspreis aktuell chart",
+        "value": 750
+      },
+      {
+        "query": "gaspreis aktuell",
+        "value": 550
+      },
+      {
+        "query": "gaspreis kwh aktuell",
+        "value": 300
+      },
+      {
+        "query": "gaspreis börse",
+        "value": 250
+      },
+      {
+        "query": "gaspreis chart",
+        "value": 100
+      },
+      {
+        "query": "strompreis",
+        "value": 70
+      },
+      {
+        "query": "gaspreis deutschland",
+        "value": 50
+      }
+    ]
+  }
+}

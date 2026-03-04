@@ -1,0 +1,3204 @@
+{
+  "source": "google_trends_pytrends",
+  "files": {
+    "iot_Butter.json": {
+      "type": "interest_over_time",
+      "keyword": "Butter",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "freq": "ME",
+      "data": [
+        {
+          "date": "2019-12-31",
+          "value": 36.0
+        },
+        {
+          "date": "2020-01-31",
+          "value": 32.0
+        },
+        {
+          "date": "2020-02-29",
+          "value": 30.5
+        },
+        {
+          "date": "2020-03-31",
+          "value": 31.8
+        },
+        {
+          "date": "2020-04-30",
+          "value": 40.0
+        },
+        {
+          "date": "2020-05-31",
+          "value": 36.0
+        },
+        {
+          "date": "2020-06-30",
+          "value": 31.25
+        },
+        {
+          "date": "2020-07-31",
+          "value": 29.75
+        },
+        {
+          "date": "2020-08-31",
+          "value": 28.2
+        },
+        {
+          "date": "2020-09-30",
+          "value": 29.5
+        },
+        {
+          "date": "2020-10-31",
+          "value": 32.25
+        },
+        {
+          "date": "2020-11-30",
+          "value": 40.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 41.25
+        },
+        {
+          "date": "2021-01-31",
+          "value": 34.8
+        },
+        {
+          "date": "2021-02-28",
+          "value": 34.5
+        },
+        {
+          "date": "2021-03-31",
+          "value": 35.25
+        },
+        {
+          "date": "2021-04-30",
+          "value": 33.25
+        },
+        {
+          "date": "2021-05-31",
+          "value": 35.6
+        },
+        {
+          "date": "2021-06-30",
+          "value": 27.0
+        },
+        {
+          "date": "2021-07-31",
+          "value": 29.0
+        },
+        {
+          "date": "2021-08-31",
+          "value": 30.0
+        },
+        {
+          "date": "2021-09-30",
+          "value": 30.25
+        },
+        {
+          "date": "2021-10-31",
+          "value": 31.4
+        },
+        {
+          "date": "2021-11-30",
+          "value": 38.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 40.75
+        },
+        {
+          "date": "2022-01-31",
+          "value": 37.0
+        },
+        {
+          "date": "2022-02-28",
+          "value": 37.5
+        },
+        {
+          "date": "2022-03-31",
+          "value": 40.0
+        },
+        {
+          "date": "2022-04-30",
+          "value": 47.75
+        },
+        {
+          "date": "2022-05-31",
+          "value": 39.8
+        },
+        {
+          "date": "2022-06-30",
+          "value": 37.0
+        },
+        {
+          "date": "2022-07-31",
+          "value": 36.0
+        },
+        {
+          "date": "2022-08-31",
+          "value": 35.5
+        },
+        {
+          "date": "2022-09-30",
+          "value": 39.5
+        },
+        {
+          "date": "2022-10-31",
+          "value": 41.8
+        },
+        {
+          "date": "2022-11-30",
+          "value": 62.75
+        },
+        {
+          "date": "2022-12-31",
+          "value": 52.25
+        },
+        {
+          "date": "2023-01-31",
+          "value": 43.8
+        },
+        {
+          "date": "2023-02-28",
+          "value": 42.25
+        },
+        {
+          "date": "2023-03-31",
+          "value": 41.25
+        },
+        {
+          "date": "2023-04-30",
+          "value": 45.6
+        },
+        {
+          "date": "2023-05-31",
+          "value": 38.75
+        },
+        {
+          "date": "2023-06-30",
+          "value": 32.75
+        },
+        {
+          "date": "2023-07-31",
+          "value": 34.4
+        },
+        {
+          "date": "2023-08-31",
+          "value": 35.25
+        },
+        {
+          "date": "2023-09-30",
+          "value": 34.75
+        },
+        {
+          "date": "2023-10-31",
+          "value": 40.8
+        },
+        {
+          "date": "2023-11-30",
+          "value": 48.0
+        },
+        {
+          "date": "2023-12-31",
+          "value": 48.0
+        },
+        {
+          "date": "2024-01-31",
+          "value": 41.0
+        },
+        {
+          "date": "2024-02-29",
+          "value": 39.75
+        },
+        {
+          "date": "2024-03-31",
+          "value": 44.8
+        },
+        {
+          "date": "2024-04-30",
+          "value": 41.0
+        },
+        {
+          "date": "2024-05-31",
+          "value": 37.5
+        },
+        {
+          "date": "2024-06-30",
+          "value": 36.2
+        },
+        {
+          "date": "2024-07-31",
+          "value": 37.5
+        },
+        {
+          "date": "2024-08-31",
+          "value": 39.5
+        },
+        {
+          "date": "2024-09-30",
+          "value": 50.6
+        },
+        {
+          "date": "2024-10-31",
+          "value": 60.75
+        },
+        {
+          "date": "2024-11-30",
+          "value": 60.25
+        },
+        {
+          "date": "2024-12-31",
+          "value": 76.2
+        }
+      ]
+    },
+    "iot_Gaspreis.json": {
+      "type": "interest_over_time",
+      "keyword": "Gaspreis",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "freq": "ME",
+      "data": [
+        {
+          "date": "2019-12-31",
+          "value": 2.0
+        },
+        {
+          "date": "2020-01-31",
+          "value": 2.0
+        },
+        {
+          "date": "2020-02-29",
+          "value": 1.0
+        },
+        {
+          "date": "2020-03-31",
+          "value": 1.4
+        },
+        {
+          "date": "2020-04-30",
+          "value": 1.25
+        },
+        {
+          "date": "2020-05-31",
+          "value": 1.0
+        },
+        {
+          "date": "2020-06-30",
+          "value": 1.0
+        },
+        {
+          "date": "2020-07-31",
+          "value": 1.0
+        },
+        {
+          "date": "2020-08-31",
+          "value": 1.0
+        },
+        {
+          "date": "2020-09-30",
+          "value": 1.0
+        },
+        {
+          "date": "2020-10-31",
+          "value": 1.75
+        },
+        {
+          "date": "2020-11-30",
+          "value": 2.0
+        },
+        {
+          "date": "2020-12-31",
+          "value": 1.5
+        },
+        {
+          "date": "2021-01-31",
+          "value": 1.6
+        },
+        {
+          "date": "2021-02-28",
+          "value": 1.5
+        },
+        {
+          "date": "2021-03-31",
+          "value": 1.0
+        },
+        {
+          "date": "2021-04-30",
+          "value": 1.0
+        },
+        {
+          "date": "2021-05-31",
+          "value": 1.0
+        },
+        {
+          "date": "2021-06-30",
+          "value": 1.0
+        },
+        {
+          "date": "2021-07-31",
+          "value": 1.0
+        },
+        {
+          "date": "2021-08-31",
+          "value": 1.4
+        },
+        {
+          "date": "2021-09-30",
+          "value": 4.5
+        },
+        {
+          "date": "2021-10-31",
+          "value": 10.8
+        },
+        {
+          "date": "2021-11-30",
+          "value": 8.75
+        },
+        {
+          "date": "2021-12-31",
+          "value": 10.0
+        },
+        {
+          "date": "2022-01-31",
+          "value": 10.2
+        },
+        {
+          "date": "2022-02-28",
+          "value": 15.5
+        },
+        {
+          "date": "2022-03-31",
+          "value": 18.75
+        },
+        {
+          "date": "2022-04-30",
+          "value": 9.75
+        },
+        {
+          "date": "2022-05-31",
+          "value": 7.8
+        },
+        {
+          "date": "2022-06-30",
+          "value": 16.0
+        },
+        {
+          "date": "2022-07-31",
+          "value": 27.6
+        },
+        {
+          "date": "2022-08-31",
+          "value": 43.75
+        },
+        {
+          "date": "2022-09-30",
+          "value": 80.25
+        },
+        {
+          "date": "2022-10-31",
+          "value": 61.4
+        },
+        {
+          "date": "2022-11-30",
+          "value": 44.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 32.75
+        },
+        {
+          "date": "2023-01-31",
+          "value": 28.0
+        },
+        {
+          "date": "2023-02-28",
+          "value": 21.5
+        },
+        {
+          "date": "2023-03-31",
+          "value": 16.25
+        },
+        {
+          "date": "2023-04-30",
+          "value": 11.2
+        },
+        {
+          "date": "2023-05-31",
+          "value": 11.5
+        },
+        {
+          "date": "2023-06-30",
+          "value": 9.75
+        },
+        {
+          "date": "2023-07-31",
+          "value": 8.4
+        },
+        {
+          "date": "2023-08-31",
+          "value": 10.0
+        },
+        {
+          "date": "2023-09-30",
+          "value": 8.5
+        },
+        {
+          "date": "2023-10-31",
+          "value": 10.2
+        },
+        {
+          "date": "2023-11-30",
+          "value": 11.5
+        },
+        {
+          "date": "2023-12-31",
+          "value": 8.6
+        },
+        {
+          "date": "2024-01-31",
+          "value": 7.5
+        },
+        {
+          "date": "2024-02-29",
+          "value": 7.75
+        },
+        {
+          "date": "2024-03-31",
+          "value": 7.2
+        },
+        {
+          "date": "2024-04-30",
+          "value": 5.25
+        },
+        {
+          "date": "2024-05-31",
+          "value": 3.75
+        },
+        {
+          "date": "2024-06-30",
+          "value": 4.0
+        },
+        {
+          "date": "2024-07-31",
+          "value": 3.75
+        },
+        {
+          "date": "2024-08-31",
+          "value": 4.5
+        },
+        {
+          "date": "2024-09-30",
+          "value": 5.2
+        },
+        {
+          "date": "2024-10-31",
+          "value": 6.75
+        },
+        {
+          "date": "2024-11-30",
+          "value": 7.5
+        },
+        {
+          "date": "2024-12-31",
+          "value": 6.4
+        }
+      ]
+    },
+    "iot_Inflation.json": {
+      "type": "interest_over_time",
+      "keyword": "Inflation",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "freq": "ME",
+      "data": [
+        {
+          "date": "2019-12-31",
+          "value": 13.0
+        },
+        {
+          "date": "2020-01-31",
+          "value": 15.75
+        },
+        {
+          "date": "2020-02-29",
+          "value": 14.25
+        },
+        {
+          "date": "2020-03-31",
+          "value": 34.8
+        },
+        {
+          "date": "2020-04-30",
+          "value": 28.75
+        },
+        {
+          "date": "2020-05-31",
+          "value": 23.0
+        },
+        {
+          "date": "2020-06-30",
+          "value": 17.75
+        },
+        {
+          "date": "2020-07-31",
+          "value": 14.5
+        },
+        {
+          "date": "2020-08-31",
+          "value": 15.4
+        },
+        {
+          "date": "2020-09-30",
+          "value": 17.0
+        },
+        {
+          "date": "2020-10-31",
+          "value": 17.5
+        },
+        {
+          "date": "2020-11-30",
+          "value": 19.8
+        },
+        {
+          "date": "2020-12-31",
+          "value": 21.5
+        },
+        {
+          "date": "2021-01-31",
+          "value": 26.0
+        },
+        {
+          "date": "2021-02-28",
+          "value": 33.0
+        },
+        {
+          "date": "2021-03-31",
+          "value": 27.25
+        },
+        {
+          "date": "2021-04-30",
+          "value": 24.0
+        },
+        {
+          "date": "2021-05-31",
+          "value": 34.8
+        },
+        {
+          "date": "2021-06-30",
+          "value": 27.5
+        },
+        {
+          "date": "2021-07-31",
+          "value": 29.25
+        },
+        {
+          "date": "2021-08-31",
+          "value": 27.8
+        },
+        {
+          "date": "2021-09-30",
+          "value": 36.25
+        },
+        {
+          "date": "2021-10-31",
+          "value": 52.0
+        },
+        {
+          "date": "2021-11-30",
+          "value": 49.5
+        },
+        {
+          "date": "2021-12-31",
+          "value": 51.25
+        },
+        {
+          "date": "2022-01-31",
+          "value": 65.0
+        },
+        {
+          "date": "2022-02-28",
+          "value": 60.25
+        },
+        {
+          "date": "2022-03-31",
+          "value": 77.5
+        },
+        {
+          "date": "2022-04-30",
+          "value": 75.75
+        },
+        {
+          "date": "2022-05-31",
+          "value": 76.6
+        },
+        {
+          "date": "2022-06-30",
+          "value": 85.0
+        },
+        {
+          "date": "2022-07-31",
+          "value": 74.6
+        },
+        {
+          "date": "2022-08-31",
+          "value": 77.25
+        },
+        {
+          "date": "2022-09-30",
+          "value": 92.5
+        },
+        {
+          "date": "2022-10-31",
+          "value": 77.6
+        },
+        {
+          "date": "2022-11-30",
+          "value": 71.0
+        },
+        {
+          "date": "2022-12-31",
+          "value": 58.75
+        },
+        {
+          "date": "2023-01-31",
+          "value": 61.2
+        },
+        {
+          "date": "2023-02-28",
+          "value": 56.5
+        },
+        {
+          "date": "2023-03-31",
+          "value": 56.5
+        },
+        {
+          "date": "2023-04-30",
+          "value": 45.6
+        },
+        {
+          "date": "2023-05-31",
+          "value": 47.75
+        },
+        {
+          "date": "2023-06-30",
+          "value": 45.0
+        },
+        {
+          "date": "2023-07-31",
+          "value": 39.6
+        },
+        {
+          "date": "2023-08-31",
+          "value": 39.5
+        },
+        {
+          "date": "2023-09-30",
+          "value": 43.5
+        },
+        {
+          "date": "2023-10-31",
+          "value": 43.0
+        },
+        {
+          "date": "2023-11-30",
+          "value": 45.75
+        },
+        {
+          "date": "2023-12-31",
+          "value": 43.4
+        },
+        {
+          "date": "2024-01-31",
+          "value": 47.5
+        },
+        {
+          "date": "2024-02-29",
+          "value": 43.25
+        },
+        {
+          "date": "2024-03-31",
+          "value": 40.6
+        },
+        {
+          "date": "2024-04-30",
+          "value": 37.75
+        },
+        {
+          "date": "2024-05-31",
+          "value": 34.25
+        },
+        {
+          "date": "2024-06-30",
+          "value": 31.4
+        },
+        {
+          "date": "2024-07-31",
+          "value": 31.25
+        },
+        {
+          "date": "2024-08-31",
+          "value": 30.5
+        },
+        {
+          "date": "2024-09-30",
+          "value": 33.0
+        },
+        {
+          "date": "2024-10-31",
+          "value": 34.5
+        },
+        {
+          "date": "2024-11-30",
+          "value": 42.75
+        },
+        {
+          "date": "2024-12-31",
+          "value": 33.8
+        }
+      ]
+    },
+    "iot_Lebensmittelpreise.json": {
+      "type": "interest_over_time",
+      "keyword": "Lebensmittelpreise",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "freq": "ME",
+      "data": [
+        {
+          "date": "2019-12-31",
+          "value": 0.0
+        },
+        {
+          "date": "2020-01-31",
+          "value": 14.75
+        },
+        {
+          "date": "2020-02-29",
+          "value": 24.25
+        },
+        {
+          "date": "2020-03-31",
+          "value": 15.2
+        },
+        {
+          "date": "2020-04-30",
+          "value": 9.0
+        },
+        {
+          "date": "2020-05-31",
+          "value": 10.0
+        },
+        {
+          "date": "2020-06-30",
+          "value": 14.5
+        },
+        {
+          "date": "2020-07-31",
+          "value": 17.75
+        },
+        {
+          "date": "2020-08-31",
+          "value": 11.0
+        },
+        {
+          "date": "2020-09-30",
+          "value": 6.25
+        },
+        {
+          "date": "2020-10-31",
+          "value": 0.0
+        },
+        {
+          "date": "2020-11-30",
+          "value": 3.2
+        },
+        {
+          "date": "2020-12-31",
+          "value": 2.0
+        },
+        {
+          "date": "2021-01-31",
+          "value": 7.4
+        },
+        {
+          "date": "2021-02-28",
+          "value": 4.0
+        },
+        {
+          "date": "2021-03-31",
+          "value": 2.5
+        },
+        {
+          "date": "2021-04-30",
+          "value": 10.0
+        },
+        {
+          "date": "2021-05-31",
+          "value": 11.6
+        },
+        {
+          "date": "2021-06-30",
+          "value": 16.0
+        },
+        {
+          "date": "2021-07-31",
+          "value": 14.75
+        },
+        {
+          "date": "2021-08-31",
+          "value": 15.0
+        },
+        {
+          "date": "2021-09-30",
+          "value": 6.25
+        },
+        {
+          "date": "2021-10-31",
+          "value": 12.6
+        },
+        {
+          "date": "2021-11-30",
+          "value": 3.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 15.0
+        },
+        {
+          "date": "2022-01-31",
+          "value": 20.6
+        },
+        {
+          "date": "2022-02-28",
+          "value": 23.5
+        },
+        {
+          "date": "2022-03-31",
+          "value": 61.75
+        },
+        {
+          "date": "2022-04-30",
+          "value": 60.0
+        },
+        {
+          "date": "2022-05-31",
+          "value": 51.8
+        },
+        {
+          "date": "2022-06-30",
+          "value": 54.0
+        },
+        {
+          "date": "2022-07-31",
+          "value": 55.6
+        },
+        {
+          "date": "2022-08-31",
+          "value": 45.25
+        },
+        {
+          "date": "2022-09-30",
+          "value": 41.5
+        },
+        {
+          "date": "2022-10-31",
+          "value": 27.0
+        },
+        {
+          "date": "2022-11-30",
+          "value": 19.25
+        },
+        {
+          "date": "2022-12-31",
+          "value": 20.5
+        },
+        {
+          "date": "2023-01-31",
+          "value": 33.2
+        },
+        {
+          "date": "2023-02-28",
+          "value": 34.5
+        },
+        {
+          "date": "2023-03-31",
+          "value": 38.0
+        },
+        {
+          "date": "2023-04-30",
+          "value": 32.4
+        },
+        {
+          "date": "2023-05-31",
+          "value": 41.0
+        },
+        {
+          "date": "2023-06-30",
+          "value": 39.0
+        },
+        {
+          "date": "2023-07-31",
+          "value": 41.0
+        },
+        {
+          "date": "2023-08-31",
+          "value": 32.75
+        },
+        {
+          "date": "2023-09-30",
+          "value": 27.5
+        },
+        {
+          "date": "2023-10-31",
+          "value": 22.0
+        },
+        {
+          "date": "2023-11-30",
+          "value": 17.25
+        },
+        {
+          "date": "2023-12-31",
+          "value": 22.6
+        },
+        {
+          "date": "2024-01-31",
+          "value": 27.75
+        },
+        {
+          "date": "2024-02-29",
+          "value": 22.25
+        },
+        {
+          "date": "2024-03-31",
+          "value": 19.8
+        },
+        {
+          "date": "2024-04-30",
+          "value": 17.5
+        },
+        {
+          "date": "2024-05-31",
+          "value": 21.25
+        },
+        {
+          "date": "2024-06-30",
+          "value": 24.2
+        },
+        {
+          "date": "2024-07-31",
+          "value": 31.25
+        },
+        {
+          "date": "2024-08-31",
+          "value": 28.0
+        },
+        {
+          "date": "2024-09-30",
+          "value": 18.2
+        },
+        {
+          "date": "2024-10-31",
+          "value": 17.75
+        },
+        {
+          "date": "2024-11-30",
+          "value": 16.75
+        },
+        {
+          "date": "2024-12-31",
+          "value": 18.0
+        }
+      ]
+    },
+    "iot_Margarine.json": {
+      "type": "interest_over_time",
+      "keyword": "Margarine",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "freq": "ME",
+      "data": [
+        {
+          "date": "2019-12-31",
+          "value": 18.0
+        },
+        {
+          "date": "2020-01-31",
+          "value": 18.0
+        },
+        {
+          "date": "2020-02-29",
+          "value": 18.0
+        },
+        {
+          "date": "2020-03-31",
+          "value": 18.8
+        },
+        {
+          "date": "2020-04-30",
+          "value": 20.75
+        },
+        {
+          "date": "2020-05-31",
+          "value": 19.0
+        },
+        {
+          "date": "2020-06-30",
+          "value": 15.5
+        },
+        {
+          "date": "2020-07-31",
+          "value": 15.5
+        },
+        {
+          "date": "2020-08-31",
+          "value": 15.0
+        },
+        {
+          "date": "2020-09-30",
+          "value": 15.75
+        },
+        {
+          "date": "2020-10-31",
+          "value": 17.0
+        },
+        {
+          "date": "2020-11-30",
+          "value": 21.2
+        },
+        {
+          "date": "2020-12-31",
+          "value": 21.25
+        },
+        {
+          "date": "2021-01-31",
+          "value": 19.0
+        },
+        {
+          "date": "2021-02-28",
+          "value": 20.75
+        },
+        {
+          "date": "2021-03-31",
+          "value": 18.75
+        },
+        {
+          "date": "2021-04-30",
+          "value": 18.5
+        },
+        {
+          "date": "2021-05-31",
+          "value": 17.0
+        },
+        {
+          "date": "2021-06-30",
+          "value": 13.5
+        },
+        {
+          "date": "2021-07-31",
+          "value": 13.75
+        },
+        {
+          "date": "2021-08-31",
+          "value": 15.4
+        },
+        {
+          "date": "2021-09-30",
+          "value": 16.0
+        },
+        {
+          "date": "2021-10-31",
+          "value": 21.4
+        },
+        {
+          "date": "2021-11-30",
+          "value": 24.0
+        },
+        {
+          "date": "2021-12-31",
+          "value": 20.75
+        },
+        {
+          "date": "2022-01-31",
+          "value": 19.6
+        },
+        {
+          "date": "2022-02-28",
+          "value": 21.25
+        },
+        {
+          "date": "2022-03-31",
+          "value": 26.25
+        },
+        {
+          "date": "2022-04-30",
+          "value": 28.0
+        },
+        {
+          "date": "2022-05-31",
+          "value": 24.4
+        },
+        {
+          "date": "2022-06-30",
+          "value": 24.0
+        },
+        {
+          "date": "2022-07-31",
+          "value": 21.4
+        },
+        {
+          "date": "2022-08-31",
+          "value": 31.0
+        },
+        {
+          "date": "2022-09-30",
+          "value": 25.25
+        },
+        {
+          "date": "2022-10-31",
+          "value": 30.0
+        },
+        {
+          "date": "2022-11-30",
+          "value": 53.5
+        },
+        {
+          "date": "2022-12-31",
+          "value": 30.25
+        },
+        {
+          "date": "2023-01-31",
+          "value": 28.8
+        },
+        {
+          "date": "2023-02-28",
+          "value": 25.0
+        },
+        {
+          "date": "2023-03-31",
+          "value": 24.75
+        },
+        {
+          "date": "2023-04-30",
+          "value": 21.4
+        },
+        {
+          "date": "2023-05-31",
+          "value": 19.0
+        },
+        {
+          "date": "2023-06-30",
+          "value": 17.75
+        },
+        {
+          "date": "2023-07-31",
+          "value": 18.2
+        },
+        {
+          "date": "2023-08-31",
+          "value": 19.5
+        },
+        {
+          "date": "2023-09-30",
+          "value": 19.25
+        },
+        {
+          "date": "2023-10-31",
+          "value": 22.0
+        },
+        {
+          "date": "2023-11-30",
+          "value": 44.5
+        },
+        {
+          "date": "2023-12-31",
+          "value": 26.2
+        },
+        {
+          "date": "2024-01-31",
+          "value": 21.75
+        },
+        {
+          "date": "2024-02-29",
+          "value": 23.25
+        },
+        {
+          "date": "2024-03-31",
+          "value": 22.4
+        },
+        {
+          "date": "2024-04-30",
+          "value": 20.0
+        },
+        {
+          "date": "2024-05-31",
+          "value": 18.75
+        },
+        {
+          "date": "2024-06-30",
+          "value": 17.8
+        },
+        {
+          "date": "2024-07-31",
+          "value": 17.25
+        },
+        {
+          "date": "2024-08-31",
+          "value": 18.25
+        },
+        {
+          "date": "2024-09-30",
+          "value": 21.2
+        },
+        {
+          "date": "2024-10-31",
+          "value": 25.75
+        },
+        {
+          "date": "2024-11-30",
+          "value": 28.25
+        },
+        {
+          "date": "2024-12-31",
+          "value": 28.4
+        }
+      ]
+    },
+    "iot_Strompreis.json": {
+      "type": "interest_over_time",
+      "keyword": "Strompreis",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "freq": "ME",
+      "data": [
+        {
+          "date": "2019-12-31",
+          "value": 10.0
+        },
+        {
+          "date": "2020-01-31",
+          "value": 9.25
+        },
+        {
+          "date": "2020-02-29",
+          "value": 8.75
+        },
+        {
+          "date": "2020-03-31",
+          "value": 5.4
+        },
+        {
+          "date": "2020-04-30",
+          "value": 5.25
+        },
+        {
+          "date": "2020-05-31",
+          "value": 5.8
+        },
+        {
+          "date": "2020-06-30",
+          "value": 6.0
+        },
+        {
+          "date": "2020-07-31",
+          "value": 5.5
+        },
+        {
+          "date": "2020-08-31",
+          "value": 5.2
+        },
+        {
+          "date": "2020-09-30",
+          "value": 5.75
+        },
+        {
+          "date": "2020-10-31",
+          "value": 6.0
+        },
+        {
+          "date": "2020-11-30",
+          "value": 7.2
+        },
+        {
+          "date": "2020-12-31",
+          "value": 6.25
+        },
+        {
+          "date": "2021-01-31",
+          "value": 7.6
+        },
+        {
+          "date": "2021-02-28",
+          "value": 7.0
+        },
+        {
+          "date": "2021-03-31",
+          "value": 5.75
+        },
+        {
+          "date": "2021-04-30",
+          "value": 5.75
+        },
+        {
+          "date": "2021-05-31",
+          "value": 5.4
+        },
+        {
+          "date": "2021-06-30",
+          "value": 6.25
+        },
+        {
+          "date": "2021-07-31",
+          "value": 6.0
+        },
+        {
+          "date": "2021-08-31",
+          "value": 6.4
+        },
+        {
+          "date": "2021-09-30",
+          "value": 9.25
+        },
+        {
+          "date": "2021-10-31",
+          "value": 15.8
+        },
+        {
+          "date": "2021-11-30",
+          "value": 13.5
+        },
+        {
+          "date": "2021-12-31",
+          "value": 17.25
+        },
+        {
+          "date": "2022-01-31",
+          "value": 29.4
+        },
+        {
+          "date": "2022-02-28",
+          "value": 19.25
+        },
+        {
+          "date": "2022-03-31",
+          "value": 21.0
+        },
+        {
+          "date": "2022-04-30",
+          "value": 17.5
+        },
+        {
+          "date": "2022-05-31",
+          "value": 12.4
+        },
+        {
+          "date": "2022-06-30",
+          "value": 16.5
+        },
+        {
+          "date": "2022-07-31",
+          "value": 24.6
+        },
+        {
+          "date": "2022-08-31",
+          "value": 60.75
+        },
+        {
+          "date": "2022-09-30",
+          "value": 79.0
+        },
+        {
+          "date": "2022-10-31",
+          "value": 55.6
+        },
+        {
+          "date": "2022-11-30",
+          "value": 73.5
+        },
+        {
+          "date": "2022-12-31",
+          "value": 46.5
+        },
+        {
+          "date": "2023-01-31",
+          "value": 45.8
+        },
+        {
+          "date": "2023-02-28",
+          "value": 38.0
+        },
+        {
+          "date": "2023-03-31",
+          "value": 31.0
+        },
+        {
+          "date": "2023-04-30",
+          "value": 30.4
+        },
+        {
+          "date": "2023-05-31",
+          "value": 27.25
+        },
+        {
+          "date": "2023-06-30",
+          "value": 23.5
+        },
+        {
+          "date": "2023-07-31",
+          "value": 24.0
+        },
+        {
+          "date": "2023-08-31",
+          "value": 26.25
+        },
+        {
+          "date": "2023-09-30",
+          "value": 23.5
+        },
+        {
+          "date": "2023-10-31",
+          "value": 23.6
+        },
+        {
+          "date": "2023-11-30",
+          "value": 35.5
+        },
+        {
+          "date": "2023-12-31",
+          "value": 40.8
+        },
+        {
+          "date": "2024-01-31",
+          "value": 23.75
+        },
+        {
+          "date": "2024-02-29",
+          "value": 27.0
+        },
+        {
+          "date": "2024-03-31",
+          "value": 19.6
+        },
+        {
+          "date": "2024-04-30",
+          "value": 17.75
+        },
+        {
+          "date": "2024-05-31",
+          "value": 15.5
+        },
+        {
+          "date": "2024-06-30",
+          "value": 17.4
+        },
+        {
+          "date": "2024-07-31",
+          "value": 15.5
+        },
+        {
+          "date": "2024-08-31",
+          "value": 16.75
+        },
+        {
+          "date": "2024-09-30",
+          "value": 19.8
+        },
+        {
+          "date": "2024-10-31",
+          "value": 23.0
+        },
+        {
+          "date": "2024-11-30",
+          "value": 29.25
+        },
+        {
+          "date": "2024-12-31",
+          "value": 35.6
+        }
+      ]
+    },
+    "meta.json": {
+      "keywords": [
+        "Butter",
+        "Margarine",
+        "Lebensmittelpreise",
+        "Inflation",
+        "Gaspreis",
+        "Strompreis"
+      ],
+      "geo": "DE",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "freq": "ME"
+    },
+    "region_Butter.json": {
+      "type": "interest_by_region",
+      "keyword": "Butter",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "resolution": "REGION",
+      "rows": [
+        {
+          "geoName": "Baden-Württemberg",
+          "geoCode": "DE-BW",
+          "interest": 73
+        },
+        {
+          "geoName": "Bayern",
+          "geoCode": "DE-BY",
+          "interest": 74
+        },
+        {
+          "geoName": "Berlin",
+          "geoCode": "DE-BE",
+          "interest": 100
+        },
+        {
+          "geoName": "Brandenburg",
+          "geoCode": "DE-BB",
+          "interest": 82
+        },
+        {
+          "geoName": "Bremen",
+          "geoCode": "DE-HB",
+          "interest": 75
+        },
+        {
+          "geoName": "Hamburg",
+          "geoCode": "DE-HH",
+          "interest": 81
+        },
+        {
+          "geoName": "Hessen",
+          "geoCode": "DE-HE",
+          "interest": 72
+        },
+        {
+          "geoName": "Mecklenburg-Vorpommern",
+          "geoCode": "DE-MV",
+          "interest": 70
+        },
+        {
+          "geoName": "Niedersachsen",
+          "geoCode": "DE-NI",
+          "interest": 65
+        },
+        {
+          "geoName": "Nordrhein-Westfalen",
+          "geoCode": "DE-NW",
+          "interest": 72
+        },
+        {
+          "geoName": "Rheinland-Pfalz",
+          "geoCode": "DE-RP",
+          "interest": 75
+        },
+        {
+          "geoName": "Saarland",
+          "geoCode": "DE-SL",
+          "interest": 71
+        },
+        {
+          "geoName": "Sachsen",
+          "geoCode": "DE-SN",
+          "interest": 74
+        },
+        {
+          "geoName": "Sachsen-Anhalt",
+          "geoCode": "DE-ST",
+          "interest": 69
+        },
+        {
+          "geoName": "Schleswig-Holstein",
+          "geoCode": "DE-SH",
+          "interest": 66
+        },
+        {
+          "geoName": "Thüringen",
+          "geoCode": "DE-TH",
+          "interest": 66
+        }
+      ]
+    },
+    "region_Gaspreis.json": {
+      "type": "interest_by_region",
+      "keyword": "Gaspreis",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "resolution": "REGION",
+      "rows": [
+        {
+          "geoName": "Baden-Württemberg",
+          "geoCode": "DE-BW",
+          "interest": 60
+        },
+        {
+          "geoName": "Bayern",
+          "geoCode": "DE-BY",
+          "interest": 71
+        },
+        {
+          "geoName": "Berlin",
+          "geoCode": "DE-BE",
+          "interest": 44
+        },
+        {
+          "geoName": "Brandenburg",
+          "geoCode": "DE-BB",
+          "interest": 81
+        },
+        {
+          "geoName": "Bremen",
+          "geoCode": "DE-HB",
+          "interest": 57
+        },
+        {
+          "geoName": "Hamburg",
+          "geoCode": "DE-HH",
+          "interest": 57
+        },
+        {
+          "geoName": "Hessen",
+          "geoCode": "DE-HE",
+          "interest": 57
+        },
+        {
+          "geoName": "Mecklenburg-Vorpommern",
+          "geoCode": "DE-MV",
+          "interest": 60
+        },
+        {
+          "geoName": "Niedersachsen",
+          "geoCode": "DE-NI",
+          "interest": 100
+        },
+        {
+          "geoName": "Nordrhein-Westfalen",
+          "geoCode": "DE-NW",
+          "interest": 74
+        },
+        {
+          "geoName": "Rheinland-Pfalz",
+          "geoCode": "DE-RP",
+          "interest": 71
+        },
+        {
+          "geoName": "Saarland",
+          "geoCode": "DE-SL",
+          "interest": 74
+        },
+        {
+          "geoName": "Sachsen",
+          "geoCode": "DE-SN",
+          "interest": 76
+        },
+        {
+          "geoName": "Sachsen-Anhalt",
+          "geoCode": "DE-ST",
+          "interest": 86
+        },
+        {
+          "geoName": "Schleswig-Holstein",
+          "geoCode": "DE-SH",
+          "interest": 85
+        },
+        {
+          "geoName": "Thüringen",
+          "geoCode": "DE-TH",
+          "interest": 77
+        }
+      ]
+    },
+    "region_Inflation.json": {
+      "type": "interest_by_region",
+      "keyword": "Inflation",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "resolution": "REGION",
+      "rows": [
+        {
+          "geoName": "Baden-Württemberg",
+          "geoCode": "DE-BW",
+          "interest": 79
+        },
+        {
+          "geoName": "Bayern",
+          "geoCode": "DE-BY",
+          "interest": 82
+        },
+        {
+          "geoName": "Berlin",
+          "geoCode": "DE-BE",
+          "interest": 88
+        },
+        {
+          "geoName": "Brandenburg",
+          "geoCode": "DE-BB",
+          "interest": 64
+        },
+        {
+          "geoName": "Bremen",
+          "geoCode": "DE-HB",
+          "interest": 75
+        },
+        {
+          "geoName": "Hamburg",
+          "geoCode": "DE-HH",
+          "interest": 100
+        },
+        {
+          "geoName": "Hessen",
+          "geoCode": "DE-HE",
+          "interest": 84
+        },
+        {
+          "geoName": "Mecklenburg-Vorpommern",
+          "geoCode": "DE-MV",
+          "interest": 56
+        },
+        {
+          "geoName": "Niedersachsen",
+          "geoCode": "DE-NI",
+          "interest": 71
+        },
+        {
+          "geoName": "Nordrhein-Westfalen",
+          "geoCode": "DE-NW",
+          "interest": 69
+        },
+        {
+          "geoName": "Rheinland-Pfalz",
+          "geoCode": "DE-RP",
+          "interest": 65
+        },
+        {
+          "geoName": "Saarland",
+          "geoCode": "DE-SL",
+          "interest": 61
+        },
+        {
+          "geoName": "Sachsen",
+          "geoCode": "DE-SN",
+          "interest": 61
+        },
+        {
+          "geoName": "Sachsen-Anhalt",
+          "geoCode": "DE-ST",
+          "interest": 51
+        },
+        {
+          "geoName": "Schleswig-Holstein",
+          "geoCode": "DE-SH",
+          "interest": 70
+        },
+        {
+          "geoName": "Thüringen",
+          "geoCode": "DE-TH",
+          "interest": 53
+        }
+      ]
+    },
+    "region_Lebensmittelpreise.json": {
+      "type": "interest_by_region",
+      "keyword": "Lebensmittelpreise",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "resolution": "REGION",
+      "rows": [
+        {
+          "geoName": "Baden-Württemberg",
+          "geoCode": "DE-BW",
+          "interest": 59
+        },
+        {
+          "geoName": "Bayern",
+          "geoCode": "DE-BY",
+          "interest": 56
+        },
+        {
+          "geoName": "Berlin",
+          "geoCode": "DE-BE",
+          "interest": 69
+        },
+        {
+          "geoName": "Brandenburg",
+          "geoCode": "DE-BB",
+          "interest": 89
+        },
+        {
+          "geoName": "Bremen",
+          "geoCode": "DE-HB",
+          "interest": 75
+        },
+        {
+          "geoName": "Hamburg",
+          "geoCode": "DE-HH",
+          "interest": 70
+        },
+        {
+          "geoName": "Hessen",
+          "geoCode": "DE-HE",
+          "interest": 57
+        },
+        {
+          "geoName": "Mecklenburg-Vorpommern",
+          "geoCode": "DE-MV",
+          "interest": 100
+        },
+        {
+          "geoName": "Niedersachsen",
+          "geoCode": "DE-NI",
+          "interest": 67
+        },
+        {
+          "geoName": "Nordrhein-Westfalen",
+          "geoCode": "DE-NW",
+          "interest": 56
+        },
+        {
+          "geoName": "Rheinland-Pfalz",
+          "geoCode": "DE-RP",
+          "interest": 65
+        },
+        {
+          "geoName": "Saarland",
+          "geoCode": "DE-SL",
+          "interest": 73
+        },
+        {
+          "geoName": "Sachsen",
+          "geoCode": "DE-SN",
+          "interest": 94
+        },
+        {
+          "geoName": "Sachsen-Anhalt",
+          "geoCode": "DE-ST",
+          "interest": 94
+        },
+        {
+          "geoName": "Schleswig-Holstein",
+          "geoCode": "DE-SH",
+          "interest": 76
+        },
+        {
+          "geoName": "Thüringen",
+          "geoCode": "DE-TH",
+          "interest": 89
+        }
+      ]
+    },
+    "region_Margarine.json": {
+      "type": "interest_by_region",
+      "keyword": "Margarine",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "resolution": "REGION",
+      "rows": [
+        {
+          "geoName": "Baden-Württemberg",
+          "geoCode": "DE-BW",
+          "interest": 75
+        },
+        {
+          "geoName": "Bayern",
+          "geoCode": "DE-BY",
+          "interest": 65
+        },
+        {
+          "geoName": "Berlin",
+          "geoCode": "DE-BE",
+          "interest": 73
+        },
+        {
+          "geoName": "Brandenburg",
+          "geoCode": "DE-BB",
+          "interest": 75
+        },
+        {
+          "geoName": "Bremen",
+          "geoCode": "DE-HB",
+          "interest": 93
+        },
+        {
+          "geoName": "Hamburg",
+          "geoCode": "DE-HH",
+          "interest": 79
+        },
+        {
+          "geoName": "Hessen",
+          "geoCode": "DE-HE",
+          "interest": 70
+        },
+        {
+          "geoName": "Mecklenburg-Vorpommern",
+          "geoCode": "DE-MV",
+          "interest": 76
+        },
+        {
+          "geoName": "Niedersachsen",
+          "geoCode": "DE-NI",
+          "interest": 95
+        },
+        {
+          "geoName": "Nordrhein-Westfalen",
+          "geoCode": "DE-NW",
+          "interest": 94
+        },
+        {
+          "geoName": "Rheinland-Pfalz",
+          "geoCode": "DE-RP",
+          "interest": 79
+        },
+        {
+          "geoName": "Saarland",
+          "geoCode": "DE-SL",
+          "interest": 81
+        },
+        {
+          "geoName": "Sachsen",
+          "geoCode": "DE-SN",
+          "interest": 75
+        },
+        {
+          "geoName": "Sachsen-Anhalt",
+          "geoCode": "DE-ST",
+          "interest": 74
+        },
+        {
+          "geoName": "Schleswig-Holstein",
+          "geoCode": "DE-SH",
+          "interest": 100
+        },
+        {
+          "geoName": "Thüringen",
+          "geoCode": "DE-TH",
+          "interest": 71
+        }
+      ]
+    },
+    "region_Strompreis.json": {
+      "type": "interest_by_region",
+      "keyword": "Strompreis",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "resolution": "REGION",
+      "rows": [
+        {
+          "geoName": "Baden-Württemberg",
+          "geoCode": "DE-BW",
+          "interest": 82
+        },
+        {
+          "geoName": "Bayern",
+          "geoCode": "DE-BY",
+          "interest": 100
+        },
+        {
+          "geoName": "Berlin",
+          "geoCode": "DE-BE",
+          "interest": 50
+        },
+        {
+          "geoName": "Brandenburg",
+          "geoCode": "DE-BB",
+          "interest": 75
+        },
+        {
+          "geoName": "Bremen",
+          "geoCode": "DE-HB",
+          "interest": 58
+        },
+        {
+          "geoName": "Hamburg",
+          "geoCode": "DE-HH",
+          "interest": 60
+        },
+        {
+          "geoName": "Hessen",
+          "geoCode": "DE-HE",
+          "interest": 65
+        },
+        {
+          "geoName": "Mecklenburg-Vorpommern",
+          "geoCode": "DE-MV",
+          "interest": 78
+        },
+        {
+          "geoName": "Niedersachsen",
+          "geoCode": "DE-NI",
+          "interest": 86
+        },
+        {
+          "geoName": "Nordrhein-Westfalen",
+          "geoCode": "DE-NW",
+          "interest": 76
+        },
+        {
+          "geoName": "Rheinland-Pfalz",
+          "geoCode": "DE-RP",
+          "interest": 81
+        },
+        {
+          "geoName": "Saarland",
+          "geoCode": "DE-SL",
+          "interest": 77
+        },
+        {
+          "geoName": "Sachsen",
+          "geoCode": "DE-SN",
+          "interest": 77
+        },
+        {
+          "geoName": "Sachsen-Anhalt",
+          "geoCode": "DE-ST",
+          "interest": 74
+        },
+        {
+          "geoName": "Schleswig-Holstein",
+          "geoCode": "DE-SH",
+          "interest": 89
+        },
+        {
+          "geoName": "Thüringen",
+          "geoCode": "DE-TH",
+          "interest": 70
+        }
+      ]
+    },
+    "related_Butter.json": {
+      "type": "related_queries",
+      "keyword": "Butter",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "related_queries": {
+        "top": [
+          {
+            "query": "peanut butter",
+            "value": 100
+          },
+          {
+            "query": "butter chicken",
+            "value": 82
+          },
+          {
+            "query": "shea butter",
+            "value": 31
+          },
+          {
+            "query": "body butter",
+            "value": 19
+          },
+          {
+            "query": "peanut butter falcon",
+            "value": 12
+          },
+          {
+            "query": "the peanut butter falcon",
+            "value": 5
+          }
+        ],
+        "rising": [
+          {
+            "query": "peanut butter falcon",
+            "value": 170
+          },
+          {
+            "query": "butter chicken",
+            "value": 150
+          },
+          {
+            "query": "the peanut butter falcon",
+            "value": 80
+          }
+        ]
+      }
+    },
+    "related_Gaspreis.json": {
+      "type": "related_queries",
+      "keyword": "Gaspreis",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "related_queries": {
+        "top": [
+          {
+            "query": "gaspreis aktuell",
+            "value": 100
+          },
+          {
+            "query": "gas",
+            "value": 64
+          },
+          {
+            "query": "gaspreis kwh",
+            "value": 36
+          },
+          {
+            "query": "gaspreis börse",
+            "value": 24
+          },
+          {
+            "query": "strompreis",
+            "value": 23
+          },
+          {
+            "query": "aktueller gaspreis",
+            "value": 23
+          },
+          {
+            "query": "gaspreise",
+            "value": 22
+          },
+          {
+            "query": "gaspreis deutschland",
+            "value": 17
+          },
+          {
+            "query": "gaspreis pro kwh",
+            "value": 15
+          },
+          {
+            "query": "ölpreis",
+            "value": 13
+          },
+          {
+            "query": "entwicklung gaspreis",
+            "value": 13
+          },
+          {
+            "query": "gaspreis chart",
+            "value": 9
+          },
+          {
+            "query": "gaspreis kwh aktuell",
+            "value": 8
+          },
+          {
+            "query": "gas preis",
+            "value": 7
+          },
+          {
+            "query": "gaspreisentwicklung",
+            "value": 7
+          },
+          {
+            "query": "gasspeicher",
+            "value": 6
+          },
+          {
+            "query": "gaspreis börse aktuell",
+            "value": 4
+          },
+          {
+            "query": "gaspreis aktuell chart",
+            "value": 2
+          }
+        ],
+        "rising": [
+          {
+            "query": "gasspeicher",
+            "value": 2300
+          },
+          {
+            "query": "gaspreis börse aktuell",
+            "value": 950
+          },
+          {
+            "query": "gaspreis aktuell chart",
+            "value": 750
+          },
+          {
+            "query": "gaspreis aktuell",
+            "value": 550
+          },
+          {
+            "query": "gaspreis kwh aktuell",
+            "value": 300
+          },
+          {
+            "query": "gaspreis börse",
+            "value": 250
+          },
+          {
+            "query": "gaspreis chart",
+            "value": 100
+          },
+          {
+            "query": "strompreis",
+            "value": 70
+          },
+          {
+            "query": "gaspreis deutschland",
+            "value": 50
+          }
+        ]
+      }
+    },
+    "related_Inflation.json": {
+      "type": "related_queries",
+      "keyword": "Inflation",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "related_queries": {
+        "top": [
+          {
+            "query": "inflation deutschland",
+            "value": 100
+          },
+          {
+            "query": "inflation 2022",
+            "value": 35
+          },
+          {
+            "query": "inflation 2023",
+            "value": 26
+          },
+          {
+            "query": "inflation euro",
+            "value": 16
+          },
+          {
+            "query": "inflation 2021",
+            "value": 16
+          },
+          {
+            "query": "inflation deutschland 2022",
+            "value": 16
+          },
+          {
+            "query": "inflation in deutschland",
+            "value": 14
+          },
+          {
+            "query": "inflation 2024",
+            "value": 13
+          },
+          {
+            "query": "inflation usa",
+            "value": 13
+          },
+          {
+            "query": "inflation rate",
+            "value": 12
+          },
+          {
+            "query": "inflation aktuell",
+            "value": 11
+          },
+          {
+            "query": "inflation deutschland 2023",
+            "value": 11
+          },
+          {
+            "query": "inflation türkei",
+            "value": 11
+          },
+          {
+            "query": "was ist inflation",
+            "value": 10
+          },
+          {
+            "query": "inflationsrate",
+            "value": 10
+          },
+          {
+            "query": "inflation 2020",
+            "value": 10
+          },
+          {
+            "query": "definition inflation",
+            "value": 9
+          },
+          {
+            "query": "germany inflation",
+            "value": 9
+          },
+          {
+            "query": "inflation germany",
+            "value": 9
+          },
+          {
+            "query": "deflation",
+            "value": 8
+          },
+          {
+            "query": "inflation corona",
+            "value": 8
+          },
+          {
+            "query": "inflation us",
+            "value": 8
+          },
+          {
+            "query": "ezb inflation",
+            "value": 7
+          },
+          {
+            "query": "ezb",
+            "value": 7
+          },
+          {
+            "query": "inflation deutschland 2021",
+            "value": 6
+          }
+        ],
+        "rising": [
+          {
+            "query": "inflation deutschland 2022",
+            "value": 322450
+          },
+          {
+            "query": "inflation 2024",
+            "value": 265850
+          },
+          {
+            "query": "inflation deutschland 2023",
+            "value": 224300
+          },
+          {
+            "query": "inflation corona",
+            "value": 167900
+          },
+          {
+            "query": "inflation deutschland 2024",
+            "value": 93050
+          },
+          {
+            "query": "inflation 2023",
+            "value": 65850
+          },
+          {
+            "query": "inflation 2022",
+            "value": 52150
+          },
+          {
+            "query": "inflation reduction act",
+            "value": 41650
+          },
+          {
+            "query": "inflationsrate deutschland 2022",
+            "value": 24600
+          },
+          {
+            "query": "inflation 2021",
+            "value": 19550
+          },
+          {
+            "query": "inflation januar 2023",
+            "value": 14400
+          },
+          {
+            "query": "inflation schweiz 2022",
+            "value": 12800
+          },
+          {
+            "query": "inflation deutschland 2021",
+            "value": 9900
+          },
+          {
+            "query": "inflationsprämie",
+            "value": 5800
+          },
+          {
+            "query": "inflation 2020",
+            "value": 800
+          },
+          {
+            "query": "wie hoch ist die inflation",
+            "value": 350
+          },
+          {
+            "query": "inflation russland",
+            "value": 200
+          },
+          {
+            "query": "inflation aktuell",
+            "value": 200
+          },
+          {
+            "query": "schweiz inflation",
+            "value": 200
+          },
+          {
+            "query": "inflation usa",
+            "value": 160
+          },
+          {
+            "query": "germany inflation",
+            "value": 110
+          },
+          {
+            "query": "inflation us",
+            "value": 110
+          },
+          {
+            "query": "inflation germany",
+            "value": 100
+          },
+          {
+            "query": "inflation türkei",
+            "value": 90
+          },
+          {
+            "query": "inflation in deutschland",
+            "value": 80
+          }
+        ]
+      }
+    },
+    "related_Lebensmittelpreise.json": {
+      "type": "related_queries",
+      "keyword": "Lebensmittelpreise",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "related_queries": {
+        "top": [],
+        "rising": []
+      }
+    },
+    "related_Margarine.json": {
+      "type": "related_queries",
+      "keyword": "Margarine",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "related_queries": {
+        "top": [],
+        "rising": []
+      }
+    },
+    "related_Strompreis.json": {
+      "type": "related_queries",
+      "keyword": "Strompreis",
+      "start": "2020-01-01",
+      "end": "2024-12-31",
+      "geo": "DE",
+      "related_queries": {
+        "top": [
+          {
+            "query": "strompreis aktuell",
+            "value": 100
+          },
+          {
+            "query": "strompreis kwh",
+            "value": 82
+          },
+          {
+            "query": "strompreis 2023",
+            "value": 54
+          },
+          {
+            "query": "strompreis eon",
+            "value": 53
+          },
+          {
+            "query": "aktueller strompreis",
+            "value": 51
+          },
+          {
+            "query": "eon",
+            "value": 49
+          },
+          {
+            "query": "strompreis 2022",
+            "value": 46
+          },
+          {
+            "query": "strompreis deutschland",
+            "value": 43
+          },
+          {
+            "query": "strompreis börse",
+            "value": 40
+          },
+          {
+            "query": "strompreise",
+            "value": 39
+          },
+          {
+            "query": "gaspreis",
+            "value": 31
+          },
+          {
+            "query": "strompreis vergleich",
+            "value": 31
+          },
+          {
+            "query": "strompreis pro kwh",
+            "value": 30
+          },
+          {
+            "query": "vattenfall",
+            "value": 27
+          },
+          {
+            "query": "strompreis 2024",
+            "value": 24
+          },
+          {
+            "query": "strompreis enbw",
+            "value": 20
+          },
+          {
+            "query": "verivox",
+            "value": 20
+          },
+          {
+            "query": "enbw",
+            "value": 20
+          },
+          {
+            "query": "stromanbieter",
+            "value": 16
+          },
+          {
+            "query": "strompreis grundversorgung",
+            "value": 15
+          },
+          {
+            "query": "tibber",
+            "value": 15
+          },
+          {
+            "query": "tibber strompreis",
+            "value": 14
+          },
+          {
+            "query": "strompreis prognose",
+            "value": 14
+          },
+          {
+            "query": "strompreis aktuell börse",
+            "value": 14
+          },
+          {
+            "query": "strompreisbremse",
+            "value": 9
+          }
+        ],
+        "rising": [
+          {
+            "query": "strompreis 2023",
+            "value": 598300
+          },
+          {
+            "query": "strompreis 2024",
+            "value": 270000
+          },
+          {
+            "query": "tibber",
+            "value": 163950
+          },
+          {
+            "query": "tibber strompreis",
+            "value": 155950
+          },
+          {
+            "query": "strompreise 2022",
+            "value": 55550
+          },
+          {
+            "query": "eon strompreis bestandskunden",
+            "value": 44100
+          },
+          {
+            "query": "strompreis bremse",
+            "value": 31050
+          },
+          {
+            "query": "strompreis 2022",
+            "value": 25400
+          },
+          {
+            "query": "strompreisbremse 2023",
+            "value": 21600
+          },
+          {
+            "query": "strompreis prognose 2024",
+            "value": 20500
+          },
+          {
+            "query": "tibber aktueller strompreis",
+            "value": 20250
+          },
+          {
+            "query": "strompreisbremse",
+            "value": 13250
+          },
+          {
+            "query": "strompreis schock",
+            "value": 5800
+          },
+          {
+            "query": "eon strompreis 2023",
+            "value": 2650
+          },
+          {
+            "query": "strompreis deckel deutschland",
+            "value": 1850
+          },
+          {
+            "query": "durchschnittlicher strompreis 2022",
+            "value": 1550
+          },
+          {
+            "query": "strompreis aktuell börse",
+            "value": 950
+          },
+          {
+            "query": "strompreis aktuell",
+            "value": 950
+          },
+          {
+            "query": "vattenfall strompreis bestandskunden",
+            "value": 800
+          },
+          {
+            "query": "strompreis grundversorgung",
+            "value": 300
+          },
+          {
+            "query": "gaspreis",
+            "value": 200
+          },
+          {
+            "query": "strompreis börse",
+            "value": 140
+          },
+          {
+            "query": "strompreis prognose",
+            "value": 120
+          },
+          {
+            "query": "aktueller strompreis",
+            "value": 90
+          },
+          {
+            "query": "strompreis eon",
+            "value": 60
+          }
+        ]
+      }
+    },
+    "schema_keys.json": {
+      "iot_Gaspreis.json": [
+        "data",
+        "end",
+        "freq",
+        "geo",
+        "keyword",
+        "start",
+        "type"
+      ],
+      "summary.json": [
+        "file",
+        "first",
+        "keyword",
+        "last",
+        "n_points",
+        "type"
+      ],
+      "related_Gaspreis.json": [
+        "end",
+        "geo",
+        "keyword",
+        "related_queries",
+        "start",
+        "type"
+      ],
+      "iot_Margarine.json": [
+        "data",
+        "end",
+        "freq",
+        "geo",
+        "keyword",
+        "start",
+        "type"
+      ],
+      "region_Strompreis.json": [
+        "end",
+        "geo",
+        "keyword",
+        "resolution",
+        "rows",
+        "start",
+        "type"
+      ],
+      "region_Inflation.json": [
+        "end",
+        "geo",
+        "keyword",
+        "resolution",
+        "rows",
+        "start",
+        "type"
+      ],
+      "related_Margarine.json": [
+        "end",
+        "geo",
+        "keyword",
+        "related_queries",
+        "start",
+        "type"
+      ],
+      "iot_Lebensmittelpreise.json": [
+        "data",
+        "end",
+        "freq",
+        "geo",
+        "keyword",
+        "start",
+        "type"
+      ],
+      "iot_Strompreis.json": [
+        "data",
+        "end",
+        "freq",
+        "geo",
+        "keyword",
+        "start",
+        "type"
+      ],
+      "iot_Inflation.json": [
+        "data",
+        "end",
+        "freq",
+        "geo",
+        "keyword",
+        "start",
+        "type"
+      ],
+      "iot_Butter.json": [
+        "data",
+        "end",
+        "freq",
+        "geo",
+        "keyword",
+        "start",
+        "type"
+      ],
+      "related_Inflation.json": [
+        "end",
+        "geo",
+        "keyword",
+        "related_queries",
+        "start",
+        "type"
+      ],
+      "region_Margarine.json": [
+        "end",
+        "geo",
+        "keyword",
+        "resolution",
+        "rows",
+        "start",
+        "type"
+      ],
+      "region_Gaspreis.json": [
+        "end",
+        "geo",
+        "keyword",
+        "resolution",
+        "rows",
+        "start",
+        "type"
+      ],
+      "related_Lebensmittelpreise.json": [
+        "end",
+        "geo",
+        "keyword",
+        "related_queries",
+        "start",
+        "type"
+      ],
+      "region_Lebensmittelpreise.json": [
+        "end",
+        "geo",
+        "keyword",
+        "resolution",
+        "rows",
+        "start",
+        "type"
+      ],
+      "region_Butter.json": [
+        "end",
+        "geo",
+        "keyword",
+        "resolution",
+        "rows",
+        "start",
+        "type"
+      ],
+      "related_Strompreis.json": [
+        "end",
+        "geo",
+        "keyword",
+        "related_queries",
+        "start",
+        "type"
+      ],
+      "related_Butter.json": [
+        "end",
+        "geo",
+        "keyword",
+        "related_queries",
+        "start",
+        "type"
+      ],
+      "meta.json": [
+        "end",
+        "freq",
+        "geo",
+        "keywords",
+        "start"
+      ]
+    },
+    "summary.json": [
+      {
+        "file": "iot_Butter.json",
+        "type": "interest_over_time",
+        "keyword": "Butter",
+        "n_points": 61,
+        "first": {
+          "date": "2019-12-31",
+          "value": 36.0
+        },
+        "last": {
+          "date": "2024-12-31",
+          "value": 76.2
+        }
+      },
+      {
+        "file": "iot_Gaspreis.json",
+        "type": "interest_over_time",
+        "keyword": "Gaspreis",
+        "n_points": 61,
+        "first": {
+          "date": "2019-12-31",
+          "value": 2.0
+        },
+        "last": {
+          "date": "2024-12-31",
+          "value": 6.4
+        }
+      },
+      {
+        "file": "iot_Inflation.json",
+        "type": "interest_over_time",
+        "keyword": "Inflation",
+        "n_points": 61,
+        "first": {
+          "date": "2019-12-31",
+          "value": 13.0
+        },
+        "last": {
+          "date": "2024-12-31",
+          "value": 33.8
+        }
+      },
+      {
+        "file": "iot_Lebensmittelpreise.json",
+        "type": "interest_over_time",
+        "keyword": "Lebensmittelpreise",
+        "n_points": 61,
+        "first": {
+          "date": "2019-12-31",
+          "value": 0.0
+        },
+        "last": {
+          "date": "2024-12-31",
+          "value": 18.0
+        }
+      },
+      {
+        "file": "iot_Margarine.json",
+        "type": "interest_over_time",
+        "keyword": "Margarine",
+        "n_points": 61,
+        "first": {
+          "date": "2019-12-31",
+          "value": 18.0
+        },
+        "last": {
+          "date": "2024-12-31",
+          "value": 28.4
+        }
+      },
+      {
+        "file": "iot_Strompreis.json",
+        "type": "interest_over_time",
+        "keyword": "Strompreis",
+        "n_points": 61,
+        "first": {
+          "date": "2019-12-31",
+          "value": 10.0
+        },
+        "last": {
+          "date": "2024-12-31",
+          "value": 35.6
+        }
+      },
+      {
+        "file": "meta.json",
+        "type": null
+      },
+      {
+        "file": "region_Butter.json",
+        "type": "interest_by_region",
+        "keyword": "Butter",
+        "n_regions": 16,
+        "top5": [
+          {
+            "geoName": "Berlin",
+            "geoCode": "DE-BE",
+            "interest": 100
+          },
+          {
+            "geoName": "Brandenburg",
+            "geoCode": "DE-BB",
+            "interest": 82
+          },
+          {
+            "geoName": "Hamburg",
+            "geoCode": "DE-HH",
+            "interest": 81
+          },
+          {
+            "geoName": "Bremen",
+            "geoCode": "DE-HB",
+            "interest": 75
+          },
+          {
+            "geoName": "Rheinland-Pfalz",
+            "geoCode": "DE-RP",
+            "interest": 75
+          }
+        ]
+      },
+      {
+        "file": "region_Gaspreis.json",
+        "type": "interest_by_region",
+        "keyword": "Gaspreis",
+        "n_regions": 16,
+        "top5": [
+          {
+            "geoName": "Niedersachsen",
+            "geoCode": "DE-NI",
+            "interest": 100
+          },
+          {
+            "geoName": "Sachsen-Anhalt",
+            "geoCode": "DE-ST",
+            "interest": 86
+          },
+          {
+            "geoName": "Schleswig-Holstein",
+            "geoCode": "DE-SH",
+            "interest": 85
+          },
+          {
+            "geoName": "Brandenburg",
+            "geoCode": "DE-BB",
+            "interest": 81
+          },
+          {
+            "geoName": "Thüringen",
+            "geoCode": "DE-TH",
+            "interest": 77
+          }
+        ]
+      },
+      {
+        "file": "region_Inflation.json",
+        "type": "interest_by_region",
+        "keyword": "Inflation",
+        "n_regions": 16,
+        "top5": [
+          {
+            "geoName": "Hamburg",
+            "geoCode": "DE-HH",
+            "interest": 100
+          },
+          {
+            "geoName": "Berlin",
+            "geoCode": "DE-BE",
+            "interest": 88
+          },
+          {
+            "geoName": "Hessen",
+            "geoCode": "DE-HE",
+            "interest": 84
+          },
+          {
+            "geoName": "Bayern",
+            "geoCode": "DE-BY",
+            "interest": 82
+          },
+          {
+            "geoName": "Baden-Württemberg",
+            "geoCode": "DE-BW",
+            "interest": 79
+          }
+        ]
+      },
+      {
+        "file": "region_Lebensmittelpreise.json",
+        "type": "interest_by_region",
+        "keyword": "Lebensmittelpreise",
+        "n_regions": 16,
+        "top5": [
+          {
+            "geoName": "Mecklenburg-Vorpommern",
+            "geoCode": "DE-MV",
+            "interest": 100
+          },
+          {
+            "geoName": "Sachsen",
+            "geoCode": "DE-SN",
+            "interest": 94
+          },
+          {
+            "geoName": "Sachsen-Anhalt",
+            "geoCode": "DE-ST",
+            "interest": 94
+          },
+          {
+            "geoName": "Brandenburg",
+            "geoCode": "DE-BB",
+            "interest": 89
+          },
+          {
+            "geoName": "Thüringen",
+            "geoCode": "DE-TH",
+            "interest": 89
+          }
+        ]
+      },
+      {
+        "file": "region_Margarine.json",
+        "type": "interest_by_region",
+        "keyword": "Margarine",
+        "n_regions": 16,
+        "top5": [
+          {
+            "geoName": "Schleswig-Holstein",
+            "geoCode": "DE-SH",
+            "interest": 100
+          },
+          {
+            "geoName": "Niedersachsen",
+            "geoCode": "DE-NI",
+            "interest": 95
+          },
+          {
+            "geoName": "Nordrhein-Westfalen",
+            "geoCode": "DE-NW",
+            "interest": 94
+          },
+          {
+            "geoName": "Bremen",
+            "geoCode": "DE-HB",
+            "interest": 93
+          },
+          {
+            "geoName": "Saarland",
+            "geoCode": "DE-SL",
+            "interest": 81
+          }
+        ]
+      },
+      {
+        "file": "region_Strompreis.json",
+        "type": "interest_by_region",
+        "keyword": "Strompreis",
+        "n_regions": 16,
+        "top5": [
+          {
+            "geoName": "Bayern",
+            "geoCode": "DE-BY",
+            "interest": 100
+          },
+          {
+            "geoName": "Schleswig-Holstein",
+            "geoCode": "DE-SH",
+            "interest": 89
+          },
+          {
+            "geoName": "Niedersachsen",
+            "geoCode": "DE-NI",
+            "interest": 86
+          },
+          {
+            "geoName": "Baden-Württemberg",
+            "geoCode": "DE-BW",
+            "interest": 82
+          },
+          {
+            "geoName": "Rheinland-Pfalz",
+            "geoCode": "DE-RP",
+            "interest": 81
+          }
+        ]
+      },
+      {
+        "file": "related_Butter.json",
+        "type": "related_queries",
+        "keyword": "Butter",
+        "top_n": 6,
+        "rising_n": 3
+      },
+      {
+        "file": "related_Gaspreis.json",
+        "type": "related_queries",
+        "keyword": "Gaspreis",
+        "top_n": 18,
+        "rising_n": 9
+      },
+      {
+        "file": "related_Inflation.json",
+        "type": "related_queries",
+        "keyword": "Inflation",
+        "top_n": 25,
+        "rising_n": 25
+      },
+      {
+        "file": "related_Lebensmittelpreise.json",
+        "type": "related_queries",
+        "keyword": "Lebensmittelpreise",
+        "top_n": 0,
+        "rising_n": 0
+      },
+      {
+        "file": "related_Margarine.json",
+        "type": "related_queries",
+        "keyword": "Margarine",
+        "top_n": 0,
+        "rising_n": 0
+      },
+      {
+        "file": "related_Strompreis.json",
+        "type": "related_queries",
+        "keyword": "Strompreis",
+        "top_n": 25,
+        "rising_n": 25
+      }
+    ]
+  }
+}

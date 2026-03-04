@@ -1,0 +1,90 @@
+{
+  "type": "interest_by_region",
+  "keyword": "Inflation",
+  "start": "2020-01-01",
+  "end": "2024-12-31",
+  "geo": "DE",
+  "resolution": "REGION",
+  "rows": [
+    {
+      "geoName": "Baden-Württemberg",
+      "geoCode": "DE-BW",
+      "interest": 79
+    },
+    {
+      "geoName": "Bayern",
+      "geoCode": "DE-BY",
+      "interest": 82
+    },
+    {
+      "geoName": "Berlin",
+      "geoCode": "DE-BE",
+      "interest": 88
+    },
+    {
+      "geoName": "Brandenburg",
+      "geoCode": "DE-BB",
+      "interest": 64
+    },
+    {
+      "geoName": "Bremen",
+      "geoCode": "DE-HB",
+      "interest": 75
+    },
+    {
+      "geoName": "Hamburg",
+      "geoCode": "DE-HH",
+      "interest": 100
+    },
+    {
+      "geoName": "Hessen",
+      "geoCode": "DE-HE",
+      "interest": 84
+    },
+    {
+      "geoName": "Mecklenburg-Vorpommern",
+      "geoCode": "DE-MV",
+      "interest": 56
+    },
+    {
+      "geoName": "Niedersachsen",
+      "geoCode": "DE-NI",
+      "interest": 71
+    },
+    {
+      "geoName": "Nordrhein-Westfalen",
+      "geoCode": "DE-NW",
+      "interest": 69
+    },
+    {
+      "geoName": "Rheinland-Pfalz",
+      "geoCode": "DE-RP",
+      "interest": 65
+    },
+    {
+      "geoName": "Saarland",
+      "geoCode": "DE-SL",
+      "interest": 61
+    },
+    {
+      "geoName": "Sachsen",
+      "geoCode": "DE-SN",
+      "interest": 61
+    },
+    {
+      "geoName": "Sachsen-Anhalt",
+      "geoCode": "DE-ST",
+      "interest": 51
+    },
+    {
+      "geoName": "Schleswig-Holstein",
+      "geoCode": "DE-SH",
+      "interest": 70
+    },
+    {
+      "geoName": "Thüringen",
+      "geoCode": "DE-TH",
+      "interest": 53
+    }
+  ]
+}
