@@ -1,0 +1,10 @@
+# API Keys und Umgebungsvariablen
+.env
+
+# Datenordner (lieber die Skripte teilen, nicht die riesigen JSONs)
+raw_data/
+__pycache__/
+
+# Python virtuelle Umgebungen
+venv/
+.venv/
