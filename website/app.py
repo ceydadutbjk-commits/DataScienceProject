@@ -30,6 +30,12 @@ from dash import html
 from dash.dependencies import Input, Output
 import plotly.express as px
 
+rq1_df = pd.read_csv("data/rq1_data.csv")
+rq2_df = pd.read_csv("data/rq2_data.csv")
+
+rq1_df["month"] = pd.to_datetime(rq1_df["month"])
+rq2_df["month"] = pd.to_datetime(rq2_df["month"])
+
 
 app = dash.Dash(__name__) # Dash App erstellen
 server = app.server # damit Render die App im Internet startet
