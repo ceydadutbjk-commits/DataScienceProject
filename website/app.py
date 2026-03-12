@@ -29,6 +29,7 @@ from dash import dcc
 from dash import html
 from dash.dependencies import Input, Output
 import plotly.express as px
+import plotly.graph_objects as go
 
 rq1_df = pd.read_csv("data/rq1_data.csv")
 rq2_df = pd.read_csv("data/rq2_data.csv")
@@ -36,6 +37,48 @@ rq2_df = pd.read_csv("data/rq2_data.csv")
 rq1_df["month"] = pd.to_datetime(rq1_df["month"])
 rq2_df["month"] = pd.to_datetime(rq2_df["month"])
 
+
+# Graph Research Question 1
+fig_rq1 = px.scatter(
+    rq1_df,
+    x="ppi_change",
+    y="butter_change",
+    color="ppi_direction",
+    title="Price Transmission between Producer Prices and Butter Prices",
+    labels={
+        "ppi_change": "Change in Dairy Producer Price Index",
+        "butter_change": "Change in Butter Consumer Price Index"
+    }
+)
+
+# Graph Research Question 2
+fig_rq2 = go.Figure()
+
+fig_rq2.add_trace(
+    go.Scatter(
+        x=rq2_df["month"],
+        y=rq2_df["butter_cpi"],
+        mode="lines",
+        name="Butter CPI",
+        fill="tozeroy"
+    )
+)
+
+fig_rq2.add_trace(
+    go.Scatter(
+        x=rq2_df["month"],
+        y=rq2_df["margarine_cpi"],
+        mode="lines",
+        name="Margarine CPI",
+        fill="tozeroy"
+    )
+)
+
+fig_rq2.update_layout(
+    title="Butter and Margarine Price Dynamics during Food Inflation",
+    xaxis_title="Month",
+    yaxis_title="Price Index (2015 = 100)"
+)
 
 app = dash.Dash(__name__) # Dash App erstellen
 server = app.server # damit Render die App im Internet startet
@@ -135,13 +178,13 @@ def display_page(pathname): # Funktion, die die Seite anzeigt
             html.H3("Research Question 1"),
             html.P("What patterns of asymmetric price transmission can be observed between rawmilk producer prices and retail butter prices in Germany?"),
             html.P("Context text ."),
-            html.Div(dcc.Graph(id='rq1_graph', figure={}), style=graph_style),
+            html.Div(dcc.Graph(figure=fig_rq1)),
             html.P("Graph explanation."),
 
             html.H3("Research Question 2"),
             html.P("How do the relative price dynamics between butter and margarine evolve during periods of elevated food inflation?"),
             html.P("Context text"),
-            html.Div(dcc.Graph(id='rq2_graph', figure={}), style=graph_style),
+            html.Div(dcc.Graph(figure=fig_rq2)),
             html.P("Graph explanation"),
 
             html.H3("Research Question 3"),
