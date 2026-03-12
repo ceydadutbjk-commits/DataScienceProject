@@ -1,5 +1,5 @@
 '''
-# Schritt 1: 
+# Schritt 1: Testblock 
 # Erstellen eines Simple Dash Dashboard for our DS Project
 
 import dash # Dash Bibliothek in unser Programm holen
@@ -31,18 +31,21 @@ from dash.dependencies import Input, Output
 import plotly.express as px
 import plotly.graph_objects as go
 
+# Laden der Daten finalen Analyse-Tabellen
 rq1_df = pd.read_csv("data/rq1_data.csv")
 rq2_df = pd.read_csv("data/rq2_data.csv")
 
+# vom text zu Datumsformat umwandeln
 rq1_df["month"] = pd.to_datetime(rq1_df["month"])
 rq2_df["month"] = pd.to_datetime(rq2_df["month"])
 
 
-# Graph Research Question 1
+# Graph Research Question 1 Scatter Plot
+# um den Zusammenhang zwischen zwei Veränderungen zu visualisieren
 fig_rq1 = px.scatter(
     rq1_df,
-    x="ppi_change",
-    y="butter_change",
+    x="ppi_change", # Veränderung im Producer Price Index
+    y="butter_change", # Veränderung im Butter  Price Index
     color="ppi_direction",
     title="Price Transmission between Producer Prices and Butter Prices",
     labels={
@@ -51,16 +54,17 @@ fig_rq1 = px.scatter(
     }
 )
 
-# Graph Research Question 2
-fig_rq2 = go.Figure()
+# Graph Research Question 2 Area-Line Plot
+fig_rq2 = go.Figure() # leere Figure erstellen
 
-fig_rq2.add_trace(
+fig_rq2.add_trace( # Datenreihe hinzufügen
     go.Scatter(
         x=rq2_df["month"],
         y=rq2_df["butter_cpi"],
-        mode="lines",
+        mode="lines", # Liniendiagramm
         name="Butter CPI",
-        fill="tozeroy"
+        fill="tozeroy" # untere Bereich mit 0 füllen
+        # dadurch wird aus einer Linie eine Area erstellt
     )
 )
 
@@ -68,7 +72,7 @@ fig_rq2.add_trace(
     go.Scatter(
         x=rq2_df["month"],
         y=rq2_df["margarine_cpi"],
-        mode="lines",
+        mode="lines", # Liniendiagramm
         name="Margarine CPI",
         fill="tozeroy"
     )
@@ -93,7 +97,7 @@ section_style = { # großen Inhaltsblöcke
     'boxShadow': '0px 2px 6px rgba(0,0,0,0.1)' # Schatten
 }
 
-graph_style = {
+graph_style = { # Style der Diagramme
     'backgroundColor': 'white',
     'padding': '10px',
     'borderRadius': '8px',
@@ -119,7 +123,7 @@ link_style = { # Style der Links in der Navigationsleiste
 
 app.layout = html.Div([ # gesamtes Layout des Dash Dashboards
 
-    dcc.Location(id='url', refresh=False), # URL
+    dcc.Location(id='url', refresh=False), # URL verwaltung
 
     html.H1("From Butter Prices to Public Emotions", style={'textAlign': 'center'}),
 
@@ -128,7 +132,7 @@ app.layout = html.Div([ # gesamtes Layout des Dash Dashboards
     style={'textAlign': 'center', 'marginBottom': '20px'}
     ),
 
-    html.Div([ # Navigationsleiste
+    html.Div([ # Navigationsmenu 
         html.A("Home", href="/", style=link_style),
         html.A("Data & Sources", href="/data", style=link_style),
         html.A("Category 1", href="/category1", style=link_style),
@@ -148,8 +152,9 @@ app.layout = html.Div([ # gesamtes Layout des Dash Dashboards
 })
 
 
-@app.callback( # mehrseitigiger Callback
+@app.callback( # mehrseitigiger Callback für die Navigation
 # Wenn sich etwas ändert, wird automatisch eine Funktion ausgeführt.
+# URL wird gelesen, passende Seite wird ausgewählt, Inhalt wird angezeigt
     Output('page_content', 'children'), # Das Ergebnis der Funktion wird in den Bereich page_content geschrieben.
     Input('url', 'pathname') # reagieren auf den aktuellen Pfad der URL
 )
@@ -177,33 +182,33 @@ def display_page(pathname): # Funktion, die die Seite anzeigt
 
             html.H3("Research Question 1"),
             html.P("What patterns of asymmetric price transmission can be observed between rawmilk producer prices and retail butter prices in Germany?"),
-            html.P("Context text ."),
+            html.P("Context ."),
             html.Div(dcc.Graph(figure=fig_rq1)),
-            html.P("Graph explanation."),
+            html.P("Graph"),
 
             html.H3("Research Question 2"),
             html.P("How do the relative price dynamics between butter and margarine evolve during periods of elevated food inflation?"),
-            html.P("Context text"),
+            html.P("Context"),
             html.Div(dcc.Graph(figure=fig_rq2)),
-            html.P("Graph explanation"),
+            html.P("Graph"),
 
             html.H3("Research Question 3"),
             html.P("Which months between 2020 and 2024 exhibit statistically significant deviations in retail butter prices that cannot be explained by underlying dairy commodity trends or normal seasonal price patterns?"),
-            html.P("Context text ."),
+            html.P("Context  ."),
             html.Div(dcc.Graph(id='rq3_graph', figure={}), style=graph_style),
-            html.P("Graph explanation ."),
+            html.P("Graph  ."),
 
             html.H3("Research Question 4"),
             html.P("How did the temporary VAT reduction in Germany (July–December 2020) affect the price-setting behaviour of retailers, and to what extent was this eOect oOset by the inflation surge in 2021?"),
-            html.P("Context text ."),
+            html.P("Context  ."),
             html.Div(dcc.Graph(id='rq4_graph', figure={}), style=graph_style),
-            html.P("Graph explanation ."),
+            html.P("Graph"),
 
             html.H3("Research Question 5"),
             html.P("To what extent can comparisons between the dairy Producer Price Index (PPI) and the Consumer Price Index (CPI) reveal periods of excessive margin expansion, where retail prices increased significantly faster than production costs?"),
-            html.P("Context text ."),
+            html.P("Context ."),
             html.Div(dcc.Graph(id='rq5_graph', figure={}), style=graph_style),
-            html.P("Graph explanation .")
+            html.P("Graph .")
         ], style=section_style)
 
     elif pathname == '/category2':
