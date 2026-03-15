@@ -14,6 +14,9 @@ from pages.data_page import create_data_page
 from components.styles import section_style, graph_style, menu_style, link_style
 from figures.rq1_figures import create_rq1_figure
 from figures.rq2_figures import create_rq2_figure
+from figures.rq3_figures import create_rq3_figure
+from figures.rq4_figures import create_rq4_figure
+from figures.rq5_figures import create_rq5_figure
 
 app = dash.Dash(__name__, suppress_callback_exceptions=True)
 app.layout = html.Div([ # gesamtes Layout des Dash Dashboards
@@ -119,6 +122,64 @@ def update_rq1_graph(selected_view):
         interpretation = html.P(
             "interpretation"
         )
+
+    return fig, interpretation
+
+@app.callback(
+    Output("rq3_graph_dynamic", "figure"),
+    Output("rq3_interpretation", "children"),
+    Input("rq3_view", "value")
+)
+def update_rq3_graph(selected_view):
+
+    fig = create_rq3_figure(selected_view)
+
+    if selected_view == "bubble":
+        interpretation = html.P(
+            "The bubble plot...."
+        )
+    else:
+        interpretation = html.P(
+            "The heatmap shows....."
+        )
+
+    return fig, interpretation
+
+@app.callback(
+    Output("rq4_graph_dynamic", "figure"),
+    Output("rq4_interpretation", "children"),
+    Input("rq4_metric", "value")
+)
+def update_rq4_graph(selected_metric):
+    fig = create_rq4_figure(selected_metric)
+
+    if selected_metric == "butter_cpi":
+        interpretation = html.P(
+            "Butter prices dropped marginally while the government lowered value-added tax, yet costs climbed sharply throughout the following year. This indicates the brief tax adjustment barely influenced the market compared to the subsequent spike in consumer prices."
+        )
+    elif selected_metric == "dairy_ppi":
+        interpretation = html.P(
+            "Dairy producer prices fluctuated slightly during the VAT period before climbing noticeably throughout 2021. These figures establish the cost basis for analyzing shifts in retail pricing."
+        )
+    else:
+        interpretation = html.P(
+            "The gap between consumer and producer prices shrank while the value-added tax decreased. This movement points to businesses passing part of the savings to their customers. In 2021, the difference grew again because rising inflation outweighed the previous tax reduction."
+        )
+
+    return fig, interpretation
+
+@app.callback(
+    Output("rq5_graph_dynamic", "figure"),
+    Output("rq5_interpretation", "children"),
+    Input("rq5_view", "value")
+)
+def update_rq5_graph(selected_view):
+
+    fig = create_rq5_figure(selected_view)
+
+    interpretation = html.P(
+        "interpretation"
+    )
 
     return fig, interpretation
 

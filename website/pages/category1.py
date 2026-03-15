@@ -61,9 +61,25 @@ html.Div(
             "deviations in retail butter prices that cannot be explained by "
             "underlying dairy commodity trends or normal seasonal price patterns?"
         ),
-        html.P("Context  ."),
-        html.Div(dcc.Graph(id='rq3_graph', figure={}), style=graph_style),
-        html.P("Graph  ."),
+        html.P("Context ."),
+
+        dcc.Dropdown(
+            id="rq3_view",
+            options=[
+                {"label": "Bubble plot", "value": "bubble"},
+                {"label": "Heatmap", "value": "heatmap"}
+            ],
+            value="bubble",
+            clearable=False,
+            style={"marginBottom": "15px"}
+        ),
+
+        html.Div(dcc.Graph(id="rq3_graph_dynamic"), style=graph_style),
+
+        html.Div(
+            id="rq3_interpretation",
+            style={"marginTop": "15px"}
+        ),
 
         html.H3("Research Question 4"),
         html.P(
@@ -71,9 +87,26 @@ html.Div(
             "affect the price-setting behaviour of retailers, and to what extent "
             "was this effect offset by the inflation surge in 2021?"
         ),
-        html.P("Context  ."),
-        html.Div(dcc.Graph(id='rq4_graph', figure={}), style=graph_style),
-        html.P("Graph"),
+        html.P("Context ."),
+
+        dcc.Dropdown(
+            id="rq4_metric",
+            options=[
+                {"label": "CPI–PPI gap", "value": "index_gap"},
+                {"label": "Butter CPI", "value": "butter_cpi"},
+                {"label": "Dairy PPI", "value": "dairy_ppi"},
+            ],
+            value="index_gap",
+            clearable=False,
+            style={"marginBottom": "15px"}
+        ),
+
+        html.Div(dcc.Graph(id="rq4_graph_dynamic"), style=graph_style),
+
+        html.Div(
+            id="rq4_interpretation",
+            style={"marginTop": "15px"}
+        ),
 
         html.H3("Research Question 5"),
         html.P(
@@ -83,6 +116,22 @@ html.Div(
             "than production costs?"
         ),
         html.P("Context ."),
-        html.Div(dcc.Graph(id='rq5_graph', figure={}), style=graph_style),
-        html.P("Graph .")
+
+        dcc.Dropdown(
+            id="rq5_view",
+            options=[
+                {"label": "Base view", "value": "base"},
+                {"label": "Highlight margin expansion", "value": "highlight"}
+            ],
+            value="base",
+            clearable=False,
+            style={"marginBottom": "15px"}
+        ),
+
+        html.Div(dcc.Graph(id="rq5_graph_dynamic"), style=graph_style),
+
+        html.Div(
+            id="rq5_interpretation",
+            style={"marginTop": "15px"}
+        ),
     ], style=section_style)
