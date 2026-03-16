@@ -1,0 +1,16 @@
+platform,narrative,count
+news,corporate_greed,10
+news,political_failure,8
+news,monetary_causes,27
+news,energy_tax_costs,1
+news,other,7
+youtube_videos,corporate_greed,6
+youtube_videos,political_failure,4
+youtube_videos,monetary_causes,19
+youtube_videos,energy_tax_costs,5
+youtube_videos,other,15
+youtube_comments,corporate_greed,51
+youtube_comments,political_failure,60
+youtube_comments,monetary_causes,57
+youtube_comments,energy_tax_costs,35
+youtube_comments,other,336

@@ -17,6 +17,8 @@ from figures.rq2_figures import create_rq2_figure
 from figures.rq3_figures import create_rq3_figure
 from figures.rq4_figures import create_rq4_figure
 from figures.rq5_figures import create_rq5_figure
+from figures.rq7_figures import create_rq7_figure
+from figures.rq8_figures import create_rq8_figure
 
 app = dash.Dash(__name__, suppress_callback_exceptions=True)
 app.layout = html.Div([ # gesamtes Layout des Dash Dashboards
@@ -176,6 +178,36 @@ def update_rq4_graph(selected_metric):
 def update_rq5_graph(selected_view):
 
     fig = create_rq5_figure(selected_view)
+
+    interpretation = html.P(
+        "interpretation"
+    )
+
+    return fig, interpretation
+
+@app.callback(
+    Output("rq7_graph_dynamic", "figure"),
+    Output("rq7_interpretation", "children"),
+    Input("rq7_view", "value")
+)
+def update_rq7_graph(selected_view):
+
+    fig = create_rq7_figure(selected_view)
+
+    interpretation = html.P(
+        "interpretation"
+    )
+
+    return fig, interpretation
+
+@app.callback(
+    Output("rq8_graph_dynamic", "figure"),
+    Output("rq8_interpretation", "children"),
+    Input("rq8_view", "value")
+)
+def update_rq8_graph(selected_view):
+
+    fig = create_rq8_figure(selected_view)
 
     interpretation = html.P(
         "interpretation"
