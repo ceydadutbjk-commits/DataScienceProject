@@ -1,3 +1,4 @@
+# Navigationsleiste der Webseite
 from dash import html
 
 

@@ -8,11 +8,25 @@ def create_category2_page(section_style, graph_style):
 
         html.H3("Research Question 6"),
         html.P(
-            "How does the sentiment and emotional intensity of online discussions "
-            "about food price inflation differ between higher-income and lower-income "
-            "German federal states between 2020 and 2024?"
+            "How is media sentiment toward food price inflation reflected in recent news coverage in Germany, and how does it relate to food price developments?"
         ),
-        html.P("Context text ."),
-        html.Div(dcc.Graph(id='rq6_graph', figure={}), style=graph_style),
-        html.P("Graph explanation .")
+        html.P("Context ."),
+
+        dcc.Dropdown(
+            id="rq6_view",
+            options=[
+                {"label": "Sentiment distribution", "value": "sentiment"},
+                {"label": "Price trends", "value": "prices"}
+            ],
+            value="sentiment",
+            clearable=False,
+            style={"marginBottom": "15px"}
+        ),
+
+        html.Div(dcc.Graph(id="rq6_graph_dynamic"), style=graph_style),
+
+        html.Div(
+            id="rq6_interpretation",
+            style={"marginTop": "15px"}
+        )
     ], style=section_style)

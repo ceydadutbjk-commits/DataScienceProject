@@ -7,3 +7,5 @@ def create_home_page(section_style):
         html.P("Short introduction"),
         html.P("Project relevance")
     ], style=section_style)
+
+    

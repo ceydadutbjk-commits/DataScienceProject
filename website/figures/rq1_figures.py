@@ -8,7 +8,7 @@ rq1_df = pd.read_csv("data/rq1_data.csv")
 # Datumsformat
 rq1_df["month"] = pd.to_datetime(rq1_df["month"])
 
-
+# Scatterplot udn Dumbbellplot
 def create_rq1_figure(view_type="scatter"):
 
     if view_type == "dumbbell":
@@ -79,3 +79,8 @@ def create_rq1_figure(view_type="scatter"):
     fig.update_layout(height=450)
 
     return fig
+
+# Für RQ1 haben wir zwei Sichtweisen genutzt.
+# Der Scatter Plot zeigt die monatliche Beziehung zwischen Erzeugerpreisänderung und Butterpreisänderung. 
+# Der Dumbbell Plot verdichtet diese Information und zeigt den
+# durchschnittlichen Unterschied zwischen Monaten mit steigenden und fallenden Producer Prices.

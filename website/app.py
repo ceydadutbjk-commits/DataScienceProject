@@ -1,9 +1,14 @@
+# Hauptprogramm, Stelle an der alle Einzelteile der Seite zusammengefasst werden
+
+
 import dash
 from dash import dcc
 from dash import html
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output # wird benutzt, um die Seite zu aktualisieren Callback
 
 # Aufteilen der Seite in verschiedene Komponenten
+# importieren der Komponenten
+
 from components.navbar import create_navbar
 from pages.imprint import create_imprint_page
 from pages.category1 import create_category1_page
@@ -19,6 +24,7 @@ from figures.rq4_figures import create_rq4_figure
 from figures.rq5_figures import create_rq5_figure
 from figures.rq7_figures import create_rq7_figure
 from figures.rq8_figures import create_rq8_figure
+from figures.rq6_figures import create_rq6_figure
 
 app = dash.Dash(__name__, suppress_callback_exceptions=True)
 app.layout = html.Div([ # gesamtes Layout des Dash Dashboards
@@ -80,6 +86,10 @@ def display_page(pathname): # Funktion, die die Seite anzeigt
             html.H2("Page not found"),
             html.P("This page does not exist.")
         ], style=section_style)
+
+# jede research question hat einen eigenen callback
+# wird aufgerufen, wenn sich etwas im dropdown ändert
+# jede rsq hat einen eigenen dropdown, figure und interpretation
 
 @app.callback(
     Output("rq2_graph_dynamic", "figure"),
@@ -147,6 +157,12 @@ def update_rq3_graph(selected_view):
 
     return fig, interpretation
 
+# dynamisches beispiel
+# Hier wird nicht zwischen zwei Plottypen gewechselt, sondern zwischen drei Metriken:
+# index_gap
+# butter_cpi
+# dairy_ppi
+
 @app.callback(
     Output("rq4_graph_dynamic", "figure"),
     Output("rq4_interpretation", "children"),
@@ -212,6 +228,26 @@ def update_rq8_graph(selected_view):
     interpretation = html.P(
         "interpretation"
     )
+
+    return fig, interpretation
+
+@app.callback(
+    Output("rq6_graph_dynamic", "figure"),
+    Output("rq6_interpretation", "children"),
+    Input("rq6_view", "value")
+)
+def update_rq6_graph(selected_view):
+
+    fig = create_rq6_figure(selected_view)
+
+    if selected_view == "prices":
+        interpretation = html.P(
+            "The price trend view shows the development of dairy and butter prices over time. Butter prices rise more strongly, which illustrates the broader food inflation context."
+        )
+    else:
+        interpretation = html.P(
+            "The sentiment distribution shows that recent news coverage on food inflation is predominantly negative, indicating a critical media tone."
+        )
 
     return fig, interpretation
 

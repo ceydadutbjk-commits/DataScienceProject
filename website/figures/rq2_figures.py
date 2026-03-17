@@ -10,7 +10,7 @@ rq2_df["month"] = pd.to_datetime(rq2_df["month"])
 
 # Verhältnis berechnen
 rq2_df["price_ratio"] = rq2_df["butter_cpi"] / rq2_df["margarine_cpi"]
-
+# das Verhältnis Butter/Margarine zeigt, wie sich beide Produkte relativ zueinander entwickeln.
 
 def create_rq2_figure(view_type="prices"):
     if view_type == "ratio":

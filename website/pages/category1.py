@@ -1,3 +1,14 @@
+'''Hier liegen RQ1 bis RQ5.
+
+Jede Research Question hat:
+	•	Überschrift
+	•	Fragestellung
+	•	Kontexttext
+	•	Dropdown
+	•	Graph
+	•	Interpretation
+'''
+
 from dash import html, dcc
 
 
