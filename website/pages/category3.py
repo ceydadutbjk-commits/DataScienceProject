@@ -11,7 +11,7 @@ def create_category3_page(section_style, graph_style):
             "How does the volume of food-inflation-related media coverage "
             "change during periods of lower and higher inflation?"
         ),
-        html.P("Context ."),
+        html.P(" This analysis falls under the category of Narratives, Emotion, and Economic Stress and examines how media coverage of food inflation changes at different inflation levels. The research question is whether there is more reporting on food inflation during periods of higher inflation than during periods of lower inflation. This is relevant because rising food prices are directly felt by many households and are often perceived as a burden. The media frequently pick up on such developments, thereby influencing public perception. By comparing inflation data with the number of media articles, the study examines whether higher inflation is associated with more coverage of food inflation."),
 
         dcc.Dropdown(
             id="rq7_view",

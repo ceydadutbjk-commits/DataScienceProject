@@ -230,9 +230,23 @@ def update_rq7_graph(selected_view):
 
     fig = create_rq7_figure(selected_view)
 
-    interpretation = html.P(
-        "interpretation"
-    )
+    if selected_view == "scatter":
+
+        interpretation = html.P(
+            "The scatter plot shows the relationship between the inflation rate on the x-axis and the number of media articles per month on the y-axis. "
+            "Points with higher inflation tend to be associated with higher article counts, suggesting that periods of stronger inflation are often accompanied by greater media attention. "
+            "At lower inflation levels, the number of articles varies more strongly and is in several cases clearly lower. "
+            "Although the pattern is not perfectly linear, the chart overall indicates a positive relationship between inflation and media coverage."
+        )
+
+    else:
+
+        interpretation = html.P(
+            "The time series compares the development of inflation and media coverage over time. "
+            "Both series follow similar broader movements, which suggests a connection between higher inflation and increased reporting. "
+            "At the same time, the graph shows that media attention does not always react immediately: in some months, article counts continue to rise even when inflation declines. "
+            "This indicates that the relationship is positive overall, but not equally strong or synchronous in every month."
+        )
 
     return fig, interpretation
 
