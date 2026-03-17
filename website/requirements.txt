@@ -6,3 +6,4 @@ pandas # laden und verarbeiten unserer daten
 numpy #Mathematik-Bibliothek für Arrays und numerische Berechnungen.
 matplotlib # Klassische Python-Plot-Bibliothek.
 seaborn # Aufbauend auf matplotlib für Statistik-Plots.
+setuptools
