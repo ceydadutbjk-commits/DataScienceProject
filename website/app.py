@@ -27,6 +27,7 @@ from figures.rq8_figures import create_rq8_figure
 from figures.rq6_figures import create_rq6_figure
 
 app = dash.Dash(__name__, suppress_callback_exceptions=True)
+server = app.server 
 app.layout = html.Div([ # gesamtes Layout des Dash Dashboards
 
     dcc.Location(id='url', refresh=False), # URL verwaltung
