@@ -25,6 +25,7 @@ from figures.rq5_figures import create_rq5_figure
 from figures.rq7_figures import create_rq7_figure
 from figures.rq8_figures import create_rq8_figure
 from figures.rq6_figures import create_rq6_figure
+from figures.rq9_figures import create_rq9_figure
 
 app = dash.Dash(__name__, suppress_callback_exceptions=True)
 server = app.server 
@@ -266,6 +267,38 @@ def update_rq6_graph(selected_view):
     else:
         interpretation = html.P(
             "The sentiment distribution shows that recent news coverage on food inflation is predominantly negative, indicating a critical media tone."
+        )
+
+    return fig, interpretation
+
+@app.callback(
+    Output("rq9_graph_dynamic", "figure"),
+    Output("rq9_interpretation", "children"),
+    Input("rq9_view", "value")
+)
+def update_rq9_graph(selected_view):
+
+    fig = create_rq9_figure(selected_view)
+
+    if selected_view == "price_indices":
+        interpretation = html.P(
+            "The chart shows the development of consumer price indices for butter, dairy products, and margarine in Germany. "
+            "All three series increase over time, with particularly strong price growth during the later inflation period. "
+            "This provides the basis for identifying food price spikes and comparing them with public reactions."
+        )
+
+    elif selected_view == "price_vs_search":
+        interpretation = html.P(
+            "This visualization compares normalized butter prices with Google search interest. "
+            "Periods of rising butter prices tend to coincide with higher search activity, suggesting that food price increases "
+            "are associated with stronger public attention and information-seeking behavior."
+        )
+
+    else:
+        interpretation = html.P(
+            "The distribution of fear scores shows that a notable share of YouTube comments contains at least one term related "
+            "to economic concern. This suggests that online discussions about food inflation are often linked to affordability, "
+            "financial pressure, and broader economic stress."
         )
 
     return fig, interpretation

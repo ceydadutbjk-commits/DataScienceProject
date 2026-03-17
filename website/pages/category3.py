@@ -58,10 +58,30 @@ def create_category3_page(section_style, graph_style):
 
         html.H3("Research Question 9"),
         html.P(
-            "How are sudden spikes in grocery prices reflected in expressions of economic fear "
-            "and perceived loss of control in online discussions?"
+            "To what extent are increases in food prices associated with economic concerns "
+            "expressed in online public discourse in Germany?"
         ),
-        html.P("Context text ."),
-        html.Div(dcc.Graph(id='rq9_graph', figure={}), style=graph_style),
-        html.P("Graph explanation .")
+        html.P(
+            "This analysis combines food price indices, Google search interest, and YouTube comments "
+            "to examine whether food price spikes are linked to public attention and economic concern."
+        ),
+
+        dcc.Dropdown(
+            id="rq9_view",
+            options=[
+                {"label": "Price increases", "value": "price_indices"},
+                {"label": "Public attention", "value": "price_vs_search"},
+                {"label": "Economic concern", "value": "economic_concern"}
+            ],
+            value="price_indices",
+            clearable=False,
+            style={"marginBottom": "15px"}
+        ),
+
+        html.Div(dcc.Graph(id="rq9_graph_dynamic"), style=graph_style),
+
+        html.Div(
+            id="rq9_interpretation",
+            style={"marginTop": "15px"}
+        )
     ], style=section_style)
