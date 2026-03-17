@@ -1,11 +1,11 @@
 # Style der einzelnen Abschnitte
 # Dictionaries definieren das Aussehen der Webseite
 section_style = {
-    'backgroundColor': '#D1EEEE',
-    'padding': '20px', # Abstand 
-    'marginBottom': '30px', # Abstand unterhalb
-    'borderRadius': '10px', # Rundung
-    'boxShadow': '0px 2px 6px rgba(0,0,0,0.1)' # Schatten
+    'backgroundColor': '#eaf4f4',
+    'padding': '24px',
+    'marginBottom': '30px',
+    'borderRadius': '14px',
+    'boxShadow': '0px 4px 12px rgba(0,0,0,0.08)'
 }
 
 graph_style = {

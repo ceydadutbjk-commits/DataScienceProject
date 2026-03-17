@@ -21,7 +21,7 @@ def create_category1_page(section_style, graph_style):    return html.Div([
             "What patterns of asymmetric price transmission can be observed "
             "between rawmilk producer prices and retail butter prices in Germany?"
         ),
-        html.P("Context ."),
+        html.P("Asymmetric price transmission means that retail prices do not react in the same way when producer prices go up as when they go down. In the German dairy market, this is relevant because raw milk producer prices can be quite volatile, while households mainly notice the price of butter on the shelf. By comparing changes in raw milk producer prices with changes in retail butter prices, we can see how strongly cost shocks are passed on to consumers during phases of food inflation."),
 
         dcc.Dropdown(
             id="rq1_view",
@@ -45,7 +45,7 @@ html.Div(
             "How do the relative price dynamics between butter and margarine "
             "evolve during periods of elevated food inflation?"
         ),
-        html.P("Context"),
+        html.P("This question examines how the price relationship between butter and margarine changes during a period of elevated food inflation. The focus is on whether butter becomes relatively more expensive or cheaper than margarine over time and how strongly the prices of these two substitute products diverge or converge."),
 
         dcc.Dropdown(
             id="rq2_view",
@@ -59,7 +59,7 @@ html.Div(
         ),
 
         html.Div(dcc.Graph(id="rq2_graph_dynamic"), style=graph_style),
-        html.P("Graph"),
+        
 
         html.Div(
             id="rq2_interpretation",

@@ -31,12 +31,30 @@ app.layout = html.Div([ # gesamtes Layout des Dash Dashboards
 
     dcc.Location(id='url', refresh=False), # URL verwaltung
 
-    html.H1("From Butter Prices to Public Emotions", style={'textAlign': 'center'}),
+    html.Div([
+    html.H1(
+        "From Butter Prices to Public Emotions",
+        style={
+            "textAlign": "center",
+            "fontSize": "48px",
+            "fontWeight": "700",
+            "marginBottom": "10px",
+            "color": "#111827"
+        }
+    ),
 
     html.P(
-    "A Data Science project on food inflation, retail price dynamics, and emotional online reactions in Germany.",
-    style={'textAlign': 'center', 'marginBottom': '20px'}
-    ),
+        "Interactive insights into food inflation, public perception, and media discourse in Germany.",
+        style={
+            "textAlign": "center",
+            "fontSize": "18px",
+            "color": "#374151",
+            "marginBottom": "25px"
+        }
+    )
+], style={
+    "padding": "30px 20px 10px 20px"
+}),
 
     create_navbar(link_style, menu_style),
 
@@ -47,7 +65,7 @@ app.layout = html.Div([ # gesamtes Layout des Dash Dashboards
     'margin': '0 auto',
     'padding': '20px',
     'fontFamily': 'Arial, sans-serif',
-    'backgroundColor': '#eef2f7'
+    'background': 'linear-gradient(to bottom, #eef2f7, #e5e7eb)'
 })
 
 
@@ -103,13 +121,13 @@ def update_rq2_graph(selected_view):
     if selected_view == "prices":
 
         interpretation = html.P(
-            " interpretation"
+            " In the absolute price chart, the y‑axis shows the price ratio of butter to margarine, while the x‑axis displays the months from early 2020 to late 2023. The ratio starts clearly above the reference value of 1, which suggests that butter is consistently priced higher than margarine at the beginning of the period. Over the course of 2022, the line rises noticeably and reaches a pronounced peak, indicating a phase in which butter prices increase more than margarine prices. From early 2023 onward, the ratio drops sharply below the reference line and remains there for several months, so margarine appears temporarily more expensive than butter, before the ratio moves slightly back toward 1 near the end of the observed period."
         )
 
     else:
 
         interpretation = html.P(
-            "interpretation"
+            "In the price rario chart, the y‑axis reports price indices for butter and margarine (base year 2015 = 100), and the x‑axis again covers the months from 2020 to 2023. Both index series trend upward over time, indicating an overall rise in prices for both products. The blue area for butter lies above the red area for margarine for a long stretch and shows a particularly strong increase from 2021 to the end of 2022, which suggests comparatively stronger price growth for butter in that phase. From early 2023, the butter index moves closer to the margarine index and even falls below it at times, indicating that the relative price dynamics between the two products reverse or become more aligned in this later period."
         )
 
     return fig, interpretation
@@ -126,13 +144,13 @@ def update_rq1_graph(selected_view):
     if selected_view == "scatter":
 
         interpretation = html.P(
-            "interpretation"
+            "The quadrant scatter shows monthly changes in raw milk producer prices on the x-axis and monthly changes in the butter consumer price index on the y-axis. Many points are located to the right of zero and often above zero, which means that rising producer prices frequently coincide with rising butter prices. On the left side, there are also months where both producer and butter prices fall, but this pattern is less clustered and more scattered. In some months, butter prices move more strongly than producer prices, suggesting that the reaction is not perfectly proportional. Overall, the plot indicates a positive link between producer and retail prices, with some signs of asymmetry, but it should be read as a pattern rather than a final statistical proof."
         )
 
     else:
 
         interpretation = html.P(
-            "interpretation"
+            "The average reaction plot summarizes how butter prices behave in months with producer price increases compared to months with producer price decreases. In the data shown, producer price increases are associated with an average butter price change of around +2.63 index points, while producer price decreases go along with an average change of about −3.71 index points. This means that butter prices respond in both directions and, in this sample, fall on average even more strongly when producer prices decrease than they rise when producer prices increase. The result therefore does not fit the simple story that “prices rise faster than they fall”, but instead points to a noticeable, two-sided pass-through of producer price movements to retail butter prices."
         )
 
     return fig, interpretation
