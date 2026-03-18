@@ -29,9 +29,9 @@ def create_imprint_page(section_style):
         html.P("Project Team:"),
         html.Ul([
             html.Li("Ceyda Dut – stu247737"),
-            html.Li("Ahmad Aldali – stu"),
-            html.Li("Ali Al Mahmoud – stu"),
-            html.Li("Rayyan – stu"),
+            html.Li("Ahmad Aldali – stu247158"),
+            html.Li("Ali Al Mahmoud – stu246024"),
+            html.Li("Rayyan – stu244778"),
         ]),
 
         html.Br(),

@@ -33,7 +33,7 @@ def create_home_page(section_style, card_style=None):
 
         html.Div([
             html.H3(
-                "Short Introduction",
+                "Project Overview",
                 style={
                     "marginBottom": "10px",
                     "color": "#1f2937"

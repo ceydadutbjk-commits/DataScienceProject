@@ -321,9 +321,10 @@ def update_rq6_graph(selected_view):
         )
     else:
         interpretation = html.P(
-            "The figure compares the consumer price indices for dairy and butter in Germany over the observed period. While the dairy CPI remains relatively stable, the butter CPI shows much stronger fluctuations and a clear upward trend."
-            "This indicates that butter experienced a more pronounced price increase than dairy products overall. In particular, the sharp rise in the butter CPI highlights how strongly individual food categories can be affected by inflation."
-            "These price developments provide important economic context for the broader discussion of food prices and rising living costs in Germany. However, they should not be interpreted as directly synchronized with the news sentiment data, since the datasets cover different time periods."
+            "This histogram shows the distribution of sentiment scores for news articles related to food prices and inflation. Most articles have negative sentiment values, indicating that media coverage of food prices is predominantly pessimistic."
+            "This negative tone likely reflects concerns about rising living costs and inflation, which are frequently framed as economic challenges in news reporting."
+            "Only a few articles are close to neutral sentiment, while positive sentiment is nearly absent. This suggests that media coverage tends to emphasize the burdens associated with food price developments rather than positive economic perspectives"
+            "Because the dataset includes only a limited number of filtered articles, the distribution should be interpreted as an indicator of the overall tone of the sample rather than a comprehensive picture of media sentiment."
         )
 
     return fig, interpretation
