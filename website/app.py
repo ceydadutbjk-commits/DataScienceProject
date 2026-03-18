@@ -259,9 +259,26 @@ def update_rq8_graph(selected_view):
 
     fig = create_rq8_figure(selected_view)
 
-    interpretation = html.P(
-        "interpretation"
-    )
+    if selected_view == "stacked":
+
+        interpretation = html.P(
+           "The stacked bar chart shows how different narratives about food inflation are distributed across news articles, YouTube videos, and YouTube comments."
+           "In the news, “monetary causes” clearly dominate, suggesting that traditional media primarily attribute inflation to economic factors. By comparison, other narratives play a significantly smaller role. "
+           "In YouTube videos, the distribution is more balanced, as several narratives each account for a relevant share. This shows that different explanatory approaches coexist there, rather than a single dominant narrative taking center stage."
+           "In YouTube comments, “other” dominates by a wide margin. This suggests that users more frequently use nonspecific or emotional explanations rather than referring to clear economic causes."
+           "Overall, the diagram shows that the narratives differ significantly depending on the platform, with a shift from structured, economic explanations in the news to more diverse and less clear interpretations on social media. "
+
+        )
+
+    else:
+
+        interpretation = html.P(
+            "The heatmap shows the prevalence of different narratives about food inflation across news articles, YouTube videos, and YouTube comments, with darker colors representing higher proportions. "
+            "In the news, “monetary causes” clearly dominates, suggesting that traditional media primarily attribute inflation to economic factors such as monetary policy. Other narratives appear significantly less frequently. "
+            "In YouTube videos, the distribution is more balanced, as several narratives such as monetary causes, other, and energy/tax costs appear with similar frequency. This shows that multiple explanations are used simultaneously there."
+            "In YouTube comments, “other” dominates by a wide margin. This suggests that comments are less structured and more heavily influenced by subjective or emotional assessments. "
+            "Overall, the heatmap shows a clear shift from structured economic explanations in the news toward more diverse and less clear interpretations on social media. "
+        )
 
     return fig, interpretation
 

@@ -36,7 +36,7 @@ def create_category3_page(section_style, graph_style):
             "Which narratives about food inflation appear most frequently across "
             "news articles, YouTube videos, and YouTube comments?"
         ),
-        html.P("Context ."),
+        html.P("This analysis falls under the category of “Narratives, Emotion, and Economic Stress” and examines which narratives about food inflation appear most frequently across various media. This is relevant because different media report differently: While news outlets tend to provide structured and economic explanations, YouTube-Videos and especially comments more strongly reflect personal opinions and emotions. By comparing the narratives across platforms, the study examines whether perceptions of food inflation differ depending on the medium or whether similar patterns emerge."),
 
         dcc.Dropdown(
             id="rq8_view",
