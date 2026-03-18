@@ -1,5 +1,6 @@
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 
 # Daten laden
 rq8_df = pd.read_csv("data/rq8_data.csv")
@@ -58,20 +59,29 @@ def create_rq8_figure(view_type="stacked"):
 
         return fig
 
-    fig = px.bar(
-        df,
-        x="platform_label",
-        y="percentage",
-        color="narrative",
-        category_orders={
-            "platform_label": platform_order,
-            "narrative": narrative_order
-        },
-        hover_data=["count", "platform_total"],
-        title="Narrative Distribution across Media Platforms"
-    )
+    fig = go.Figure()
+
+    for narrative in narrative_order:
+        narrative_df = df[df["narrative"] == narrative]
+
+        if not narrative_df.empty:
+            fig.add_trace(
+                go.Bar(
+                    x=narrative_df["platform_label"],
+                    y=narrative_df["percentage"],
+                    name=narrative,
+                    customdata=narrative_df[["count", "platform_total"]],
+                    hovertemplate=(
+                        "Platform: %{x}<br>"
+                        "Percentage: %{y:.1f}%<br>"
+                        "Count: %{customdata[0]}<br>"
+                        "Platform total: %{customdata[1]}<extra></extra>"
+                    )
+                )
+            )
 
     fig.update_layout(
+        title="Narrative Distribution across Media Platforms",
         barmode="stack",
         xaxis_title="Platform",
         yaxis_title="Percentage within platform",
@@ -79,4 +89,5 @@ def create_rq8_figure(view_type="stacked"):
         legend_title="Narrative",
         height=450
     )
+
     return fig
