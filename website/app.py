@@ -293,11 +293,16 @@ def update_rq6_graph(selected_view):
 
     if selected_view == "prices":
         interpretation = html.P(
-            "The price trend view shows the development of dairy and butter prices over time. Butter prices rise more strongly, which illustrates the broader food inflation context."
+            "This histogram shows the distribution of sentiment scores for news articles related to food prices and inflation. Most articles have negative sentiment values, indicating that media coverage of food prices is predominantly pessimistic."
+            "This negative tone likely reflects concerns about rising living costs and inflation, which are frequently framed as economic challenges in news reporting."
+            "Only a few articles are close to neutral sentiment, while positive sentiment is nearly absent. This suggests that media coverage tends to emphasize the burdens associated with food price developments rather than positive economic perspectives"
+            "Because the dataset includes only a limited number of filtered articles, the distribution should be interpreted as an indicator of the overall tone of the sample rather than a comprehensive picture of media sentiment."
         )
     else:
         interpretation = html.P(
-            "The sentiment distribution shows that recent news coverage on food inflation is predominantly negative, indicating a critical media tone."
+            "The figure compares the consumer price indices for dairy and butter in Germany over the observed period. While the dairy CPI remains relatively stable, the butter CPI shows much stronger fluctuations and a clear upward trend."
+            "This indicates that butter experienced a more pronounced price increase than dairy products overall. In particular, the sharp rise in the butter CPI highlights how strongly individual food categories can be affected by inflation."
+            "These price developments provide important economic context for the broader discussion of food prices and rising living costs in Germany. However, they should not be interpreted as directly synchronized with the news sentiment data, since the datasets cover different time periods."
         )
 
     return fig, interpretation
@@ -313,23 +318,22 @@ def update_rq9_graph(selected_view):
 
     if selected_view == "price_indices":
         interpretation = html.P(
-            "The chart shows the development of consumer price indices for butter, dairy products, and margarine in Germany. "
-            "All three series increase over time, with particularly strong price growth during the later inflation period. "
-            "This provides the basis for identifying food price spikes and comparing them with public reactions."
+            "The figure illustrates how consumer price indices for selected food products in Germany have developed over time. All categories show a clear upward trend, with prices rising particularly sharply from 2021 onwards. This marks a period of intensified food inflation."
+            "Such a pronounced increase indicates that households have faced growing cost pressure, especially for essential goods. These price surges are economically significant because they directly influence everyday consumption patterns and purchasing power."
+            "Against this backdrop, it is understandable that rising food prices have drawn greater public attention and economic concern. These developments can be further explored by linking price dynamics to online search behavior and public discourse."
         )
 
     elif selected_view == "price_vs_search":
         interpretation = html.P(
-            "This visualization compares normalized butter prices with Google search interest. "
-            "Periods of rising butter prices tend to coincide with higher search activity, suggesting that food price increases "
-            "are associated with stronger public attention and information-seeking behavior."
+            "The figure compares the normalized development of butter prices with Google search interest. Both data series are scaled to enable a direct visual comparison."
+            "It becomes apparent that periods of rising butter prices often coincide with increased search activity. This suggests that consumers react to higher food prices by seeking more information. The pattern indicates that price developments can influence public awareness and attention, linking market trends to shifts in online behavior"
         )
 
     else:
         interpretation = html.P(
-            "The distribution of fear scores shows that a notable share of YouTube comments contains at least one term related "
-            "to economic concern. This suggests that online discussions about food inflation are often linked to affordability, "
-            "financial pressure, and broader economic stress."
+            "The distribution of fear scores shows that a significant portion of YouTube comments contains language associated with economic concerns. "
+            "Many users mention rising prices, financial pressure, or the affordability of food. "
+            "This suggests that online discussions about food inflation are closely linked to feelings of economic insecurity and household financial stress, reflecting how consumers emotionally and cognitively respond to increasing living costs."
         )
 
     return fig, interpretation

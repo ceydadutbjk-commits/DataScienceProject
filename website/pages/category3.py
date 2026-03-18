@@ -62,8 +62,10 @@ def create_category3_page(section_style, graph_style):
             "expressed in online public discourse in Germany?"
         ),
         html.P(
-            "This analysis combines food price indices, Google search interest, and YouTube comments "
-            "to examine whether food price spikes are linked to public attention and economic concern."
+            "This study examines how rising food prices in Germany, particularly the increase in butter prices, relate to public attention and expressions of economic concern online. "
+            "By combining food price indices, Google search data, and YouTube comments, the analysis explores whether price spikes are mirrored by greater awareness and discussions about financial pressure."
+            "Findings indicate that higher butter prices coincide with increased search activity and frequent mentions of terms like “teuer,” “Inflation,” and “Kosten.” "
+            "This suggests that food price increases are perceived as part of a broader experience of economic strain."
         ),
 
         dcc.Dropdown(
