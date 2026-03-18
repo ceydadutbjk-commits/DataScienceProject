@@ -1,5 +1,6 @@
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 
 # Daten laden
 rq9_df = pd.read_csv("data/rq9_data.csv")
@@ -25,20 +26,48 @@ def create_rq9_figure(view_type="price_indices"):
             "margarine_price": "Margarine"
         })
 
-        fig = px.line(
-            price_long,
-            x="date",
-            y="price_index",
-            color="product",
-            title="Consumer price indices for selected food products in Germany",
-            labels={
-                "date": "Year",
-                "price_index": "Price index",
-                "product": "Product"
-            }
-        )
+        price_long = price_long.dropna(subset=["date", "price_index", "product"])
+
+        butter_df = price_long[price_long["product"] == "Butter"]
+        dairy_df = price_long[price_long["product"] == "Dairy"]
+        margarine_df = price_long[price_long["product"] == "Margarine"]
+
+        fig = go.Figure()
+
+        if not butter_df.empty:
+            fig.add_trace(
+                go.Scatter(
+                    x=butter_df["date"],
+                    y=butter_df["price_index"],
+                    mode="lines",
+                    name="Butter"
+                )
+            )
+
+        if not dairy_df.empty:
+            fig.add_trace(
+                go.Scatter(
+                    x=dairy_df["date"],
+                    y=dairy_df["price_index"],
+                    mode="lines",
+                    name="Dairy"
+                )
+            )
+
+        if not margarine_df.empty:
+            fig.add_trace(
+                go.Scatter(
+                    x=margarine_df["date"],
+                    y=margarine_df["price_index"],
+                    mode="lines",
+                    name="Margarine"
+                )
+            )
 
         fig.update_layout(
+            title="Consumer price indices for selected food products in Germany",
+            xaxis_title="Year",
+            yaxis_title="Price index",
             height=450,
             legend_title="Product"
         )
@@ -70,20 +99,37 @@ def create_rq9_figure(view_type="price_indices"):
             "search_interest_norm": "Google search interest"
         })
 
-        fig = px.line(
-            plot_df,
-            x="year_month",
-            y="normalized_value",
-            color="series",
-            title="Butter price vs. Google search interest",
-            labels={
-                "year_month": "Year-Month",
-                "normalized_value": "Normalized value",
-                "series": "Series"
-            }
-        )
+        plot_df = plot_df.dropna(subset=["year_month", "normalized_value", "series"])
+
+        price_series_df = plot_df[plot_df["series"] == "Butter price (normalized)"]
+        search_series_df = plot_df[plot_df["series"] == "Google search interest"]
+
+        fig = go.Figure()
+
+        if not price_series_df.empty:
+            fig.add_trace(
+                go.Scatter(
+                    x=price_series_df["year_month"],
+                    y=price_series_df["normalized_value"],
+                    mode="lines",
+                    name="Butter price (normalized)"
+                )
+            )
+
+        if not search_series_df.empty:
+            fig.add_trace(
+                go.Scatter(
+                    x=search_series_df["year_month"],
+                    y=search_series_df["normalized_value"],
+                    mode="lines",
+                    name="Google search interest"
+                )
+            )
 
         fig.update_layout(
+            title="Butter price vs. Google search interest",
+            xaxis_title="Year-Month",
+            yaxis_title="Normalized value",
             height=450,
             legend_title="Series"
         )
