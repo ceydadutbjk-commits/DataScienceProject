@@ -79,5 +79,4 @@ def create_rq8_figure(view_type="stacked"):
         legend_title="Narrative",
         height=450
     )
-
     return fig
