@@ -33,28 +33,59 @@ def create_rq3_figure(view_type="bubble"):
         return fig
 
     plot_df = rq3_df.copy()
-    plot_df["bubble_size"] = plot_df["residual_zscore"].abs() * 20
     plot_df = plot_df.dropna(subset=["datum", "residual", "residual_zscore", "significant_deviation"])
-    plot_df["significant_label"] = plot_df["significant_deviation"].map({
-        True: "Significant",
-        False: "Not significant"
-    })
+    plot_df["bubble_size"] = plot_df["residual_zscore"].abs() * 20
+    plot_df["significant_deviation"] = plot_df["significant_deviation"].astype(bool)
 
-    fig = px.scatter(
-        plot_df,
-        x="datum",
-        y="residual",
-        size="bubble_size",
-        color="significant_label",
-        hover_data=["residual_zscore", "deviation_direction"],
-        title="Unusual Butter Price Deviations over Time",
-        labels={
-            "datum": "Date",
-            "residual": "Residual (actual - predicted)",
-            "significant_label": "Significant"
-        }
-    )
+    significant_df = plot_df[plot_df["significant_deviation"] == True]
+    not_significant_df = plot_df[plot_df["significant_deviation"] == False]
+
+    fig = go.Figure()
+
+    if not not_significant_df.empty:
+        fig.add_trace(
+            go.Scatter(
+                x=not_significant_df["datum"],
+                y=not_significant_df["residual"],
+                mode="markers",
+                name="Not significant",
+                marker=dict(size=not_significant_df["bubble_size"]),
+                text=not_significant_df["deviation_direction"],
+                customdata=not_significant_df[["residual_zscore"]],
+                hovertemplate=(
+                    "Date: %{x}<br>"
+                    "Residual: %{y}<br>"
+                    "Residual z-score: %{customdata[0]:.2f}<br>"
+                    "Direction: %{text}<extra></extra>"
+                )
+            )
+        )
+
+    if not significant_df.empty:
+        fig.add_trace(
+            go.Scatter(
+                x=significant_df["datum"],
+                y=significant_df["residual"],
+                mode="markers",
+                name="Significant",
+                marker=dict(size=significant_df["bubble_size"]),
+                text=significant_df["deviation_direction"],
+                customdata=significant_df[["residual_zscore"]],
+                hovertemplate=(
+                    "Date: %{x}<br>"
+                    "Residual: %{y}<br>"
+                    "Residual z-score: %{customdata[0]:.2f}<br>"
+                    "Direction: %{text}<extra></extra>"
+                )
+            )
+        )
 
     fig.add_hline(y=0, line_dash="dash", line_color="gray")
+
+    fig.update_layout(
+        title="Unusual Butter Price Deviations over Time",
+        xaxis_title="Date",
+        yaxis_title="Residual (actual - predicted)"
+    )
 
     return fig
