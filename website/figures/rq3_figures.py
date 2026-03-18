@@ -34,19 +34,24 @@ def create_rq3_figure(view_type="bubble"):
 
     plot_df = rq3_df.copy()
     plot_df["bubble_size"] = plot_df["residual_zscore"].abs() * 20
+    plot_df = plot_df.dropna(subset=["datum", "residual", "residual_zscore", "significant_deviation"])
+    plot_df["significant_label"] = plot_df["significant_deviation"].map({
+        True: "Significant",
+        False: "Not significant"
+    })
 
     fig = px.scatter(
         plot_df,
         x="datum",
         y="residual",
         size="bubble_size",
-        color="significant_deviation",
+        color="significant_label",
         hover_data=["residual_zscore", "deviation_direction"],
         title="Unusual Butter Price Deviations over Time",
         labels={
             "datum": "Date",
             "residual": "Residual (actual - predicted)",
-            "significant_deviation": "Significant"
+            "significant_label": "Significant"
         }
     )
 

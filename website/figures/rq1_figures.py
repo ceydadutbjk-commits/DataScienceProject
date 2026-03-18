@@ -61,16 +61,40 @@ def create_rq1_figure(view_type="scatter"):
 
         return fig
 
-    fig = px.scatter(
-        rq1_df,
-        x="ppi_change",
-        y="butter_change",
-        color="ppi_direction",
+    scatter_df = rq1_df.copy()
+    scatter_df = scatter_df.dropna(subset=["ppi_change", "butter_change", "ppi_direction"])
+    scatter_df["ppi_direction"] = scatter_df["ppi_direction"].astype(str)
+
+    increase_df = scatter_df[scatter_df["ppi_direction"] == "increase"]
+    decrease_df = scatter_df[scatter_df["ppi_direction"] == "decrease"]
+
+    fig = go.Figure()
+
+    if not increase_df.empty:
+        fig.add_trace(
+            go.Scatter(
+                x=increase_df["ppi_change"],
+                y=increase_df["butter_change"],
+                mode="markers",
+                name="increase"
+            )
+        )
+
+    if not decrease_df.empty:
+        fig.add_trace(
+            go.Scatter(
+                x=decrease_df["ppi_change"],
+                y=decrease_df["butter_change"],
+                mode="markers",
+                name="decrease"
+            )
+        )
+
+    fig.update_layout(
         title="Quadrant View of Price Transmission between Producer and Retail Prices",
-        labels={
-            "ppi_change": "Change in Dairy Producer Price Index",
-            "butter_change": "Change in Butter Consumer Price Index"
-        }
+        xaxis_title="Change in Dairy Producer Price Index",
+        yaxis_title="Change in Butter Consumer Price Index",
+        height=450
     )
 
     fig.add_vline(x=0, line_dash="dash", line_color="gray")
