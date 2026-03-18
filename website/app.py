@@ -198,21 +198,21 @@ def update_rq4_graph(selected_metric):
 
     if selected_metric == "butter_cpi":
         interpretation = html.P(
-            "In the following CPI-PPI gap chart, the x-axis represents the gap between consumer- and producer prices, while the y-axis represents three different periods before the VAT reduction, during the VAT reduction, and during the inflation phase 2021. These three periods each have a beginning and an end. "
-            "Before the VAT reduction, the gap between consumer prices and producer prices is quite large, and the gap decreases over time. This indicates that consumer prices are moving closer to producer prices. "
-            "In the VAT reduction period, the gap becomes slightly smaller implying that some of the tax reduction benefits were passed on to consumers. "
-        )
-    elif selected_metric == "dairy_ppi":
-        interpretation = html.P(
             "In the butter CPI chart, the x-axis represents the price index of butter, and the y-axis represents the different periods before VAT reduction, the VAT reproduction period, and the inflation in 2021. Each of the periods includes also the start and the end points."
             "In the pre-VAT reduction period, the price of butter is relatively high and decreases over time. In the VAT reduction period, the price of butter is relatively stable with a decrease. This implies that the effect of VAT reduction is low on the price of butter. However, in the inflation period of 2021, the price of butter increases dramatically from the beginning to the end of the period. This implies that the effect of inflation is higher than that of VAT reduction. From this chart, we can conclude that the price of butter is more influenced by inflation than by VAT reduction."
         )
-    else:
+    elif selected_metric == "dairy_ppi":
         interpretation = html.P(
             "In the following PPI chart, the x-axis represents the producer price of dairy products, while the y-axis represents the three time periods. "
             "Before the VAT reduction, the producer prices rise slightly. During the VAT period, the prices are expected to rise steadily with small fluctuations." 
             "However, in 2021, it is observed that the prices rise significantly throughout the period, starting from the beginning of the period and reaching the end of the period, as shown in the chart. Hence, it can be observed that the prices rise steadily throughout the period, as indicated in the chart, especially during the inflation period."
             "This shows the basis of the rise in consumer prices, as shown in the butter CPI chart, which is quite high."
+        )
+    else:
+        interpretation = html.P(
+            "In the following CPI-PPI gap chart, the x-axis represents the gap between consumer- and producer prices, while the y-axis represents three different periods before the VAT reduction, during the VAT reduction, and during the inflation phase 2021. These three periods each have a beginning and an end. "
+            "Before the VAT reduction, the gap between consumer prices and producer prices is quite large, and the gap decreases over time. This indicates that consumer prices are moving closer to producer prices. "
+            "In the VAT reduction period, the gap becomes slightly smaller implying that some of the tax reduction benefits were passed on to consumers. "
         )
 
     return fig, interpretation
