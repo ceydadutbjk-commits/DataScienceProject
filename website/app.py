@@ -168,11 +168,16 @@ def update_rq3_graph(selected_view):
 
     if selected_view == "bubble":
         interpretation = html.P(
-            "The bubble plot...."
+            "The differences between actual butter prices and projected values over time is displayed in the following bubble plot. The x-axis displays the months, and the y-axis shows the residuals/ the degree to which actual prices differ from anticipated levels. "
+            "Butter prices are frequently lower than anticipated because the majority of points are below 0. Particularly between spring and fall 2023, several months are designated as significant and have bigger bubbles. The deviations are significantly negative during this time, suggesting that butter prices did not rise as much as anticipated given producer prices. "
+            "At the beginning, there was one month that has a smaller, non-significant deviation, indicating that prices were more in line with expectations. The deviations get bigger and more regular over time.  "
+            "All in all, the plot suggests that the price of butter did not react as strongly as anticipated in 2023, which could suggest that the price was delayed or a change in the market. "
         )
     else:
         interpretation = html.P(
-            "The heatmap shows....."
+            "The following Heat map shows remaining z-scores (standardized distance) over months and years. The colours demonstrate how strong the deviations are and darker colours indicate stronger negative deviations."
+            "Most months have negative values, which indicates that butter prices are continuously lower than expected. The middle of the year, when the colours were dark is when the biggest deviations occur. This implies that the price of butter was much lower than expected at this time of the year. The colours also lighten at the end and the start of the series to indicate that the price is moving towards the expected level."
+            "Overall, the heatmap presents a trend of underperformance in the price of butter, especially at the end of the year. This could be due to structural factors or system delays."
         )
 
     return fig, interpretation
@@ -193,15 +198,21 @@ def update_rq4_graph(selected_metric):
 
     if selected_metric == "butter_cpi":
         interpretation = html.P(
-            "Butter prices dropped marginally while the government lowered value-added tax, yet costs climbed sharply throughout the following year. This indicates the brief tax adjustment barely influenced the market compared to the subsequent spike in consumer prices."
+            "In the following CPI-PPI gap chart, the x-axis represents the gap between consumer- and producer prices, while the y-axis represents three different periods before the VAT reduction, during the VAT reduction, and during the inflation phase 2021. These three periods each have a beginning and an end. "
+            "Before the VAT reduction, the gap between consumer prices and producer prices is quite large, and the gap decreases over time. This indicates that consumer prices are moving closer to producer prices. "
+            "In the VAT reduction period, the gap becomes slightly smaller implying that some of the tax reduction benefits were passed on to consumers. "
         )
     elif selected_metric == "dairy_ppi":
         interpretation = html.P(
-            "Dairy producer prices fluctuated slightly during the VAT period before climbing noticeably throughout 2021. These figures establish the cost basis for analyzing shifts in retail pricing."
+            "In the butter CPI chart, the x-axis represents the price index of butter, and the y-axis represents the different periods before VAT reduction, the VAT reproduction period, and the inflation in 2021. Each of the periods includes also the start and the end points."
+            "In the pre-VAT reduction period, the price of butter is relatively high and decreases over time. In the VAT reduction period, the price of butter is relatively stable with a decrease. This implies that the effect of VAT reduction is low on the price of butter. However, in the inflation period of 2021, the price of butter increases dramatically from the beginning to the end of the period. This implies that the effect of inflation is higher than that of VAT reduction. From this chart, we can conclude that the price of butter is more influenced by inflation than by VAT reduction."
         )
     else:
         interpretation = html.P(
-            "The gap between consumer and producer prices shrank while the value-added tax decreased. This movement points to businesses passing part of the savings to their customers. In 2021, the difference grew again because rising inflation outweighed the previous tax reduction."
+            "In the following PPI chart, the x-axis represents the producer price of dairy products, while the y-axis represents the three time periods. "
+            "Before the VAT reduction, the producer prices rise slightly. During the VAT period, the prices are expected to rise steadily with small fluctuations." 
+            "However, in 2021, it is observed that the prices rise significantly throughout the period, starting from the beginning of the period and reaching the end of the period, as shown in the chart. Hence, it can be observed that the prices rise steadily throughout the period, as indicated in the chart, especially during the inflation period."
+            "This shows the basis of the rise in consumer prices, as shown in the butter CPI chart, which is quite high."
         )
 
     return fig, interpretation
@@ -215,9 +226,19 @@ def update_rq5_graph(selected_view):
 
     fig = create_rq5_figure(selected_view)
 
-    interpretation = html.P(
-        "interpretation"
-    )
+    if selected_view == "base":
+        interpretation = html.P(
+            "In the above chart, the y-axis represents the year-over-year inflation rates, while the x-axis represents the period from early 2021 to late 2023. The red line represents the butter CPI, while the blue line represents the dairy PPI."
+            "At the beginning, the two lines are close together at low levels, showing that the two products are experiencing similar growth in prices. In 2022, the inflation rates increase rapidly for both products, with butter CPI experiencing a sharper increase and reaching a higher peak."
+            "After the peak, the two lines decreased, with butter CPI decreasing more sharply, even going into negative territory, while the PPI decreases gradually. This shows that retail prices decrease faster than production prices."
+            "Generally, the two lines follow a similar trend, with some differences, especially when the inflation was high."
+        )
+    else:
+        interpretation = html.P(
+            "In this context, the chart points out the periods where the butter CPI inflation is greater than the dairy PPI inflation."
+            "Looking at the chart for the year 2022, there are several points highlighted by the chart where the butter CPI inflation is greater than the dairy PPI inflation, especially at the peak of the inflation. This can be seen as the period of margin expansion."
+            "Also, the widest gap between the two lines can be seen at the midpoint of the year 2022, which points out the widest margin expansion. After this period, the gap between the two lines becomes narrow and then decreases in the year 2023 when the price falls below the production cost. This points out the end of the margin expansion period and the beginning of the margin compression period. Thus, the highlighted points on the chart indicate that the margin expansion occurs only at the peak of the inflation in the year 2022."
+        )
 
     return fig, interpretation
 

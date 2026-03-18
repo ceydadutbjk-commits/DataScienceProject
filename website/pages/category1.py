@@ -72,7 +72,10 @@ html.Div(
             "deviations in retail butter prices that cannot be explained by "
             "underlying dairy commodity trends or normal seasonal price patterns?"
         ),
-        html.P("Context ."),
+        html.P("This question investigates abnormal movements of butter price through comparing actual prices against predicted price, for butter produced, based on expected producer price levels and normal seasonal patterns."
+                "By observing months in which butter price behaves differently than expected, we can try to determine if these differences represent unusual dynamic conditions in butter market, including delayed price adjustments or temporary inefficiencies of the butter market." 
+        
+                ),
 
         dcc.Dropdown(
             id="rq3_view",
@@ -98,7 +101,10 @@ html.Div(
             "affect the price-setting behaviour of retailers, and to what extent "
             "was this effect offset by the inflation surge in 2021?"
         ),
-        html.P("Context ."),
+        html.P("This analysis is about the prices that move between the producers and consumers during a certain period with changing economic conditions. "
+                "The analysis is about the reduction of VAT in 2020, which was temporary, and the high inflation period in 2021. "
+                 "The idea is to see the effect of the retail prices (CPI), when the production prices (PPI) change, whether these changes are passed on the consumers, and the stability in this situation. "
+                 ),
 
         dcc.Dropdown(
             id="rq4_metric",
@@ -126,7 +132,11 @@ html.Div(
             "margin expansion, where retail prices increased significantly faster "
             "than production costs?"
         ),
-        html.P("Context ."),
+        html.P(
+            "This question seeks to answer how the inflation rates of butter consumer prices (CPI) and dairy producer prices (PPI) change with time." 
+            "The aim is to identify instances when consumer prices rise more rapidly than producer prices." 
+            "These instances may signify opportunities for potential margin expansion, implying that retailers are raising prices more rapidly than justified by cost changes."
+         ),
 
         dcc.Dropdown(
             id="rq5_view",
