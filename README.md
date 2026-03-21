@@ -214,7 +214,7 @@ The project combines a modern Python-based technology stack with standard empiri
 
 The core of the interactive dashboard resides in the `website/` directory. A typical structure is:
 
-
+```bash
 website/
 ├── app.py          # Main Dash application, layout, and callback registration
 ├── pages/          # Page definitions for categories and research questions
