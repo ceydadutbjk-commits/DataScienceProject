@@ -1,0 +1,8 @@
+## Additional Project Materials
+
+The folder `inflation_project/raw_data/` contains:
+- Jupyter notebooks used for data collection, preprocessing, and analysis
+- Raw API outputs in JSON format
+- intermediate files created during the analytical workflow
+
+These materials document the full project pipeline, while the dashboard itself runs on the processed files stored in `website/data/`.
