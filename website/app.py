@@ -411,6 +411,9 @@ def update_rq8_graph(selected_view):
             "This shows that multiple explanations are used simultaneously there."
             "In YouTube comments, “other” dominates by a wide margin."
             "This suggests that comments are less structured and more heavily influenced by subjective or emotional assessments."
+        )
+
+    return fig, interpretation
 
 @app.callback( 
     Output("rq6_graph_dynamic", "figure"),
@@ -418,10 +421,20 @@ def update_rq8_graph(selected_view):
     Input("rq6_view", "value")
 )
 def update_rq6_graph(selected_view):
+    """
+    Updates the interactive figure and interpretation for Research Question 6 based on the selected view.
 
+    Parameters:
+        selected_view (str): The type of figure to create. Can be "prices" or "sentiment".
+
+    Returns:
+        fig (go.Figure): Interactive Plotly figure
+        interpretation (html.P): Text describing the plot
+    """
     fig = create_rq6_figure(selected_view)
 
     if selected_view == "prices":
+        # The histogram shows the distribution of sentiment scores for news articles related to food prices and inflation.
         interpretation = html.P(
             "This histogram shows the distribution of sentiment scores for news articles related to food prices and inflation. Most articles have negative sentiment values, indicating that media coverage of food prices is predominantly pessimistic."
             "This negative tone likely reflects concerns about rising living costs and inflation, which are frequently framed as economic challenges in news reporting."
@@ -429,6 +442,7 @@ def update_rq6_graph(selected_view):
             "Because the dataset includes only a limited number of filtered articles, the distribution should be interpreted as an indicator of the overall tone of the sample rather than a comprehensive picture of media sentiment."
         )
     else:
+        # The histogram shows the distribution of sentiment scores for news articles related to food prices and inflation.
         interpretation = html.P(
             "This histogram shows the distribution of sentiment scores for news articles related to food prices and inflation. Most articles have negative sentiment values, indicating that media coverage of food prices is predominantly pessimistic."
             "This negative tone likely reflects concerns about rising living costs and inflation, which are frequently framed as economic challenges in news reporting."
