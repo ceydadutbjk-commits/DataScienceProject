@@ -23,10 +23,14 @@ The repository demonstrates the full workflow of a modern Data Science project: 
 
 
 
-## 2. Project Preview 👀
+## 2. Project Preview 
 
-Dashboard Preview:
-A placeholder image or animated GIF of the main dashboard view should be inserted here (e.g. `docs/dashboard_preview.png`).
+**Live Dashboard:**  
+[Open the interactive dashboard](https://food-inflation.onrender.com)
+
+**Dashboard Preview:**  
+![Dashboard Preview](docs/dashboard_preview.png)
+
 
 The dashboard presents interactive time series, scatter plots, heatmaps, and stacked bar charts that visualise:
 
@@ -88,7 +92,7 @@ This category analyses how inflation-related narratives and emotions are articul
 
 
 
-## 5. Key Insights & Findings 🚀
+## 5. Key Insights & Findings 
 
 The analysis yields several substantive insights about the interaction between price dynamics, media discourse, and public concern:
 
@@ -103,7 +107,7 @@ The analysis yields several substantive insights about the interaction between p
 
 
 
-## 6. Data Sources 📊
+## 6. Data Sources 
 
 ### Economic Data
 
@@ -141,7 +145,7 @@ The analysis yields several substantive insights about the interaction between p
 
 All data used in the dashboard are stored in processed form as CSV files under `website/data/`.
 
-### RQ1 Dataset: CPI–PPI Dynamics Website
+### RQ1 Dataset: CPI–PPI Dynamics 
 
 It contains monthly data on butter consumer prices (CPI) and dairy producer prices (PPI) in Germany.
 
@@ -278,7 +282,7 @@ The dataset is used to analyse how increases in food prices relate to public att
 
 
 
-## 7. Data Pipeline 🔄
+## 7. Data Pipeline 
 
 The project follows a structured, reproducible data pipeline that separates raw collection from analysis and visualisation.
 
@@ -343,9 +347,7 @@ The project combines a modern Python-based technology stack with standard empiri
 - Narrative classification across platforms (news, YouTube videos, and comments)  
 - Descriptive and exploratory statistics to link prices, media activity, and public concern  
 
-
-
-## 9. Repository & App Structure 🌐
+## 9. Repository & App Structure 
 
 The core of the interactive dashboard resides in the `website/` directory. A typical structure is:
 
@@ -357,8 +359,18 @@ website/
 ├── components/     # Reusable UI components (navigation, headers, controls)
 ├── data/           # Processed CSV datasets (rq1_data.csv ... rq9_data.csv)
 └── requirements.txt
+```md
 
-## 10. Dashboard Features 🚀
+### How the Website Was Built and Deployed
+
+The web application was built with **Dash** and **Plotly** in Python.  
+Each research question is connected to a dedicated preprocessed CSV file stored in `website/data/`.  
+The corresponding figure functions load these datasets and generate interactive charts that are embedded into the dashboard pages.
+
+The application is deployed on **Render**.  
+At runtime, the dashboard does not call external APIs. Instead, it uses the preprocessed CSV files included in the repository, which improves stability, reproducibility, and loading speed.
+
+## 10. Dashboard Features 
 
 The dashboard is designed to support interactive, exploratory analysis rather than static reporting.  
 It enables users to interrogate relationships between prices, media coverage, narratives, and public attention in a flexible way.
@@ -391,9 +403,9 @@ The main navigation separates the dashboard into the three core categories:
 
 1. **Price Dynamics, Inflation, and Retail Behaviour**  
 2. **Regional Inequality and Public Sentiment**  
-3. **Narratives, Emotion, and Economic Stress**, 
+3. **Narratives, Emotion, and Economic Stress**
 
-the "Home" and "Data & Sources"
+In addition, the navigation includes the **Home**, **Data & Sources**, and **Imprint** pages.
 
 Within each category, subpages or sections correspond to the individual research questions (RQ1–RQ9), allowing users to directly access the relevant analytical views.
 
@@ -414,9 +426,7 @@ Navigate across categories to compare:
 
 This structure allows users to move seamlessly from quantitative price patterns to qualitative narrative patterns.
 
----
-
-## 12. Running Locally 💻
+## 12. Running Locally 
 
 To run the dashboard on a local machine:
 
@@ -434,12 +444,14 @@ pip install -r requirements.txt
 
 # 4. Start the Dash app
 python app.py
-Then open a browser and go to `http://127.0.0.1:8050/` (or the address shown in the terminal).  
-The local dashboard uses the preprocessed CSV files in `website/data/` and does not rely on live API calls.
 
----
+Then open a browser and go to http://..../ (the address shown in the terminal)
 
-## 13. Challenges & Limitations ⚠️
+The local dashboard uses the preprocessed CSV files in website/data/ and does not rely on live API calls
+
+
+
+## 13. Challenges & Limitations 
 
 The project faced several practical and methodological challenges:
 
@@ -457,9 +469,8 @@ The project faced several practical and methodological challenges:
 
 These limitations should be considered when interpreting the results and when extending or reusing the project.
 
----
 
-## 14. Use of LLMs 🤖
+## 14. Use of LLMs 
 
 Large Language Models (LLMs) were used selectively as support tools during the project:
 
@@ -479,7 +490,7 @@ All analytical logic, data processing, and visualizations were developed indepen
 
 
 
-## 15. Conclusion 🎓
+## 15. Conclusion
 
 This project shows how combining detailed price indices with media sentiment, narrative analysis, and indicators of public attention can deepen the understanding of food inflation as both an economic and a social phenomenon.  
 By focusing on butter as a salient everyday product, the analysis reveals concrete mechanisms of price transmission, margin expansion, narrative framing, and public concern.  
