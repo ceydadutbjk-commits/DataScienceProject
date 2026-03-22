@@ -9,8 +9,8 @@ Data Science Project (inf-DSProj-01a)
 
 - Ceyda Dut – stu247737  
 - Ahmad Aldali – stu247158  
-- Ali Al Mahmoud – stu246024  
-- Rayyan – stu244778  
+- Ali Al Mahmoud – stu244778   
+- Rayyan – stu246024 
 
 
 
