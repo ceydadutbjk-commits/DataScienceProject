@@ -1,9 +1,10 @@
-# Liste der Python-Pakete, die Render installieren soll 
-dash==2.13.0 # Framework für Python Website (baut Layout, verbindet Diagramme, macht Interaktivität) 
-plotly==5.16.1 # Bibliothek für interaktive Diagramme
-gunicorn # Webserver für Render, startet Dash-App im Internet
-pandas # laden und verarbeiten unserer daten
-numpy #Mathematik-Bibliothek für Arrays und numerische Berechnungen.
-matplotlib # Klassische Python-Plot-Bibliothek.
-seaborn # Aufbauend auf matplotlib für Statistik-Plots.
-setuptools
+# Required Python packages for running and deploying the Dash application
+
+dash==2.13.0        # Web framework for building the interactive dashboard
+plotly==5.16.1      # Library for interactive visualizations
+gunicorn            # Production server for deployment on Render
+pandas              # Data loading and processing
+numpy               # Numerical computations and array operations
+matplotlib          # Base plotting library
+seaborn             # Statistical visualization (built on matplotlib)
+setuptools          # Packaging utilities

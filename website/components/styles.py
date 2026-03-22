@@ -1,5 +1,7 @@
-# Style der einzelnen Abschnitte
-# Dictionaries definieren das Aussehen der Webseite
+# Central styling configuration used across all pages of the dashboard
+
+# Styling dictionaries for the website layout
+# These define the visual appearance of sections, graphs, navigation menu, and links
 section_style = {
     'backgroundColor': '#eaf4f4',
     'padding': '24px',

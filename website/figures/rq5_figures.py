@@ -1,17 +1,26 @@
 import pandas as pd
 import plotly.graph_objects as go
 
-# Daten laden
+
 rq5_df = pd.read_csv("data/rq5_data.csv")
 
-# Datumsformat
+
 rq5_df["date"] = pd.to_datetime(rq5_df["date"])
 
 
 def create_rq5_figure(view_type="base"):
+    """
+    Create a visualization for Research Question 5.
+
+    Parameters:
+        view_type (str): The type of figure to create. Can be "base" or "highlight".
+
+    Returns:
+        fig (go.Figure): The created figure.
+    """
     fig = go.Figure()
 
-    # Linie 1: Dairy PPI inflation
+    # Add the dairy PPI inflation
     fig.add_trace(
         go.Scatter(
             x=rq5_df["date"],
@@ -21,7 +30,7 @@ def create_rq5_figure(view_type="base"):
         )
     )
 
-    # Linie 2: Butter CPI inflation + Fläche dazwischen
+    # Add the butter CPI inflation
     fig.add_trace(
         go.Scatter(
             x=rq5_df["date"],
@@ -32,7 +41,7 @@ def create_rq5_figure(view_type="base"):
         )
     )
 
-    # Optional: markiere Monate mit potenzieller margin expansion
+    # Highlight the potential margin expansions
     if view_type == "highlight":
         flagged_df = rq5_df[rq5_df["margin_expansion_flag"]]
 
@@ -45,8 +54,10 @@ def create_rq5_figure(view_type="base"):
             )
         )
 
+    # Add a horizontal line to indicate the 0% inflation rate
     fig.add_hline(y=0, line_dash="dash", line_color="gray")
 
+    # Update the layout
     fig.update_layout(
         title="Inflation Gap between Butter CPI and Dairy PPI over Time",
         xaxis_title="Date",

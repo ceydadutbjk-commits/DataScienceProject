@@ -1,13 +1,8 @@
-# Hauptprogramm, Stelle an der alle Einzelteile der Seite zusammengefasst werden
-
 
 import dash
 from dash import dcc
 from dash import html
-from dash.dependencies import Input, Output # wird benutzt, um die Seite zu aktualisieren Callback
-
-# Aufteilen der Seite in verschiedene Komponenten
-# importieren der Komponenten
+from dash.dependencies import Input, Output # 
 
 from components.navbar import create_navbar
 from pages.imprint import create_imprint_page
@@ -29,9 +24,8 @@ from figures.rq9_figures import create_rq9_figure
 
 app = dash.Dash(__name__, suppress_callback_exceptions=True)
 server = app.server 
-app.layout = html.Div([ # gesamtes Layout des Dash Dashboards
-
-    dcc.Location(id='url', refresh=False), # URL verwaltung
+app.layout = html.Div([ 
+    dcc.Location(id='url', refresh=False), 
 
     html.Div([
     html.H1(
@@ -60,7 +54,7 @@ app.layout = html.Div([ # gesamtes Layout des Dash Dashboards
 
     create_navbar(link_style, menu_style),
 
-    html.Div(id='page_content') # Inhaltsblöcke
+    html.Div(id='page_content') 
 
 ], style={
     'maxWidth': '1100px',
@@ -71,45 +65,60 @@ app.layout = html.Div([ # gesamtes Layout des Dash Dashboards
 })
 
 
-@app.callback( # mehrseitigiger Callback für die Navigation
-# Wenn sich etwas ändert, wird automatisch eine Funktion ausgeführt.
-# URL wird gelesen, passende Seite wird ausgewählt, Inhalt wird angezeigt
-    Output('page_content', 'children'), # Das Ergebnis der Funktion wird in den Bereich page_content geschrieben.
-    Input('url', 'pathname') # reagieren auf den aktuellen Pfad der URL
+@app.callback(
+    Output('page_content', 'children'), 
+    Input('url', 'pathname') 
 )
 
-def display_page(pathname): # Funktion, die die Seite anzeigt
+def display_page(pathname):
+    """
+    Determine which page to display based on the URL's pathname.
 
+    Parameters
+    ----------
+    pathname : str
+        The pathname of the URL.
+
+    Returns
+    -------
+    page_content : html.Div
+        The content of the page to be displayed.
+    """
     if pathname == '/':
+        # The homepage displays a brief introduction and links to the other pages.
         return create_home_page(section_style)
 
     elif pathname == '/data':
+        # The data page provides information about the datasets used and their sources.
         return create_data_page(section_style)
 
     elif pathname == '/category1':
+        # The category 1 page displays the results of the research questions 1 to 5.
         return create_category1_page(
             section_style,
             graph_style
         )
 
     elif pathname == '/category2':
+        # The category 2 page displays the results of the research questions 6 and 7.
         return create_category2_page(section_style, graph_style)
 
     elif pathname == '/category3':
+        # The category 3 page displays the results of the research questions 8 and 9.
         return create_category3_page(section_style, graph_style)
 
     elif pathname == '/imprint':
+        # The imprint page displays the project's authors and their contact information.
         return create_imprint_page(section_style)
 
     else:
+        # If the pathname does not match any of the above, display a 404 page.
         return html.Div([
             html.H2("Page not found"),
             html.P("This page does not exist.")
         ], style=section_style)
 
-# jede research question hat einen eigenen callback
-# wird aufgerufen, wenn sich etwas im dropdown ändert
-# jede rsq hat einen eigenen dropdown, figure und interpretation
+
 
 @app.callback(
     Output("rq2_graph_dynamic", "figure"),
@@ -117,19 +126,35 @@ def display_page(pathname): # Funktion, die die Seite anzeigt
     Input("rq2_view", "value")
 )
 def update_rq2_graph(selected_view):
+    """
+    Updates the graph and interpretation for the Research Question 2 based on the selected view.
 
+    Parameters
+    ----------
+    selected_view : str
+        The selected view for the graph. Can be "prices" or "ratio".
+
+    Returns
+    -------
+    fig : go.Figure
+        The updated graph.
+    interpretation : html.P
+        The updated interpretation for the graph.
+    """
     fig = create_rq2_figure(selected_view)
 
     if selected_view == "prices":
 
+        # The absolute price chart shows the price ratio of butter to margarine over time.
         interpretation = html.P(
-            " In the absolute price chart, the y‑axis shows the price ratio of butter to margarine, while the x‑axis displays the months from early 2020 to late 2023. The ratio starts clearly above the reference value of 1, which suggests that butter is consistently priced higher than margarine at the beginning of the period. Over the course of 2022, the line rises noticeably and reaches a pronounced peak, indicating a phase in which butter prices increase more than margarine prices. From early 2023 onward, the ratio drops sharply below the reference line and remains there for several months, so margarine appears temporarily more expensive than butter, before the ratio moves slightly back toward 1 near the end of the observed period."
+            "In the absolute price chart, the y-axis shows the price ratio of butter to margarine, while the x-axis displays the months from early 2020 to late 2023. The ratio starts clearly above the reference value of 1, which suggests that butter is consistently priced higher than margarine at the beginning of the period. Over the course of 2022, the line rises noticeably and reaches a pronounced peak, indicating a phase in which butter prices increase more than margarine prices. From early 2023 onward, the ratio drops sharply below the reference line and remains there for several months, so margarine appears temporarily more expensive than butter, before the ratio moves slightly back toward 1 near the end of the observed period."
         )
 
     else:
 
+        # The price ratio chart shows the price indices for butter and margarine over time.
         interpretation = html.P(
-            "In the price rario chart, the y‑axis reports price indices for butter and margarine (base year 2015 = 100), and the x‑axis again covers the months from 2020 to 2023. Both index series trend upward over time, indicating an overall rise in prices for both products. The blue area for butter lies above the red area for margarine for a long stretch and shows a particularly strong increase from 2021 to the end of 2022, which suggests comparatively stronger price growth for butter in that phase. From early 2023, the butter index moves closer to the margarine index and even falls below it at times, indicating that the relative price dynamics between the two products reverse or become more aligned in this later period."
+            "In the price rario chart, the y-axis reports price indices for butter and margarine (base year 2015 = 100), and the x-axis again covers the months from 2020 to 2023. Both index series trend upward over time, indicating an overall rise in prices for both products. The blue area for butter lies above the red area for margarine for a long stretch and shows a particularly strong increase from 2021 to the end of 2022, which suggests comparatively stronger price growth for butter in that phase. From early 2023, the butter index moves closer to the margarine index and even falls below it at times, indicating that the relative price dynamics between the two products reverse or become more aligned in this later period."
         )
 
     return fig, interpretation
@@ -140,17 +165,29 @@ def update_rq2_graph(selected_view):
     Input("rq1_view", "value")
 )
 def update_rq1_graph(selected_view):
+    """
+    This function updates the graph and interpretation for Research Question 1 based on the user's selected view.
 
+    Parameters:
+        selected_view (str): The type of figure to create. Can be "scatter" or "dumbbell".
+
+    Returns:
+        fig (go.Figure): The updated graph.
+        interpretation (html.P): The updated interpretation for the graph.
+    """
     fig = create_rq1_figure(selected_view)
 
+    # Create the interpretation based on the selected view
     if selected_view == "scatter":
 
+        # The scatter plot shows the relationship between producer price changes and butter price changes.
         interpretation = html.P(
             "The quadrant scatter shows monthly changes in raw milk producer prices on the x-axis and monthly changes in the butter consumer price index on the y-axis. Many points are located to the right of zero and often above zero, which means that rising producer prices frequently coincide with rising butter prices. On the left side, there are also months where both producer and butter prices fall, but this pattern is less clustered and more scattered. In some months, butter prices move more strongly than producer prices, suggesting that the reaction is not perfectly proportional. Overall, the plot indicates a positive link between producer and retail prices, with some signs of asymmetry, but it should be read as a pattern rather than a final statistical proof."
         )
 
     else:
 
+        # The dumbbell plot summarizes the relationship between producer price changes and butter price changes.
         interpretation = html.P(
             "The average reaction plot summarizes how butter prices behave in months with producer price increases compared to months with producer price decreases. In the data shown, producer price increases are associated with an average butter price change of around +2.63 index points, while producer price decreases go along with an average change of about −3.71 index points. This means that butter prices respond in both directions and, in this sample, fall on average even more strongly when producer prices decrease than they rise when producer prices increase. The result therefore does not fit the simple story that “prices rise faster than they fall”, but instead points to a noticeable, two-sided pass-through of producer price movements to retail butter prices."
         )
@@ -163,30 +200,44 @@ def update_rq1_graph(selected_view):
     Input("rq3_view", "value")
 )
 def update_rq3_graph(selected_view):
+    """
+    Creates the visualization for Research Question 3.
 
+    Parameters:
+        selected_view (str): Either "bubble" or "heatmap"
+
+    Returns:
+        fig (go.Figure): Interactive Plotly figure
+        interpretation (html.P): Text describing the plot
+    """
     fig = create_rq3_figure(selected_view)
 
     if selected_view == "bubble":
         interpretation = html.P(
-            "The differences between actual butter prices and projected values over time is displayed in the following bubble plot. The x-axis displays the months, and the y-axis shows the residuals/ the degree to which actual prices differ from anticipated levels. "
-            "Butter prices are frequently lower than anticipated because the majority of points are below 0. Particularly between spring and fall 2023, several months are designated as significant and have bigger bubbles. The deviations are significantly negative during this time, suggesting that butter prices did not rise as much as anticipated given producer prices. "
-            "At the beginning, there was one month that has a smaller, non-significant deviation, indicating that prices were more in line with expectations. The deviations get bigger and more regular over time.  "
+            "The differences between actual butter prices and projected values over time is displayed in the following bubble plot. "
+            "The x-axis displays the months, and the y-axis shows the residuals/ the degree to which actual prices differ from anticipated levels. "
+            "Butter prices are frequently lower than anticipated because the majority of points are below 0. "
+            "Particularly between spring and fall 2023, several months are designated as significant and have bigger bubbles. "
+            "The deviations are significantly negative during this time, suggesting that butter prices did not rise as much as anticipated given producer prices. "
+            "At the beginning, there was one month that has a smaller, non-significant deviation, indicating that prices were more in line with expectations. "
+            "The deviations get bigger and more regular over time. "
             "All in all, the plot suggests that the price of butter did not react as strongly as anticipated in 2023, which could suggest that the price was delayed or a change in the market. "
         )
     else:
         interpretation = html.P(
-            "The following Heat map shows remaining z-scores (standardized distance) over months and years. The colours demonstrate how strong the deviations are and darker colours indicate stronger negative deviations."
-            "Most months have negative values, which indicates that butter prices are continuously lower than expected. The middle of the year, when the colours were dark is when the biggest deviations occur. This implies that the price of butter was much lower than expected at this time of the year. The colours also lighten at the end and the start of the series to indicate that the price is moving towards the expected level."
-            "Overall, the heatmap presents a trend of underperformance in the price of butter, especially at the end of the year. This could be due to structural factors or system delays."
+            "The following Heat map shows remaining z-scores (standardized distance) over months and years. "
+            "The colours demonstrate how strong the deviations are and darker colours indicate stronger negative deviations. "
+            "Most months have negative values, which indicates that butter prices are continuously lower than expected. "
+            "The middle of the year, when the colours were dark is when the biggest deviations occur. "
+            "This implies that the price of butter was much lower than expected at this time of the year. "
+            "The colours also lighten at the end and the start of the series to indicate that the price is moving towards the expected level. "
+            "Overall, the heatmap presents a trend of underperformance in the price of butter, especially at the end of the year. "
+            "This could be due to structural factors or system delays. "
         )
 
     return fig, interpretation
 
-# dynamisches beispiel
-# Hier wird nicht zwischen zwei Plottypen gewechselt, sondern zwischen drei Metriken:
-# index_gap
-# butter_cpi
-# dairy_ppi
+
 
 @app.callback(
     Output("rq4_graph_dynamic", "figure"),
@@ -194,6 +245,16 @@ def update_rq3_graph(selected_view):
     Input("rq4_metric", "value")
 )
 def update_rq4_graph(selected_metric):
+    """
+    This function updates the graph and interpretation for Research Question 4 based on the user's selected view.
+
+    Parameters:
+        selected_metric (str): The type of metric to plot. Can be "butter_cpi", "dairy_ppi", or "cpi_ppi_gap".
+
+    Returns:
+        fig (go.Figure): The updated graph.
+        interpretation (html.P): The updated interpretation for the graph.
+    """
     fig = create_rq4_figure(selected_metric)
 
     if selected_metric == "butter_cpi":
@@ -223,19 +284,34 @@ def update_rq4_graph(selected_metric):
     Input("rq5_view", "value")
 )
 def update_rq5_graph(selected_view):
+    """
+    Updates the graph and interpretation for Research Question 5 based on the user's selected view.
 
+    Parameters:
+        selected_view (str): The type of view to plot. Can be "base" or "gap".
+
+    Returns:
+        fig (go.Figure): The updated graph.
+        interpretation (html.P): The updated interpretation for the graph.
+    """
     fig = create_rq5_figure(selected_view)
 
     if selected_view == "base":
         interpretation = html.P(
-            "In the above chart, the y-axis represents the year-over-year inflation rates, while the x-axis represents the period from early 2021 to late 2023. The red line represents the butter CPI, while the blue line represents the dairy PPI."
+            """
+            In the above chart, the y-axis represents the year-over-year inflation rates, 
+            while the x-axis represents the period from early 2021 to late 2023. 
+            The red line represents the butter CPI, while the blue line represents the dairy PPI.
+            """
             "At the beginning, the two lines are close together at low levels, showing that the two products are experiencing similar growth in prices. In 2022, the inflation rates increase rapidly for both products, with butter CPI experiencing a sharper increase and reaching a higher peak."
             "After the peak, the two lines decreased, with butter CPI decreasing more sharply, even going into negative territory, while the PPI decreases gradually. This shows that retail prices decrease faster than production prices."
             "Generally, the two lines follow a similar trend, with some differences, especially when the inflation was high."
         )
     else:
         interpretation = html.P(
-            "In this context, the chart points out the periods where the butter CPI inflation is greater than the dairy PPI inflation."
+            """
+            In this context, the chart points out the periods where the butter CPI inflation is greater than the dairy PPI inflation.
+            """
             "Looking at the chart for the year 2022, there are several points highlighted by the chart where the butter CPI inflation is greater than the dairy PPI inflation, especially at the peak of the inflation. This can be seen as the period of margin expansion."
             "Also, the widest gap between the two lines can be seen at the midpoint of the year 2022, which points out the widest margin expansion. After this period, the gap between the two lines becomes narrow and then decreases in the year 2023 when the price falls below the production cost. This points out the end of the margin expansion period and the beginning of the margin compression period. Thus, the highlighted points on the chart indicate that the margin expansion occurs only at the peak of the inflation in the year 2022."
         )
@@ -248,25 +324,38 @@ def update_rq5_graph(selected_view):
     Input("rq7_view", "value")
 )
 def update_rq7_graph(selected_view):
-
+    """
+    Returns an interactive figure and an interpretation of the figure for Research Question 7.
+    
+    Parameters:
+        selected_view (str): The type of figure to create. Can be "scatter" or "timeseries".
+    
+    Returns:
+        fig (go.Figure): Interactive Plotly figure.
+        interpretation (html.P): Interpretation of the figure.
+    """
     fig = create_rq7_figure(selected_view)
 
     if selected_view == "scatter":
 
         interpretation = html.P(
-            "The scatter plot shows the relationship between the inflation rate on the x-axis and the number of media articles per month on the y-axis. "
-            "Points with higher inflation tend to be associated with higher article counts, suggesting that periods of stronger inflation are often accompanied by greater media attention. "
-            "At lower inflation levels, the number of articles varies more strongly and is in several cases clearly lower. "
-            "Although the pattern is not perfectly linear, the chart overall indicates a positive relationship between inflation and media coverage."
+            """
+            The scatter plot shows the relationship between the inflation rate on the x-axis and the number of media articles per month on the y-axis. 
+            Points with higher inflation tend to be associated with higher article counts, suggesting that periods of stronger inflation are often accompanied by greater media attention. 
+            At lower inflation levels, the number of articles varies more strongly and is in several cases clearly lower. 
+            Although the pattern is not perfectly linear, the chart overall indicates a positive relationship between inflation and media coverage.
+            """
         )
 
     else:
 
         interpretation = html.P(
-            "The time series compares the development of inflation and media coverage over time. "
-            "Both series follow similar broader movements, which suggests a connection between higher inflation and increased reporting. "
-            "At the same time, the graph shows that media attention does not always react immediately: in some months, article counts continue to rise even when inflation declines. "
-            "This indicates that the relationship is positive overall, but not equally strong or synchronous in every month."
+            """
+            The time series compares the development of inflation and media coverage over time. 
+            Both series follow similar broader movements, which suggests a connection between higher inflation and increased reporting. 
+            At the same time, the graph shows that media attention does not always react immediately: in some months, article counts continue to rise even when inflation declines. 
+            This indicates that the relationship is positive overall, but not equally strong or synchronous in every month.
+            """
         )
 
     return fig, interpretation
@@ -277,33 +366,53 @@ def update_rq7_graph(selected_view):
     Input("rq8_view", "value")
 )
 def update_rq8_graph(selected_view):
-
+    """
+    This function returns an interactive figure and an interpretation of the figure for Research Question 8.
+    
+    Parameters:
+        selected_view (str): The type of figure to create. Can be "stacked" or "heatmap".
+    
+    Returns:
+        fig (go.Figure): Interactive Plotly figure.
+        interpretation (html.P): Interpretation of the figure.
+    """
     fig = create_rq8_figure(selected_view)
 
     if selected_view == "stacked":
 
+        # The stacked bar chart shows how different narratives about food inflation are distributed across news articles, YouTube videos, and YouTube comments.
+        # In the news, “monetary causes” clearly dominate, suggesting that traditional media primarily attribute inflation to economic factors.
+        # By comparison, other narratives play a significantly smaller role.
+        # In YouTube videos, the distribution is more balanced, as several narratives each account for a relevant share.
+        # This shows that different explanatory approaches coexist there, rather than a single dominant narrative taking center stage.
+        # In YouTube comments, “other” dominates by a wide margin.
+        # This suggests that users more frequently use nonspecific or emotional explanations rather than referring to clear economic causes.
         interpretation = html.P(
-           "The stacked bar chart shows how different narratives about food inflation are distributed across news articles, YouTube videos, and YouTube comments."
-           "In the news, “monetary causes” clearly dominate, suggesting that traditional media primarily attribute inflation to economic factors. By comparison, other narratives play a significantly smaller role. "
-           "In YouTube videos, the distribution is more balanced, as several narratives each account for a relevant share. This shows that different explanatory approaches coexist there, rather than a single dominant narrative taking center stage."
-           "In YouTube comments, “other” dominates by a wide margin. This suggests that users more frequently use nonspecific or emotional explanations rather than referring to clear economic causes."
-           "Overall, the diagram shows that the narratives differ significantly depending on the platform, with a shift from structured, economic explanations in the news to more diverse and less clear interpretations on social media. "
-
+            "The stacked bar chart shows how different narratives about food inflation are distributed across news articles, YouTube videos, and YouTube comments."
+            "In the news, “monetary causes” clearly dominate, suggesting that traditional media primarily attribute inflation to economic factors. By comparison, other narratives play a significantly smaller role."
+            "In YouTube videos, the distribution is more balanced, as several narratives each account for a relevant share. This shows that different explanatory approaches coexist there, rather than a single dominant narrative taking center stage."
+            "In YouTube comments, “other” dominates by a wide margin. This suggests that users more frequently use nonspecific or emotional explanations rather than referring to clear economic causes."
         )
 
     else:
 
+        # The heatmap shows the prevalence of different narratives about food inflation across news articles, YouTube videos, and YouTube comments, with darker colors representing higher proportions.
+        # In the news, “monetary causes” clearly dominates, suggesting that traditional media primarily attribute inflation to economic factors such as monetary policy.
+        # Other narratives appear significantly less frequently.
+        # In YouTube videos, the distribution is more balanced, as several narratives such as monetary causes, other, and energy/tax costs appear with similar frequency.
+        # This shows that multiple explanations are used simultaneously there.
+        # In YouTube comments, “other” dominates by a wide margin.
+        # This suggests that comments are less structured and more heavily influenced by subjective or emotional assessments.
         interpretation = html.P(
-            "The heatmap shows the prevalence of different narratives about food inflation across news articles, YouTube videos, and YouTube comments, with darker colors representing higher proportions. "
-            "In the news, “monetary causes” clearly dominates, suggesting that traditional media primarily attribute inflation to economic factors such as monetary policy. Other narratives appear significantly less frequently. "
-            "In YouTube videos, the distribution is more balanced, as several narratives such as monetary causes, other, and energy/tax costs appear with similar frequency. This shows that multiple explanations are used simultaneously there."
-            "In YouTube comments, “other” dominates by a wide margin. This suggests that comments are less structured and more heavily influenced by subjective or emotional assessments. "
-            "Overall, the heatmap shows a clear shift from structured economic explanations in the news toward more diverse and less clear interpretations on social media. "
-        )
+            "The heatmap shows the prevalence of different narratives about food inflation across news articles, YouTube videos, and YouTube comments, with darker colors representing higher proportions."
+            "In the news, “monetary causes” clearly dominates, suggesting that traditional media primarily attribute inflation to economic factors such as monetary policy."
+            "Other narratives appear significantly less frequently."
+            "In YouTube videos, the distribution is more balanced, as several narratives such as monetary causes, other, and energy/tax costs appear with similar frequency."
+            "This shows that multiple explanations are used simultaneously there."
+            "In YouTube comments, “other” dominates by a wide margin."
+            "This suggests that comments are less structured and more heavily influenced by subjective or emotional assessments."
 
-    return fig, interpretation
-
-@app.callback(
+@app.callback( 
     Output("rq6_graph_dynamic", "figure"),
     Output("rq6_interpretation", "children"),
     Input("rq6_view", "value")
@@ -335,10 +444,22 @@ def update_rq6_graph(selected_view):
     Input("rq9_view", "value")
 )
 def update_rq9_graph(selected_view):
+    """
+    Updates the interactive figure and interpretation for Research Question 9 based on the selected view.
 
+    Parameters:
+        selected_view (str): The type of figure to create. Can be "price_indices", "price_vs_search", or "economic_concern".
+
+    Returns:
+        fig (go.Figure): Interactive Plotly figure.
+        interpretation (html.P): Interpretation of the figure.
+    """
     fig = create_rq9_figure(selected_view)
 
     if selected_view == "price_indices":
+        # The figure illustrates how consumer price indices for selected food products in Germany have developed over time.
+        # All categories show a clear upward trend, with prices rising particularly sharply from 2021 onwards.
+        # This marks a period of intensified food inflation.
         interpretation = html.P(
             "The figure illustrates how consumer price indices for selected food products in Germany have developed over time. All categories show a clear upward trend, with prices rising particularly sharply from 2021 onwards. This marks a period of intensified food inflation."
             "Such a pronounced increase indicates that households have faced growing cost pressure, especially for essential goods. These price surges are economically significant because they directly influence everyday consumption patterns and purchasing power."
@@ -346,12 +467,17 @@ def update_rq9_graph(selected_view):
         )
 
     elif selected_view == "price_vs_search":
+        # The figure compares the normalized development of butter prices with Google search interest.
+        # Both data series are scaled to enable a direct visual comparison.
         interpretation = html.P(
             "The figure compares the normalized development of butter prices with Google search interest. Both data series are scaled to enable a direct visual comparison."
             "It becomes apparent that periods of rising butter prices often coincide with increased search activity. This suggests that consumers react to higher food prices by seeking more information. The pattern indicates that price developments can influence public awareness and attention, linking market trends to shifts in online behavior"
         )
 
     else:
+        # The distribution of fear scores shows that a significant portion of YouTube comments contains language associated with economic concerns.
+        # Many users mention rising prices, financial pressure, or the affordability of food.
+        # This suggests that online discussions about food inflation are closely linked to feelings of economic insecurity and household financial stress, reflecting how consumers emotionally and cognitively respond to increasing living costs.
         interpretation = html.P(
             "The distribution of fear scores shows that a significant portion of YouTube comments contains language associated with economic concerns. "
             "Many users mention rising prices, financial pressure, or the affordability of food. "
@@ -360,6 +486,6 @@ def update_rq9_graph(selected_view):
 
     return fig, interpretation
 
-if __name__ == '__main__': # Wenn du diese Datei direkt startest, soll die App laufen.
+if __name__ == '__main__':  
 
-    app.run(debug=True) # startet lokale Server
+    app.run(debug=True) # start local Server

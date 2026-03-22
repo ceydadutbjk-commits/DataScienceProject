@@ -1,18 +1,32 @@
-'''Hier liegen RQ1 bis RQ5.
 
-Jede Research Question hat:
-	•	Überschrift
-	•	Fragestellung
-	•	Kontexttext
-	•	Dropdown
-	•	Graph
-	•	Interpretation
-'''
 
 from dash import html, dcc
 
 
-def create_category1_page(section_style, graph_style):    return html.Div([
+"""
+Category 1 page layout for research questions 1 to 5.
+
+Each research question section contains:
+- title
+- research question
+- context text
+- dropdown
+- graph container
+- interpretation container
+"""
+
+def create_category1_page(section_style, graph_style):
+    """
+    Create the layout for the Category 1 page.
+
+    Parameters:
+    section_style (dict): CSS styles for the section container.
+    graph_style (dict): CSS styles for the graph container.
+
+    Returns:
+    html.Div: The layout for the Category 1 page.
+    """
+    return html.Div([
         html.H2("Category 1"),
         html.P("Price Dynamics, Inflation and Retail Behaviour in Germany"),
 
@@ -33,12 +47,12 @@ def create_category1_page(section_style, graph_style):    return html.Div([
             clearable=False,
             style={"marginBottom": "15px"}
         ),
-html.Div(dcc.Graph(id="rq1_graph_dynamic"), style=graph_style),
+        html.Div(dcc.Graph(id="rq1_graph_dynamic"), style=graph_style),
 
-html.Div(
-    id="rq1_interpretation",
-    style={"marginTop": "15px"}
-),
+        html.Div(
+            id="rq1_interpretation",
+            style={"marginTop": "15px"}
+        ),
 
         html.H3("Research Question 2"),
         html.P(
@@ -60,7 +74,6 @@ html.Div(
 
         html.Div(dcc.Graph(id="rq2_graph_dynamic"), style=graph_style),
         
-
         html.Div(
             id="rq2_interpretation",
             style={"marginTop": "15px"}
@@ -73,15 +86,15 @@ html.Div(
             "underlying dairy commodity trends or normal seasonal price patterns?"
         ),
         html.P("This question investigates abnormal movements of butter price through comparing actual prices against predicted price, for butter produced, based on expected producer price levels and normal seasonal patterns."
-                "By observing months in which butter price behaves differently than expected, we can try to determine if these differences represent unusual dynamic conditions in butter market, including delayed price adjustments or temporary inefficiencies of the butter market." 
+                "By observing months in which butter price behaves differently than expected, we can try to determine if these differences represent unusual dynamic conditions in butter market, including delayed price adjustments or temporary inefficiencies of the butter market."
         
-                ),
+        ),
 
         dcc.Dropdown(
             id="rq3_view",
             options=[
                 {"label": "Bubble plot", "value": "bubble"},
-                {"label": "Heatmap", "value": "heatmap"}
+                {"label": "heatmap", "value": "heatmap"}
             ],
             value="bubble",
             clearable=False,
@@ -129,12 +142,12 @@ html.Div(
         html.P(
             "To what extent can comparisons between the dairy Producer Price Index "
             "(PPI) and the Consumer Price Index (CPI) reveal periods of excessive "
-            "margin expansion, where retail prices increased significantly faster "
+            "margin expansion, where retail prices Increased significantly faster "
             "than production costs?"
         ),
         html.P(
             "This question seeks to answer how the inflation rates of butter consumer prices (CPI) and dairy producer prices (PPI) change with time." 
-            "The aim is to identify instances when consumer prices rise more rapidly than producer prices." 
+            "The aim is to identify instances when consumer prices rise more rapidly than producer prices."
             "These instances may signify opportunities for potential margin expansion, implying that retailers are raising prices more rapidly than justified by cost changes."
          ),
 

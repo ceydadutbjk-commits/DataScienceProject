@@ -141,6 +141,141 @@ The analysis yields several substantive insights about the interaction between p
 
 All data used in the dashboard are stored in processed form as CSV files under `website/data/`.
 
+### RQ1 Dataset: CPI–PPI Dynamics Website
+
+It contains monthly data on butter consumer prices (CPI) and dairy producer prices (PPI) in Germany.
+
+**Variables:**
+- `month`: Time index (monthly)
+- `butter_cpi`: Consumer price index for butter
+- `dairy_ppi`: Producer price index for dairy products
+- `dairy_cpi`: Consumer price index for dairy products
+- `ppi_change`: Monthly change in producer prices
+- `butter_change`: Monthly change in butter prices
+- `ppi_direction`: Direction of producer price change (increase/decrease)
+
+The dataset is used to analyse asymmetric price transmission between producer and retail levels.
+
+### RQ2 Dataset: Butter vs. Margarine Price Dynamics
+
+This dataset contains monthly consumer price indices (CPI) for butter and margarine in Germany, allowing a comparison of their relative price development over time.
+
+**Variables:**
+- `month`: Time index (monthly)
+- `butter_cpi`: Consumer price index for butter
+- `margarine_cpi`: Consumer price index for margarine
+- `price_gap`: Difference between butter and margarine prices (butter_cpi - margarine_cpi)
+- `inflation_period`: Boolean indicator marking periods of elevated food inflation
+
+The dataset is used to analyse how the relative price dynamics between butter and margarine evolve, especially during periods of high inflation.
+
+### RQ3 Dataset: Deviations from Expected Butter Prices
+
+This dataset contains observed and model-predicted butter consumer price indices (CPI) in Germany, along with residual-based deviation measures.
+
+**Variables:**
+- `datum`: Time index (monthly)
+- `butter_cpi`: Observed consumer price index for butter
+- `predicted_butter_cpi`: Model-based expected butter price
+- `residual`: Difference between observed and predicted values (actual - predicted)
+- `residual_zscore`: Standardised residual indicating the magnitude of deviation
+- `significant_deviation`: Boolean indicator for statistically significant deviations
+- `deviation_direction`: Direction of deviation (e.g. lower_than_expected, not_significant)
+
+The dataset is used to identify periods in which butter prices significantly deviate from expected trends, indicating unusual market behaviour.
+
+### RQ4 Dataset: VAT Reduction and Inflation Effects
+
+This dataset summarises key price developments across different policy and inflation periods in Germany, focusing on the impact of the temporary VAT reduction in 2020 and subsequent inflation.
+
+**Variables:**
+- `period`: Defined time period (before VAT reduction, during VAT reduction, inflation phase)
+- `gap_start`: Initial difference between butter CPI and dairy PPI at the beginning of the period
+- `gap_end`: Final difference between butter CPI and dairy PPI at the end of the period
+- `butter_start`: Butter CPI at the beginning of the period
+- `butter_end`: Butter CPI at the end of the period
+- `ppi_start`: Dairy PPI at the beginning of the period
+- `ppi_end`: Dairy PPI at the end of the period
+
+The dataset is used to analyse how retail butter prices and producer prices evolved across policy interventions and inflation phases, and whether VAT reductions had a lasting effect.
+
+### RQ5 Dataset: CPI–PPI Gap and Margin Expansion
+
+This dataset contains year-over-year (YoY) percentage changes in butter consumer prices (CPI) and dairy producer prices (PPI), allowing the analysis of potential margin expansion in the retail sector.
+
+**Variables:**
+- `date`: Time index (monthly)
+- `butter_yoy_pct`: Year-over-year percentage change in butter CPI
+- `dairy_ppi_yoy_pct`: Year-over-year percentage change in dairy PPI
+- `margin_gap`: Difference between consumer and producer price inflation (butter_yoy_pct - dairy_ppi_yoy_pct)
+- `margin_expansion_flag`: Boolean indicator marking periods where consumer prices increase significantly faster than producer prices
+
+The dataset is used to identify periods of potential margin expansion, where retail prices rise more strongly than production costs.
+
+### RQ6 Dataset: Media Sentiment and Price Trends
+
+This dataset combines media sentiment observations with official price data to analyse how public sentiment relates to food price developments.
+
+**Structure:**
+The dataset contains two types of entries:
+- `sentiment`: individual sentiment scores derived from media sources
+- `prices`: monthly consumer price indices for butter and dairy products
+
+**Variables:**
+- `type`: Indicates whether the row represents sentiment data or price data (`sentiment` or `prices`)
+- `date`: Time index (available for price data)
+- `sentiment`: Sentiment score of media content (range approximately from -1 to 1)
+- `dairy_cpi`: Consumer price index for dairy products
+- `butter_cpi`: Consumer price index for butter
+
+The dataset is used to explore how negative or positive media sentiment evolves over time and how it relates to actual price developments.
+
+### RQ7 Dataset: Media Coverage and Inflation Regimes
+
+This dataset captures the relationship between inflation levels and the volume of media coverage on food inflation.
+
+**Variables:**
+- `month`: Time index (monthly)
+- `inflation_yoy`: Year-over-year inflation rate
+- `article_count`: Number of media articles related to food inflation
+- `inflation_regime`: Categorisation of inflation periods (e.g. high inflation vs. lower inflation)
+
+The dataset is used to analyse how the intensity of media coverage changes across different inflation regimes and whether higher inflation leads to increased media attention.
+
+### RQ8 Dataset: Narrative Distribution Across Platforms
+
+This dataset captures the distribution of different food inflation narratives across multiple media platforms.
+
+**Variables:**
+- `platform`: Source of the content (news, YouTube videos, YouTube comments)
+- `narrative`: Classified narrative category (e.g. corporate greed, political failure, monetary causes, energy and tax costs, other)
+- `count`: Number of occurrences of each narrative within the platform
+
+The dataset is used to compare how different platforms frame food inflation and to identify differences in narrative emphasis between professional media and user-generated content.
+
+### RQ9 Dataset: Prices, Public Attention, and Economic Concern
+
+This dataset combines multiple data sources to analyse how rising food prices relate to public attention and indicators of economic concern.
+
+**Structure:**
+The dataset contains three types of entries:
+- `price_indices`: Long-term time series of butter, dairy, and margarine price indices
+- `price_vs_search`: Combined observations of butter prices and Google search interest
+- `economic_concern`: Distribution of economic concern levels derived from online discourse
+
+**Variables:**
+- `type`: Indicates the data type (`price_indices`, `price_vs_search`, or `economic_concern`)
+- `date`: Time index for price data
+- `year_month`: Time index for combined price–search data
+- `butter_price`: Consumer price index for butter
+- `dairy_price`: Consumer price index for dairy products
+- `margarine_price`: Consumer price index for margarine
+- `butter_search_interest`: Google Trends index for butter-related searches
+- `fear_score`: Indicator of economic concern in online discourse
+- `count`: Frequency of observations for each concern level
+
+The dataset is used to analyse how increases in food prices relate to public attention (search behaviour) and expressions of economic concern in online discussions.
+
 
 
 ## 7. Data Pipeline 🔄
@@ -334,7 +469,15 @@ Large Language Models (LLMs) were used selectively as support tools during the p
 All outputs from LLMs were critically reviewed, adapted, and integrated manually by the project team.  
 No code or text was adopted without scrutiny, and all core analytical decisions, interpretations, and final conclusions were made by the students.
 
----
+## Code Origin and External Support
+
+Parts of the website structure (especially layout, navigation, and basic Dash setup) are based on course-provided examples and standard Dash templates.
+
+These components were adapted, extended, and integrated into our project.
+
+All analytical logic, data processing, and visualizations were developed independently by the project team.
+
+
 
 ## 15. Conclusion 🎓
 

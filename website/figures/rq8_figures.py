@@ -2,12 +2,20 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-# Daten laden
 rq8_df = pd.read_csv("data/rq8_data.csv")
 
 
 def create_rq8_figure(view_type="stacked"):
-    # Lesbarere Plattformnamen
+    """
+    Create an interactive visualization for Research Question 8.
+
+    Parameters:
+        view_type (str): The type of figure to create. Can be "stacked" or "heatmap".
+
+    Returns:
+        fig (go.Figure): The created figure.
+    """
+    # Define a consistent order for platforms and narrative categories
     platform_labels = {
         "news": "News",
         "youtube_videos": "YouTube Videos",
@@ -26,17 +34,21 @@ def create_rq8_figure(view_type="stacked"):
         "other"
     ]
 
-    # Prozentanteile je Plattform berechnen
+    # Calculate the total number of texts per platform
     df["platform_total"] = df.groupby("platform")["count"].transform("sum")
+
+    # Calculate the percentage share of each narrative within each platform
     df["percentage"] = (df["count"] / df["platform_total"]) * 100
 
     if view_type == "heatmap":
+        # Create a matrix of percentage values for the heatmap
         heatmap_df = df.pivot(
             index="platform_label",
             columns="narrative",
             values="percentage"
         )
 
+        # Reorder rows and columns so the heatmap follows a consistent structure
         heatmap_df = heatmap_df.reindex(
             index=platform_order,
             columns=narrative_order
@@ -52,15 +64,17 @@ def create_rq8_figure(view_type="stacked"):
                 "y": "Platform",
                 "color": "Percentage"
             },
-            title="Narrative Intensity across Platforms"
+            title="Narrative Intensity across platforms"
         )
 
+        # Customize the heatmap's layout
         fig.update_layout(height=450)
 
         return fig
 
     fig = go.Figure()
 
+    # Iterate over all narratives and create a bar segment for each
     for narrative in narrative_order:
         narrative_df = df[df["narrative"] == narrative]
 
@@ -80,8 +94,9 @@ def create_rq8_figure(view_type="stacked"):
                 )
             )
 
+    # Customize the stacked bar chart's layout
     fig.update_layout(
-        title="Narrative Distribution across Media Platforms",
+        title="Narrative Distribution across Media platforms",
         barmode="stack",
         xaxis_title="Platform",
         yaxis_title="Percentage within platform",

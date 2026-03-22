@@ -1,3 +1,4 @@
+# This module creates the interactive visualizations for Research Question 4.
 import pandas as pd
 import plotly.graph_objects as go
 
@@ -6,8 +7,17 @@ rq4_df = pd.read_csv("data/rq4_data.csv")
 
 
 def create_rq4_figure(metric="index_gap"):
-    """Create a dynamic range plot for Research Question 4."""
+    """
+    Create a dynamic range plot for Research Question 4.
 
+    Parameters:
+        metric (str): The metric to plot. Can be one of "index_gap", "butter_cpi", "dairy_ppi".
+
+    Returns:
+        plotly.graph_objects.Figure: Interactive Plotly figure.
+    """
+
+    # Map metric to specific columns in the dataframe
     metric_map = {
         "index_gap": {
             "start": "gap_start",
@@ -29,12 +39,14 @@ def create_rq4_figure(metric="index_gap"):
         },
     }
 
+    # Select the columns to plot based on the metric
     selected = metric_map[metric]
 
     start_values = rq4_df[selected["start"]]
     end_values = rq4_df[selected["end"]]
     periods = rq4_df["period"]
 
+    # Create a line with the start and end values
     line_x = []
     line_y = []
 
@@ -42,6 +54,7 @@ def create_rq4_figure(metric="index_gap"):
         line_x.extend([start, end, None])
         line_y.extend([period, period, None])
 
+    # Create a scatter plot with the start and end values
     fig = go.Figure()
 
     fig.add_trace(
@@ -82,3 +95,4 @@ def create_rq4_figure(metric="index_gap"):
     )
 
     return fig
+    

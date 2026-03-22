@@ -1,4 +1,14 @@
-# Navigationsleiste der Webseite
+def create_navbar(link_style, menu_style):
+    """
+    Creates the navigation bar for the website.
+
+    Parameters:
+        link_style (dict): CSS style applied to each navigation link
+        menu_style (dict): CSS style applied to the navigation container
+
+    Returns:
+        html.Div: Dash HTML component representing the navigation bar
+    """
 from dash import html
 
 

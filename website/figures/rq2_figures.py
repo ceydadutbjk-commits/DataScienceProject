@@ -2,17 +2,29 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-# Daten laden
+
 rq2_df = pd.read_csv("data/rq2_data.csv")
 
-# Datumsformat
+
 rq2_df["month"] = pd.to_datetime(rq2_df["month"])
 
-# Verhältnis berechnen
+
 rq2_df["price_ratio"] = rq2_df["butter_cpi"] / rq2_df["margarine_cpi"]
-# das Verhältnis Butter/Margarine zeigt, wie sich beide Produkte relativ zueinander entwickeln.
+
 
 def create_rq2_figure(view_type="prices"):
+    """
+    Create a Plotly figure based on the Research Question 2 data.
+
+    Parameters:
+    view_type (str): The type of figure to create. Can be "ratio" or "prices".
+
+    Returns:
+    fig (go.Figure): The created figure.
+
+    """
+
+    # Ratio view: shows how butter prices evolve relative to margarine prices
     if view_type == "ratio":
         fig = px.line(
             rq2_df,
@@ -34,6 +46,7 @@ def create_rq2_figure(view_type="prices"):
 
         return fig
 
+    # Default view: compares the absolute CPI development of butter and margarine.
     fig = go.Figure()
 
     fig.add_trace(

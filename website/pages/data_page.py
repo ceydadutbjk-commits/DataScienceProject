@@ -1,7 +1,25 @@
 from dash import html
 
 
+"""
+Create the data page of the dashboard.
+
+The data page is divided into two main sections: data sources and variables & preparation.
+The data sources section contains three cards, each describing a different data type used in the project.
+The variables & preparation section contains two cards, each describing a different aspect of the data analysis.
+"""
+
 def create_data_page(section_style):
+    """
+    Define the style of the data page.
+
+    Args:
+        section_style (dict): The style of the section.
+
+    Returns:
+        html.Div: The data page.
+    """
+
     card_style = {
         "background": "linear-gradient(145deg, #ffffff, #f3f4f6)",
         "padding": "24px",
@@ -10,7 +28,7 @@ def create_data_page(section_style):
         "marginBottom": "24px",
         "border": "1px solid #e5e7eb",
         "transition": "transform 0.2s ease, box-shadow 0.2s ease"
-}
+    }
 
     source_grid_style = {
         "display": "grid",
@@ -97,11 +115,11 @@ def create_data_page(section_style):
                     }
                 ),
                 html.P(
-                    "Sources: Google Trends, YouTube",
+                    "Sources: Google trends, YouTube",
                     style={"fontWeight": "bold", "marginBottom": "10px", "color": "#1f2937"}
                 ),
                 html.P(
-                    "Reflect public awareness and online response through search behavior and user interactions. Google Trends indicates shifts in public attention, while YouTube comments provide insight into sentiment and narrative framing.",
+                    "Reflect public awareness and online response through search behavior and user interactions. Google trends indicates shifts in public attention, while YouTube comments provide insight into sentiment and narrative framing.",
                     style={"fontSize": "15px", "lineHeight": "1.7", "color": "#374151"}
                 )
             ], style={**card_style, "borderLeft": "5px solid #6366f1"})
@@ -123,7 +141,7 @@ def create_data_page(section_style):
             html.Ul([
                 html.Li("Economic: CPI, PPI, inflation gaps, relative price ratios"),
                 html.Li("Media & Discourse: article counts, sentiment polarity, narrative categories"),
-                html.Li("Public Interest: search volumes, topic-related keyword indicators"),
+                html.Li("PublicInterest: search volumes, topic-related keyword indicators"),
             ], style={"fontSize": "15px", "lineHeight": "1.8", "color": "#374151"}),
 
             html.P(

@@ -2,8 +2,20 @@ from dash import html
 
 
 def create_imprint_page(section_style):
-    return html.Div([
+    """
+    Create the Imprint page of the website.
 
+    Parameters
+    ----------
+    section_style : dict
+        Styling dictionary for the section containing the imprint.
+
+    Returns
+    -------
+    html.Div
+        The Imprint page as a Dash HTML Div object.
+    """
+    return html.Div([
         html.H2("Imprint"),
 
         html.P("This website was created as part of the university course:"),

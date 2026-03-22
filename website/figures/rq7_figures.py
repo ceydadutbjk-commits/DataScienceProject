@@ -2,21 +2,28 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-# Daten laden
 rq7_df = pd.read_csv("data/rq7_data.csv")
 
-# Datumsformat
 rq7_df["month"] = pd.to_datetime(rq7_df["month"])
 
 
 def create_rq7_figure(view_type="scatter"):
+    """
+    Create an interactive visualization for Research Question 7.
+
+    Parameters:
+        view_type (str): The type of figure to create. Can be "scatter" or "timeseries".
+
+    Returns:
+        fig (go.Figure): The created figure.
+    """
     if view_type == "timeseries":
         fig = go.Figure()
 
         fig.add_trace(
             go.Scatter(
                 x=rq7_df["month"],
-                y=rq7_df["inflation_yoy"],
+                y=rq7_df["inflation_Yoy"],
                 mode="lines+markers",
                 name="Inflation YoY",
                 hovertemplate="Month: %{x}<br>Inflation YoY: %{y:.2f}%<extra></extra>"
@@ -50,7 +57,7 @@ def create_rq7_figure(view_type="scatter"):
         return fig
 
     scatter_df = rq7_df.copy()
-    scatter_df = scatter_df.dropna(subset=["inflation_yoy", "article_count", "inflation_regime", "month"])
+    scatter_df = scatter_df.dropna(subset=["inflation_Yoy", "article_count", "inflation_regime", "month"])
     scatter_df["inflation_regime"] = scatter_df["inflation_regime"].astype(str)
 
     low_df = scatter_df[scatter_df["inflation_regime"] == "lower_inflation"]
@@ -58,10 +65,11 @@ def create_rq7_figure(view_type="scatter"):
 
     fig = go.Figure()
 
+    # Add the low inflation data points
     if not low_df.empty:
         fig.add_trace(
             go.Scatter(
-                x=low_df["inflation_yoy"],
+                x=low_df["inflation_Yoy"],
                 y=low_df["article_count"],
                 mode="markers",
                 name="Low inflation",
@@ -75,10 +83,11 @@ def create_rq7_figure(view_type="scatter"):
             )
         )
 
+    # Add the high inflation data points
     if not high_df.empty:
         fig.add_trace(
             go.Scatter(
-                x=high_df["inflation_yoy"],
+                x=high_df["inflation_Yoy"],
                 y=high_df["article_count"],
                 mode="markers",
                 name="High inflation",

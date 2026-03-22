@@ -2,6 +2,16 @@ from dash import html
 
 
 def create_home_page(section_style, card_style=None):
+    """
+    Creates the home page of the dashboard based on multiple parameters.
+
+    Parameters:
+    section_style (dict): Styling for the entire page content.
+    card_style (dict): Styling for individual cards. Defaults to a standard style.
+
+    Returns:
+    html.Div: The home page content.
+    """
     if card_style is None:
         card_style = {
             "backgroundColor": "white",
@@ -13,6 +23,7 @@ def create_home_page(section_style, card_style=None):
 
     return html.Div([
 
+        # Page title and introduction
         html.Div([
             html.H2(
                 "Home",
@@ -31,6 +42,7 @@ def create_home_page(section_style, card_style=None):
             )
         ], style=card_style),
 
+        # Project overview
         html.Div([
             html.H3(
                 "Project Overview",
@@ -57,6 +69,7 @@ def create_home_page(section_style, card_style=None):
             )
         ], style=card_style),
 
+        # Project relevance
         html.Div([
             html.H3(
                 "Project Relevance",
