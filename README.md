@@ -349,6 +349,14 @@ The project combines a modern Python-based technology stack with standard empiri
 
 ## 9. Repository & App Structure 
 
+### Note on `inflation_project/raw_data/`
+
+The folder `inflation_project/raw_data/` contains the research notebooks, intermediate raw API files (mainly JSON), exported figures, and selected processed CSV files used during the analytical workflow.
+
+The folder name was kept for consistency with the notebook paths used throughout the project.  
+Although it contains more than only raw data, retaining this structure ensured reproducibility and avoided breaking relative file references shortly before submission.
+
+
 The core of the interactive dashboard resides in the `website/` directory. A typical structure is:
 
 ```bash
